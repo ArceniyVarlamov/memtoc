@@ -1,0 +1,364 @@
+{
+ "schema_version": "memtoc-repair-39-v1",
+ "date": "2026-07-22",
+ "provenance": {
+  "qc_freeze_sha256": "e3561b24c71cdaee80c30a58675abd554f64378d6ad4586e7792904eaad78804",
+  "proposals_sha256": "d2e5caf4aff0d4b61911ae84fb3fcb33d25ccc6e17aeb0d92e0be9804cea1438",
+  "reviewed_sha256": "52c7f86f98ba16346fa47b978b1682b3abfc04ba26543eeac78e5a8ed056af5e",
+  "review": "all 39 proposals approved YES without replacement by owner (2026-07-22); drafts assistant-authored, human-verified",
+  "journal_row": "memtoc-repair-round"
+ },
+ "repairs": [
+  {
+   "audit_id": "QC-0022",
+   "qkey": "who is the mother of dakota mayi johnson",
+   "instance_id": 237,
+   "hop_idx": 0,
+   "old_near": "Nina Mercedez",
+   "new_near": "Kelly McGillis",
+   "repair_reason": "implausible distractor: unrelated performer is not a credible mother"
+  },
+  {
+   "audit_id": "QC-0024",
+   "qkey": "who is the father of hugh cholmondeley 1st earl of cholmondeley",
+   "instance_id": 191,
+   "hop_idx": 0,
+   "old_near": "Peter O'Connell",
+   "new_near": "Thomas Cholmondeley of Vale Royal",
+   "repair_reason": "implausible distractor: unrelated non-noble father candidate"
+  },
+  {
+   "audit_id": "QC-0038",
+   "qkey": "who is the director of cop or hood",
+   "instance_id": 224,
+   "hop_idx": 0,
+   "old_near": "Alfred Neumann",
+   "new_near": "Henri Verneuil",
+   "repair_reason": "role mismatch: candidate is not the film's director"
+  },
+  {
+   "audit_id": "QC-0045",
+   "qkey": "who is the father of timothy shriver",
+   "instance_id": 318,
+   "hop_idx": 0,
+   "old_near": "Steve Berry",
+   "new_near": "Ted Kennedy",
+   "repair_reason": "implausible distractor: unrelated writer is not a credible father"
+  },
+  {
+   "audit_id": "QC-0049",
+   "qkey": "who is the publisher of hrriyet daily news",
+   "instance_id": 161,
+   "hop_idx": 0,
+   "old_near": "Turkish Aerospace Industries",
+   "new_near": "Ciner Media Group",
+   "repair_reason": "role mismatch: aerospace company is not a news publisher"
+  },
+  {
+   "audit_id": "QC-0052",
+   "qkey": "who is the director of snake in the eagles shadow",
+   "instance_id": 186,
+   "hop_idx": 0,
+   "old_near": "Jiang Guangtao",
+   "new_near": "Lau Kar-leung",
+   "repair_reason": "role mismatch: candidate is a voice actor, not the director"
+  },
+  {
+   "audit_id": "QC-0070",
+   "qkey": "who is the director of operation gold ingot",
+   "instance_id": 165,
+   "hop_idx": 0,
+   "old_near": "Alfred Neumann",
+   "new_near": "Jacques Deray",
+   "repair_reason": "role mismatch: candidate is not a film director"
+  },
+  {
+   "audit_id": "QC-0072",
+   "qkey": "goodbye girl was directed by who",
+   "instance_id": 62,
+   "hop_idx": 1,
+   "old_near": "Richard Steven Horvitz",
+   "new_near": "Arthur Hiller",
+   "repair_reason": "role mismatch: candidate is an actor, not the director"
+  },
+  {
+   "audit_id": "QC-0077",
+   "qkey": "who is the director of the monocle laughs",
+   "instance_id": 351,
+   "hop_idx": 0,
+   "old_near": "Stefan Sagmeister",
+   "new_near": "Philippe de Broca",
+   "repair_reason": "role mismatch: candidate is a designer, not the director"
+  },
+  {
+   "audit_id": "QC-0112",
+   "qkey": "who is the father of josephandr taschereau",
+   "instance_id": 160,
+   "hop_idx": 0,
+   "old_near": "Ker Baillie-Hamilton",
+   "new_near": "Gabriel-Elzéar Taschereau",
+   "repair_reason": "implausible distractor: unrelated person from a different context"
+  },
+  {
+   "audit_id": "QC-0132",
+   "qkey": "angelspit toured the united states with which american electronic music duo from orlando florida",
+   "instance_id": 117,
+   "hop_idx": 0,
+   "old_near": "Fashion",
+   "new_near": "Breathe Carolina",
+   "repair_reason": "role mismatch: candidate is not the specified Orlando electronic duo"
+  },
+  {
+   "audit_id": "QC-0141",
+   "qkey": "who is the spouse of frank launder",
+   "instance_id": 299,
+   "hop_idx": 1,
+   "old_near": "Deirdre O'Kane",
+   "new_near": "Joyce Grenfell",
+   "repair_reason": "implausible distractor: candidate was born decades too late to be the spouse"
+  },
+  {
+   "audit_id": "QC-0203",
+   "qkey": "what is the place of death of abdullah i of jordan",
+   "instance_id": 584,
+   "hop_idx": 1,
+   "old_near": "Palestine Ahliya University",
+   "new_near": "Amman",
+   "repair_reason": "role mismatch: candidate is an institution, not a death place"
+  },
+  {
+   "audit_id": "QC-0208",
+   "qkey": "the dogwoman telemovies were created by which actress",
+   "instance_id": 25,
+   "hop_idx": 0,
+   "old_near": "Emma Hamilton",
+   "new_near": "Gina Riley",
+   "repair_reason": "implausible distractor: candidate died before television existed"
+  },
+  {
+   "audit_id": "QC-0210",
+   "qkey": "who is the director of film liberated hands",
+   "instance_id": 713,
+   "hop_idx": 0,
+   "old_near": "Notker Wolf",
+   "new_near": "Helmut Käutner",
+   "repair_reason": "role mismatch: candidate is not a film director"
+  },
+  {
+   "audit_id": "QC-0234",
+   "qkey": "who is the architect of hook and ladder no 4 located in albany ny",
+   "instance_id": 77,
+   "hop_idx": 0,
+   "old_near": "Julius Shulman",
+   "new_near": "Albert W. Fuller",
+   "repair_reason": "role mismatch: candidate is a photographer, not an architect"
+  },
+  {
+   "audit_id": "QC-0263",
+   "qkey": "who is the father of octavius vernon harcourt",
+   "instance_id": 771,
+   "hop_idx": 0,
+   "old_near": "George Owen Cambridge",
+   "new_near": "George Harcourt, 2nd Earl Harcourt",
+   "repair_reason": "implausible distractor: candidate is from the wrong generation"
+  },
+  {
+   "audit_id": "QC-0279",
+   "qkey": "who is the director of the invisible menace",
+   "instance_id": 213,
+   "hop_idx": 0,
+   "old_near": "John Waters",
+   "new_near": "William Clemens",
+   "repair_reason": "implausible distractor: candidate was a child when the film was made"
+  },
+  {
+   "audit_id": "QC-0288",
+   "qkey": "who is the father of philipp duke of saxemerseburglauchstdt",
+   "instance_id": 207,
+   "hop_idx": 0,
+   "old_near": "Foppe van Aitzema",
+   "new_near": "John George II, Elector of Saxony",
+   "repair_reason": "implausible distractor: unrelated diplomat is not a credible royal father"
+  },
+  {
+   "audit_id": "QC-0301",
+   "qkey": "who is the director of skirts ahoy",
+   "instance_id": 466,
+   "hop_idx": 0,
+   "old_near": "Oskar Seidlin",
+   "new_near": "Richard Thorpe",
+   "repair_reason": "role mismatch: candidate is a scholar, not the director"
+  },
+  {
+   "audit_id": "QC-0334",
+   "qkey": "who is the father of cosima von blow pavoncelli",
+   "instance_id": 792,
+   "hop_idx": 0,
+   "old_near": "Brandon Lewis",
+   "new_near": "Gunter Sachs",
+   "repair_reason": "implausible distractor: candidate is younger than the child"
+  },
+  {
+   "audit_id": "QC-0339",
+   "qkey": "who is the director of my 20th century",
+   "instance_id": 166,
+   "hop_idx": 0,
+   "old_near": "Henriett Seth F.",
+   "new_near": "Márta Mészáros",
+   "repair_reason": "role mismatch: candidate is not a film director"
+  },
+  {
+   "audit_id": "QC-0340",
+   "qkey": "who is acting jack from while you were sleeping",
+   "instance_id": 29,
+   "hop_idx": 0,
+   "old_near": "Jimmy Bennett",
+   "new_near": "Aidan Quinn",
+   "repair_reason": "implausible distractor: candidate was born after the film's release"
+  },
+  {
+   "audit_id": "QC-0351",
+   "qkey": "who is the father of henry ford ii",
+   "instance_id": 185,
+   "hop_idx": 1,
+   "old_near": "Bob Falkenburg",
+   "new_near": "Henry Ford",
+   "repair_reason": "implausible distractor: candidate is younger than the son"
+  },
+  {
+   "audit_id": "QC-0363",
+   "qkey": "who is the publisher of africa renewal",
+   "instance_id": 162,
+   "hop_idx": 0,
+   "old_near": "Anita Borg Institute for Women and Technology",
+   "new_near": "African Union",
+   "repair_reason": "implausible distractor: unrelated institute is not a credible publisher"
+  },
+  {
+   "audit_id": "QC-0381",
+   "qkey": "who is the father of abaqa khan",
+   "instance_id": 275,
+   "hop_idx": 0,
+   "old_near": "Müge",
+   "new_near": "Möngke Khan",
+   "repair_reason": "role mismatch: candidate does not fit the father role"
+  },
+  {
+   "audit_id": "QC-0384",
+   "qkey": "rejuvelac is kind of grain water invented and promoted by which holistic health practitioner",
+   "instance_id": 13,
+   "hop_idx": 0,
+   "old_near": "Sylvia Nasar",
+   "new_near": "Adelle Davis",
+   "repair_reason": "role mismatch: candidate is not a holistic-health practitioner"
+  },
+  {
+   "audit_id": "QC-0392",
+   "qkey": "who is the sibling of natalie wood",
+   "instance_id": 907,
+   "hop_idx": 1,
+   "old_near": "Sharon Van Etten",
+   "new_near": "Jill St. John",
+   "repair_reason": "implausible distractor: candidate is from a much later generation"
+  },
+  {
+   "audit_id": "QC-0405",
+   "qkey": "who is the director of bodens boy",
+   "instance_id": 820,
+   "hop_idx": 0,
+   "old_near": "Bernard Archard",
+   "new_near": "Maurice Elvey",
+   "repair_reason": "role mismatch: candidate is an actor, not the director"
+  },
+  {
+   "audit_id": "QC-0406",
+   "qkey": "who is the father of fitzroy john somerset 5th baron raglan",
+   "instance_id": 324,
+   "hop_idx": 0,
+   "old_near": "John Henry Mackay",
+   "new_near": "Henry Somerset, 10th Duke of Beaufort",
+   "repair_reason": "implausible distractor: unrelated writer is not a credible father"
+  },
+  {
+   "audit_id": "QC-0409",
+   "qkey": "who is the father of charles mills 1st baron hillingdon",
+   "instance_id": 623,
+   "hop_idx": 0,
+   "old_near": "Karl Lotichius",
+   "new_near": "Samuel Jones-Loyd, 1st Baron Overstone",
+   "repair_reason": "implausible distractor: unrelated banker is not a credible father"
+  },
+  {
+   "audit_id": "QC-0444",
+   "qkey": "who is the mother of damian harris",
+   "instance_id": 725,
+   "hop_idx": 1,
+   "old_near": "Zienia Merton",
+   "new_near": "Vanessa Redgrave",
+   "repair_reason": "implausible distractor: candidate is too young to be the mother"
+  },
+  {
+   "audit_id": "QC-0446",
+   "qkey": "who is the mother of harriet hemings",
+   "instance_id": 356,
+   "hop_idx": 0,
+   "old_near": "Margaret Taylor",
+   "new_near": "Betty Hemings",
+   "repair_reason": "implausible distractor: unrelated first lady is not a credible mother"
+  },
+  {
+   "audit_id": "QC-0448",
+   "qkey": "the 2015 austrian thriller film jack tells the story of which serial killer",
+   "instance_id": 15,
+   "hop_idx": 0,
+   "old_near": "O. W. Fischer",
+   "new_near": "Fritz Haarmann",
+   "repair_reason": "role mismatch: candidate is an actor, not the serial killer"
+  },
+  {
+   "audit_id": "QC-0452",
+   "qkey": "who is the husband of marie anna of saxony",
+   "instance_id": 353,
+   "hop_idx": 0,
+   "old_near": "Isidoro Ferrini",
+   "new_near": "Francis IV, Duke of Modena",
+   "repair_reason": "implausible distractor: unrelated non-royal spouse candidate"
+  },
+  {
+   "audit_id": "QC-0455",
+   "qkey": "who is the mother of eva chamberlain",
+   "instance_id": 349,
+   "hop_idx": 0,
+   "old_near": "Anita Augspurg",
+   "new_near": "Mathilde Wesendonck",
+   "repair_reason": "implausible distractor: candidate is too young to be the mother"
+  },
+  {
+   "audit_id": "QC-0468",
+   "qkey": "who is the cast member of ice bound a womans survival at the south pole",
+   "instance_id": 887,
+   "hop_idx": 0,
+   "old_near": "Gloria Dickson",
+   "new_near": "Christine Lahti",
+   "repair_reason": "implausible distractor: candidate died decades before the production"
+  },
+  {
+   "audit_id": "QC-0494",
+   "qkey": "who is selena quintanillaprezs assistant and head of her fan club",
+   "instance_id": 475,
+   "hop_idx": 0,
+   "old_near": "Diane Black",
+   "new_near": "Suzette Quintanilla",
+   "repair_reason": "implausible distractor: unrelated politician is not a credible assistant"
+  },
+  {
+   "audit_id": "QC-0496",
+   "qkey": "who is the father of alessandro ruspoli 9th prince of cerveteri",
+   "instance_id": 572,
+   "hop_idx": 0,
+   "old_near": "Paolo Conte",
+   "new_near": "Prospero Colonna",
+   "repair_reason": "implausible distractor: candidate is younger than the son"
+  }
+ ]
+}

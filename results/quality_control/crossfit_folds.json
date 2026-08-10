@@ -1,0 +1,6901 @@
+{
+  "schema_version": "memtoc-instance-group-split-v1",
+  "status": "frozen",
+  "dataset_row": "memtoc-v1",
+  "seed": 20260721,
+  "algorithm": {
+    "name": "deterministic-greedy-two-fold",
+    "group_unit": "ToolHop instance_id",
+    "balanced_features": [
+      "question_count",
+      "family",
+      "gold_kind",
+      "human_vs_machine_distractor_source",
+      "family_x_gold_kind_x_source"
+    ]
+  },
+  "source": {
+    "mapping": "results/construction/distractor_mapping_575.json",
+    "mapping_sha256": "560dea277c736caecf5a6f4c6396a0ab00fda962f1891ef7bfa2ca066569e3d7",
+    "mapping_content_sha256": "25bd95806104243a6ba0f9fdb26a655d6957a338a44a22da811770686cbbd72a"
+  },
+  "summary": {
+    "n_questions": 575,
+    "n_instances": 309,
+    "zero_instance_leakage": true,
+    "folds": {
+      "A": {
+        "n_questions": 287,
+        "n_instances": 154,
+        "family": {
+          "birth_death_date": 48,
+          "birth_death_place": 9,
+          "creator_role": 33,
+          "free_form": 95,
+          "genealogy": 102
+        },
+        "tau": {
+          "date": 55,
+          "organization": 11,
+          "other_string": 8,
+          "person": 152,
+          "place": 26,
+          "timezone": 9,
+          "work": 4,
+          "year": 22
+        },
+        "source_bucket": {
+          "human": 74,
+          "machine": 213
+        },
+        "stratum": {
+          "birth_death_date|date|machine": 48,
+          "birth_death_place|other_string|human": 1,
+          "birth_death_place|place|machine": 8,
+          "creator_role|organization|machine": 5,
+          "creator_role|other_string|human": 1,
+          "creator_role|person|human": 3,
+          "creator_role|person|machine": 23,
+          "creator_role|place|human": 1,
+          "free_form|date|machine": 7,
+          "free_form|organization|human": 2,
+          "free_form|organization|machine": 4,
+          "free_form|other_string|human": 1,
+          "free_form|person|human": 19,
+          "free_form|person|machine": 16,
+          "free_form|place|human": 6,
+          "free_form|place|machine": 5,
+          "free_form|timezone|machine": 9,
+          "free_form|work|human": 4,
+          "free_form|year|machine": 22,
+          "genealogy|other_string|human": 5,
+          "genealogy|person|human": 29,
+          "genealogy|person|machine": 62,
+          "genealogy|place|human": 2,
+          "genealogy|place|machine": 4
+        }
+      },
+      "B": {
+        "n_questions": 288,
+        "n_instances": 155,
+        "family": {
+          "birth_death_date": 48,
+          "birth_death_place": 9,
+          "creator_role": 32,
+          "free_form": 95,
+          "genealogy": 104
+        },
+        "tau": {
+          "date": 56,
+          "organization": 12,
+          "other_string": 9,
+          "person": 152,
+          "place": 24,
+          "timezone": 9,
+          "work": 4,
+          "year": 22
+        },
+        "source_bucket": {
+          "human": 75,
+          "machine": 213
+        },
+        "stratum": {
+          "birth_death_date|date|machine": 48,
+          "birth_death_place|place|human": 1,
+          "birth_death_place|place|machine": 8,
+          "creator_role|organization|machine": 6,
+          "creator_role|other_string|human": 1,
+          "creator_role|person|human": 3,
+          "creator_role|person|machine": 22,
+          "free_form|date|machine": 8,
+          "free_form|organization|human": 1,
+          "free_form|organization|machine": 4,
+          "free_form|other_string|human": 2,
+          "free_form|person|human": 19,
+          "free_form|person|machine": 16,
+          "free_form|place|human": 6,
+          "free_form|place|machine": 4,
+          "free_form|timezone|machine": 9,
+          "free_form|work|human": 4,
+          "free_form|year|machine": 22,
+          "genealogy|organization|human": 1,
+          "genealogy|other_string|human": 6,
+          "genealogy|person|human": 29,
+          "genealogy|person|machine": 63,
+          "genealogy|place|human": 2,
+          "genealogy|place|machine": 3
+        }
+      }
+    }
+  },
+  "assignments": [
+    {
+      "instance_id": 0,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "salisbury woodland gardens links a zoo with which park",
+        "stanley park is designed and built under the watchful eye of who"
+      ]
+    },
+    {
+      "instance_id": 1,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the actress that plays kaylee frye in the series firefly",
+        "jewel staite also stars with alan dale in a scifi tv film released in what year"
+      ]
+    },
+    {
+      "instance_id": 2,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "which 2016 film featuring the voice of townsend coleman",
+        "who directed and wrote sing 2016 american film"
+      ]
+    },
+    {
+      "instance_id": 3,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "charles barkley changed his jersey number to 32 in honor of which player",
+        "magic johnson was born in which year"
+      ]
+    },
+    {
+      "instance_id": 4,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what year was boss bailey drafted"
+      ]
+    },
+    {
+      "instance_id": 5,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "tefik selim mborja was a part of which party",
+        "albanian fascist party held power in albania until what year"
+      ]
+    },
+    {
+      "instance_id": 6,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "kam heskin plays paige morgan in which 2004 film",
+        "the prince and me is directed by who"
+      ]
+    },
+    {
+      "instance_id": 7,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "which actor played colonel sherman t potter in mash",
+        "what role did harry morgan play in kentucky jones"
+      ]
+    },
+    {
+      "instance_id": 8,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "operation light house was an experiment by wernher von braun and which man",
+        "walter dornberger was born in what year"
+      ]
+    },
+    {
+      "instance_id": 9,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the author of henry v"
+      ]
+    },
+    {
+      "instance_id": 10,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "three men on a horse is a play by which playwright",
+        "george abbott is born in which year"
+      ]
+    },
+    {
+      "instance_id": 11,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mathematician husband of anneli cahn lax",
+        "in what year was peter lax born"
+      ]
+    },
+    {
+      "instance_id": 12,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the star of lady in a cage",
+        "olivia de havilland was born in what year"
+      ]
+    },
+    {
+      "instance_id": 13,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "rejuvelac is kind of grain water invented and promoted by which holistic health practitioner",
+        "ann wigmore was born in which year"
+      ]
+    },
+    {
+      "instance_id": 14,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "barbara bach married what former member of the beatles"
+      ]
+    },
+    {
+      "instance_id": 15,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "the 2015 austrian thriller film jack tells the story of which serial killer",
+        "jack unterweger died in what year"
+      ]
+    },
+    {
+      "instance_id": 16,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the actor appeared on charlottes shorts and weeds",
+        "gary anthony williams was born in what year"
+      ]
+    },
+    {
+      "instance_id": 17,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "marvel classics comics specialized in adaptations of literary classics such as which novel",
+        "mobydick by american writer herman melville was published in what year"
+      ]
+    },
+    {
+      "instance_id": 24,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "which actor starred in the tv land original series the soul man",
+        "in what year did cedric the entertainer host the black movie awards"
+      ]
+    },
+    {
+      "instance_id": 25,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "the dogwoman telemovies were created by which actress",
+        "magda szubanski was born in what year"
+      ]
+    },
+    {
+      "instance_id": 26,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "which actress was starred in streak with rumer willis",
+        "in what year was brittany snow born"
+      ]
+    },
+    {
+      "instance_id": 27,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "rock springs is a collection of short stories by which author",
+        "richard ford is born in what year"
+      ]
+    },
+    {
+      "instance_id": 28,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of princess mafalda of savoy",
+        "when was victor emmanuel iii of italy born"
+      ]
+    },
+    {
+      "instance_id": 29,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is acting jack from while you were sleeping",
+        "bill pullman was born in what year"
+      ]
+    },
+    {
+      "instance_id": 30,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "which british author wrote the novel on which here we go round the mulberry bush was based",
+        "when was hunter davies born"
+      ]
+    },
+    {
+      "instance_id": 31,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the largest convention center in the us state of georgia",
+        "what year did georgia world congress center open"
+      ]
+    },
+    {
+      "instance_id": 32,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the danish chemist famous for the introduction of the concept of ph",
+        "in what year did the danish plant ecologist who assisted s p l srensen die"
+      ]
+    },
+    {
+      "instance_id": 33,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who was kalanipauahis niece",
+        "who was bernice pauahi bishops husband"
+      ]
+    },
+    {
+      "instance_id": 34,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "which american short slasher film with frenchspeaking serial killers was released on october 31 2011",
+        "when was the director of maniac born"
+      ]
+    },
+    {
+      "instance_id": 35,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the 1994 american animated epic musical film which mel shaw animated",
+        "who was the producer of the lion king"
+      ]
+    },
+    {
+      "instance_id": 37,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "who created the 2003 remake of spy hunter"
+      ]
+    },
+    {
+      "instance_id": 38,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the film that centered on the fictional barden university and the bellas",
+        "what is the name of the character portrayed by anna camp in pitch perfect 2"
+      ]
+    },
+    {
+      "instance_id": 41,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "what was christopher nolans magicthemed drama",
+        "what year did the prestige film come out"
+      ]
+    },
+    {
+      "instance_id": 42,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "when did jessie 2011 tv series end"
+      ]
+    },
+    {
+      "instance_id": 43,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the american lawyer lobbyist and political consultant who was a senior member of the presidential campaign of donald trump",
+        "when was paul manafort born"
+      ]
+    },
+    {
+      "instance_id": 45,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "short circuit had a follow up sequel released in what year"
+      ]
+    },
+    {
+      "instance_id": 46,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the upcoming british drama film directed by dominic cooke",
+        "who will billy howle be seen opposite in on chesil beach film"
+      ]
+    },
+    {
+      "instance_id": 48,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "an cat dubh into the heart is a song from which u2 album",
+        "boy album was released on what date"
+      ]
+    },
+    {
+      "instance_id": 50,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the person known as the wild woman of buttle",
+        "who is the psychologist who wrote about the disciple of mary maclane"
+      ]
+    },
+    {
+      "instance_id": 51,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "georgia rickard contributed in which american healthy lifestyle magazine",
+        "what year was prevention started"
+      ]
+    },
+    {
+      "instance_id": 54,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "the grudge 2 was produced by which american film actor"
+      ]
+    },
+    {
+      "instance_id": 56,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the actor that starred in death in paradise",
+        "what character in father ted was played by ardal ohanlon"
+      ]
+    },
+    {
+      "instance_id": 58,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what screenwriter with credits for evolution cowrote the family man"
+      ]
+    },
+    {
+      "instance_id": 61,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "which band did the song what lovers do",
+        "who is the current drummer of maroon 5"
+      ]
+    },
+    {
+      "instance_id": 62,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "the third solo album by david gates of bread shares a name with which 1977 film",
+        "goodbye girl was directed by who"
+      ]
+    },
+    {
+      "instance_id": 63,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "in which division cleveland browns placed fourth in 2009",
+        "in which year did afc north adopt its current name"
+      ]
+    },
+    {
+      "instance_id": 66,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "when would wwe 2k18 be released"
+      ]
+    },
+    {
+      "instance_id": 67,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "masakazu katsura was born in what year"
+      ]
+    },
+    {
+      "instance_id": 69,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "which english inventor developed the richard hornsby sons oil engine",
+        "what is the date of birth of herbert akroyd stuart"
+      ]
+    },
+    {
+      "instance_id": 70,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "on what date will the comedy film directed by kevin tent and starring nina dobrev be released on video on demand services"
+      ]
+    },
+    {
+      "instance_id": 71,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "which movement hans knirsch was an activist for",
+        "what date did austrian national socialism officially gain traction"
+      ]
+    },
+    {
+      "instance_id": 76,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "which nbc sitcom johnny pemberton appears in as the character bo thompson",
+        "who created superstore"
+      ]
+    },
+    {
+      "instance_id": 77,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the architect of hook and ladder no 4 located in albany ny",
+        "who was the brother of marcus t reynolds"
+      ]
+    },
+    {
+      "instance_id": 81,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who was the plaintiff in the 1892 barbed wire patent case",
+        "when was joseph glidden born"
+      ]
+    },
+    {
+      "instance_id": 87,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "which former indian cricketer made his odi debuts during the 2000 icc knockout trophy",
+        "when was zaheer khan born"
+      ]
+    },
+    {
+      "instance_id": 99,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "luke null is an actor on which program",
+        "saturday night live premiered its 43rd season on which date"
+      ]
+    },
+    {
+      "instance_id": 100,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "charlie mcdermott plays axl heck on which tv show",
+        "the middle tv series premiered in what date"
+      ]
+    },
+    {
+      "instance_id": 109,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the company that sponsors the cfl game of the week",
+        "who founded wendys"
+      ]
+    },
+    {
+      "instance_id": 116,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the rank held by sir charles comyn egertong",
+        "sinch when has field marshal united kingdom been the highest in the british army"
+      ]
+    },
+    {
+      "instance_id": 117,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "angelspit toured the united states with which american electronic music duo from orlando florida",
+        "blood on the dance floor formed in what year"
+      ]
+    },
+    {
+      "instance_id": 130,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "which irish entertainer is in the girl band maxi dick and twink",
+        "what is the name of the daughter of adele king"
+      ]
+    },
+    {
+      "instance_id": 131,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the song that some critics compared to fading with",
+        "what year was take a bow rihanna song released"
+      ]
+    },
+    {
+      "instance_id": 145,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the author of cock and bull",
+        "what year was will self born"
+      ]
+    },
+    {
+      "instance_id": 154,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of mary tudor",
+        "who is the mother of elizabeth of york"
+      ]
+    },
+    {
+      "instance_id": 155,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of the rip off review of western culture",
+        "when was rip off press founded"
+      ]
+    },
+    {
+      "instance_id": 157,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "coldplay formed in what year"
+      ]
+    },
+    {
+      "instance_id": 158,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "francisco jose hernandez was a participant in which invasion",
+        "bay of pigs invasion took place in what year"
+      ]
+    },
+    {
+      "instance_id": 159,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of bellingham review",
+        "when was western washington university founded"
+      ]
+    },
+    {
+      "instance_id": 160,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of josephandr taschereau",
+        "who is the father of thomaspierrejoseph taschereau"
+      ]
+    },
+    {
+      "instance_id": 161,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of hrriyet daily news",
+        "when was doan media founded"
+      ]
+    },
+    {
+      "instance_id": 162,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of africa renewal",
+        "when was united nations founded"
+      ]
+    },
+    {
+      "instance_id": 163,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of qst",
+        "when was american radio relay league founded"
+      ]
+    },
+    {
+      "instance_id": 165,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of operation gold ingot",
+        "who is the mother of georges lautner"
+      ]
+    },
+    {
+      "instance_id": 166,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of my 20th century",
+        "who is the father of ildik enyedi"
+      ]
+    },
+    {
+      "instance_id": 167,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of hugh montgomerie 7th earl of eglinton",
+        "who is the mother of alexander montgomerie 6th earl of eglinton"
+      ]
+    },
+    {
+      "instance_id": 168,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of prince nikolai of denmark",
+        "what is the date of birth of alexandra countess of frederiksborg"
+      ]
+    },
+    {
+      "instance_id": 169,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of princess feodora of denmark",
+        "what is the date of birth of prince harald of denmark"
+      ]
+    },
+    {
+      "instance_id": 170,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of duchess marie gabrielle in bavaria",
+        "what is the date of birth of infanta maria josepha of portugal"
+      ]
+    },
+    {
+      "instance_id": 171,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of mel ruanaid mac donnchada midi",
+        "who is the father of donnchad midi"
+      ]
+    },
+    {
+      "instance_id": 172,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of ahmosehenutemipet",
+        "who is the father of seqenenre tao"
+      ]
+    },
+    {
+      "instance_id": 173,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of landgravine marie louise of hessekassel",
+        "what is the date of death of maria amalia of courland"
+      ]
+    },
+    {
+      "instance_id": 174,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of robert count of burgundy",
+        "what is the date of death of mahaut countess of artois"
+      ]
+    },
+    {
+      "instance_id": 175,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of ferdinand maximilian of badenbaden",
+        "who is the father of william margrave of badenbaden"
+      ]
+    },
+    {
+      "instance_id": 176,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of catherine of foix countess of candale",
+        "what is the date of birth of eleanor of navarre"
+      ]
+    },
+    {
+      "instance_id": 177,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of william louis of anhaltharzgerode",
+        "what is the date of death of frederick prince of anhaltharzgerode"
+      ]
+    },
+    {
+      "instance_id": 178,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of viacheslav i of kiev",
+        "who is the father of gytha of wessex"
+      ]
+    },
+    {
+      "instance_id": 179,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of duleep singh",
+        "what is the date of death of maharaja ranjit singh"
+      ]
+    },
+    {
+      "instance_id": 180,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of richard de clare 6th earl of gloucester",
+        "what is the date of death of isabel marshal"
+      ]
+    },
+    {
+      "instance_id": 181,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of bill patterson",
+        "what is the date of death of gerald patterson"
+      ]
+    },
+    {
+      "instance_id": 182,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of little joe",
+        "who is the father of jessica hausner"
+      ]
+    },
+    {
+      "instance_id": 183,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the performer of everybody needs a best friend",
+        "who is the father of norah jones"
+      ]
+    },
+    {
+      "instance_id": 184,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of sara ali khan",
+        "who is the spouse of saif ali khan"
+      ]
+    },
+    {
+      "instance_id": 185,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of edsel bryant ford ii",
+        "who is the father of henry ford ii"
+      ]
+    },
+    {
+      "instance_id": 186,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of snake in the eagles shadow",
+        "who is the father of yuen wooping"
+      ]
+    },
+    {
+      "instance_id": 187,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of chiang hsiaowu",
+        "who is the father of chiang chingkuo"
+      ]
+    },
+    {
+      "instance_id": 188,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the child of victoria josefa dolores catalina sackville",
+        "who is the spouse of vita sackvillewest"
+      ]
+    },
+    {
+      "instance_id": 189,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of baha aldawla",
+        "who is the father of adud aldawla"
+      ]
+    },
+    {
+      "instance_id": 190,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of sorority house",
+        "who is the spouse of john farrow"
+      ]
+    },
+    {
+      "instance_id": 191,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of hugh cholmondeley 1st earl of cholmondeley",
+        "who is the mother of robert cholmondeley 1st viscount cholmondeley"
+      ]
+    },
+    {
+      "instance_id": 193,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the father of yujiul yucheng"
+      ]
+    },
+    {
+      "instance_id": 194,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the date of birth of sir henry st johnmildmay 3rd baronet"
+      ]
+    },
+    {
+      "instance_id": 195,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of alexandre berthier 3rd prince of wagram",
+        "who is the father of napolon alexandre berthier"
+      ]
+    },
+    {
+      "instance_id": 196,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of alphonse jourdain",
+        "who is the mother of elvira of castile"
+      ]
+    },
+    {
+      "instance_id": 198,
+      "fold": "A",
+      "n_questions": 3,
+      "qkeys": [
+        "who is the performer of ill come running back to you",
+        "what is the place of death of sam cooke",
+        "what is the time zone of los angeles california"
+      ]
+    },
+    {
+      "instance_id": 199,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of eye to the telescope",
+        "when was science fiction poetry association founded"
+      ]
+    },
+    {
+      "instance_id": 200,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of humphrey de bohun 2nd earl of hereford",
+        "what is the date of death of henry de bohun 1st earl of hereford"
+      ]
+    },
+    {
+      "instance_id": 202,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of raoul i of brienne count of eu",
+        "what is the date of death of john ii of brienne count of eu"
+      ]
+    },
+    {
+      "instance_id": 203,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of fireeater",
+        "who is the spouse of pirjo honkasalo"
+      ]
+    },
+    {
+      "instance_id": 205,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of princess isabelle of orlans",
+        "what is the date of death of jean duke of guise"
+      ]
+    },
+    {
+      "instance_id": 206,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of charles joseph kelly monck 3rd viscount monck",
+        "who is the father of charles monck 1st viscount monck"
+      ]
+    },
+    {
+      "instance_id": 207,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of philipp duke of saxemerseburglauchstdt",
+        "what is the date of death of christian i duke of saxemerseburg"
+      ]
+    },
+    {
+      "instance_id": 208,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the spouse of ove robert aunli",
+        "who is the father of berit aunli"
+      ]
+    },
+    {
+      "instance_id": 209,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the father of dale earnhardt"
+      ]
+    },
+    {
+      "instance_id": 210,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of catherine of guelders",
+        "what is the date of death of arnold duke of guelders"
+      ]
+    },
+    {
+      "instance_id": 212,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of maria of austria duchess of jlichclevesberg",
+        "what is the date of birth of william duke of jlichclevesberg"
+      ]
+    },
+    {
+      "instance_id": 213,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the director of the invisible menace"
+      ]
+    },
+    {
+      "instance_id": 215,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of carlo i cybomalaspina",
+        "what is the date of death of alderano cybomalaspina"
+      ]
+    },
+    {
+      "instance_id": 216,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of philip of ibelin",
+        "who is the mother of maria komnene"
+      ]
+    },
+    {
+      "instance_id": 218,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the composer of durval discos",
+        "who is the father of andr abujamra"
+      ]
+    },
+    {
+      "instance_id": 219,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of mervyn tuchet 4th earl of castlehaven",
+        "who is the mother of mervyn tuchet 2nd earl of castlehaven"
+      ]
+    },
+    {
+      "instance_id": 220,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of anthony william fairbank edwards",
+        "what is the date of birth of harold c edwards"
+      ]
+    },
+    {
+      "instance_id": 221,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of susanne porsche",
+        "what is the date of birth of wolfgang porsche"
+      ]
+    },
+    {
+      "instance_id": 223,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of john tufton 2nd baron hothfield",
+        "what is the date of death of henry tufton 1st baron hothfield"
+      ]
+    },
+    {
+      "instance_id": 224,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the director of cop or hood"
+      ]
+    },
+    {
+      "instance_id": 225,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of roses from the south",
+        "what nationality is franz antel"
+      ]
+    },
+    {
+      "instance_id": 226,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of hugh i 1057 august 29 1093 was duke of burgundy",
+        "what is the place of death of henry of burgundy"
+      ]
+    },
+    {
+      "instance_id": 227,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of tala mi thiri",
+        "what is the place of death of binnya u"
+      ]
+    },
+    {
+      "instance_id": 229,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the date of death of john cecil 5th earl of exeter"
+      ]
+    },
+    {
+      "instance_id": 230,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of ludwig gruno of hessehomburg",
+        "what is the date of birth of frederick iii landgrave of hessehomburg"
+      ]
+    },
+    {
+      "instance_id": 231,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the composer of oomana thinkal",
+        "what is the date of death of m b sreenivasan"
+      ]
+    },
+    {
+      "instance_id": 232,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of film war italian style",
+        "what is the date of birth of luigi scattini"
+      ]
+    },
+    {
+      "instance_id": 235,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of american woman",
+        "who is the father of jake scott"
+      ]
+    },
+    {
+      "instance_id": 237,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of dakota mayi johnson",
+        "who is the mother of melanie griffith"
+      ]
+    },
+    {
+      "instance_id": 238,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the founder of suez canal company",
+        "what is the date of birth of ferdinand de lesseps"
+      ]
+    },
+    {
+      "instance_id": 242,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of margarete weikirchner",
+        "what is the date of birth of count philipp i of hanaumnzenberg"
+      ]
+    },
+    {
+      "instance_id": 244,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of mary of teck",
+        "what is the date of birth of francis duke of teck"
+      ]
+    },
+    {
+      "instance_id": 245,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of napier sturt 3rd baron alington",
+        "what is the date of birth of humphrey sturt 2nd baron alington"
+      ]
+    },
+    {
+      "instance_id": 247,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the director of la cage aux folles 3 the wedding"
+      ]
+    },
+    {
+      "instance_id": 248,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of stephanie von hohenlohe",
+        "what is the date of birth of friedrich franz von hohenlohewaldenburgschillingsfrst"
+      ]
+    },
+    {
+      "instance_id": 249,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of john annesley 4th earl of anglesey",
+        "what is the date of death of james annesley 2nd earl of anglesey"
+      ]
+    },
+    {
+      "instance_id": 251,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of edward wingfield 2nd viscount powerscourt",
+        "who is the mother of richard wingfield 1st viscount powerscourt"
+      ]
+    },
+    {
+      "instance_id": 252,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of mirza farkhunda shah",
+        "what is the date of death of bahadur shah ii"
+      ]
+    },
+    {
+      "instance_id": 254,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of mehmed i",
+        "who is the mother of bayezid i"
+      ]
+    },
+    {
+      "instance_id": 255,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of hj akitoki",
+        "who is the father of kanezawa sanetoki"
+      ]
+    },
+    {
+      "instance_id": 256,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of the cup",
+        "who is the father of khyentse norbu"
+      ]
+    },
+    {
+      "instance_id": 260,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of tatiana tolstoypaus",
+        "what is the date of death of herman paus"
+      ]
+    },
+    {
+      "instance_id": 265,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of sissel langenielsen",
+        "what is the date of death of trygve langenielsen"
+      ]
+    },
+    {
+      "instance_id": 266,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of american scientist",
+        "when was sigma xi founded"
+      ]
+    },
+    {
+      "instance_id": 268,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of slap her shes french",
+        "what is the date of birth of melanie mayron"
+      ]
+    },
+    {
+      "instance_id": 269,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of vyacheslav yaroslavich",
+        "who is the father of ingegerd olofsdotter of sweden"
+      ]
+    },
+    {
+      "instance_id": 270,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of philip iii of namur",
+        "what is the date of death of john i marquis of namur"
+      ]
+    },
+    {
+      "instance_id": 271,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the mother of william paulet 3rd marquess of winchester"
+      ]
+    },
+    {
+      "instance_id": 273,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of dino ki dulhaniya",
+        "who is the father of mehreen jabbar"
+      ]
+    },
+    {
+      "instance_id": 275,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of abaqa khan",
+        "who is the mother of hulagu khan"
+      ]
+    },
+    {
+      "instance_id": 276,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of ollom fotla",
+        "who is the father of fachu fnscothach"
+      ]
+    },
+    {
+      "instance_id": 278,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of hanneles journey to heaven",
+        "who is the spouse of urban gad"
+      ]
+    },
+    {
+      "instance_id": 280,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of james tuchet 5th earl of castlehaven",
+        "who is the mother of mervyn tuchet 4th earl of castlehaven"
+      ]
+    },
+    {
+      "instance_id": 281,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of sun luyu",
+        "who is the father of sun quan"
+      ]
+    },
+    {
+      "instance_id": 287,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of euphemia ii countess of ross",
+        "who is the father of alexander leslie earl of ross"
+      ]
+    },
+    {
+      "instance_id": 288,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of leopold david de rothschild",
+        "what is the date of death of lionel nathan de rothschild"
+      ]
+    },
+    {
+      "instance_id": 292,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of p solsiden",
+        "who is the spouse of edith carlmar"
+      ]
+    },
+    {
+      "instance_id": 294,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of princess batrice of bourbontwo sicilies",
+        "what is the date of death of prince ferdinand duke of castro"
+      ]
+    },
+    {
+      "instance_id": 297,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of dui finn",
+        "who is the father of stna innarraid"
+      ]
+    },
+    {
+      "instance_id": 299,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of the belles of st trinians",
+        "who is the spouse of frank launder"
+      ]
+    },
+    {
+      "instance_id": 303,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of a nohit norun summer",
+        "who is the father of francis leclerc"
+      ]
+    },
+    {
+      "instance_id": 308,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of prince raphael rainer of thurn and taxis",
+        "what is the date of birth of archduchess margarethe klementine of austria"
+      ]
+    },
+    {
+      "instance_id": 309,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the father of diya aldawla"
+      ]
+    },
+    {
+      "instance_id": 310,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of gustav von leonhard",
+        "what is the date of death of karl csar von leonhard"
+      ]
+    },
+    {
+      "instance_id": 312,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the spouse of albert gallatin simms",
+        "who is the father of ruth hanna mccormick"
+      ]
+    },
+    {
+      "instance_id": 313,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of joachim i prince of anhaltdessau",
+        "what is the date of death of ernest i prince of anhaltdessau"
+      ]
+    },
+    {
+      "instance_id": 314,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of sophia of pomerania",
+        "what is the date of death of eric ii duke of pomerania"
+      ]
+    },
+    {
+      "instance_id": 315,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of louis i count of nassauweilburg",
+        "what is the date of birth of john iii of nassauweilburg"
+      ]
+    },
+    {
+      "instance_id": 316,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the date of death of stephen moore 1st earl mount cashell"
+      ]
+    },
+    {
+      "instance_id": 317,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of jean nol destrhan",
+        "what is the date of death of jean baptiste destrehan"
+      ]
+    },
+    {
+      "instance_id": 318,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of timothy shriver",
+        "what is the date of death of sargent shriver"
+      ]
+    },
+    {
+      "instance_id": 320,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of film kalteva torni",
+        "what is the date of birth of timo koivusalo"
+      ]
+    },
+    {
+      "instance_id": 321,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of charles somerscocks 3rd earl somers",
+        "what is the date of death of john somerscocks 2nd earl somers"
+      ]
+    },
+    {
+      "instance_id": 322,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of martha rika alonso",
+        "what is the date of birth of rafael moreno valle rosas"
+      ]
+    },
+    {
+      "instance_id": 323,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of john hodgettsfoley",
+        "what is the date of birth of edward foley"
+      ]
+    },
+    {
+      "instance_id": 324,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of fitzroy john somerset 5th baron raglan",
+        "what is the date of death of fitzroy richard somerset"
+      ]
+    },
+    {
+      "instance_id": 325,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of josephdouard perrault",
+        "what is the date of birth of josephstanislas perrault"
+      ]
+    },
+    {
+      "instance_id": 327,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of tangos the exile of gardel",
+        "what is the date of birth of fernando solanas"
+      ]
+    },
+    {
+      "instance_id": 329,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of albert margrave of meissen",
+        "what is the date of death of friedrich christian margrave of meissen"
+      ]
+    },
+    {
+      "instance_id": 332,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of george louis i count of erbacherbach",
+        "what is the date of birth of george albert i count of erbachschnberg"
+      ]
+    },
+    {
+      "instance_id": 336,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of the miscellany news",
+        "when was vassar college founded"
+      ]
+    },
+    {
+      "instance_id": 338,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of zita of bourbonparma",
+        "what is the date of death of robert i duke of parma"
+      ]
+    },
+    {
+      "instance_id": 345,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of geoffrey denis erskine russell 4th baron ampthill",
+        "who is the father of john russell 3rd baron ampthill"
+      ]
+    },
+    {
+      "instance_id": 347,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of augusta marie of holsteingottorp",
+        "what is the date of death of frederick iii duke of holsteingottorp"
+      ]
+    },
+    {
+      "instance_id": 348,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of brenda brave",
+        "who is the mother of daniel bergman"
+      ]
+    },
+    {
+      "instance_id": 349,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of eva chamberlain",
+        "who is the mother of cosima wagner"
+      ]
+    },
+    {
+      "instance_id": 351,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the director of the monocle laughs"
+      ]
+    },
+    {
+      "instance_id": 353,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of marie anna of saxony",
+        "what is the date of birth of leopold ii grand duke of tuscany"
+      ]
+    },
+    {
+      "instance_id": 354,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of stella orlofi",
+        "who is the child of rhildur orleifsdttir"
+      ]
+    },
+    {
+      "instance_id": 356,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of harriet hemings",
+        "who is the father of sally hemings"
+      ]
+    },
+    {
+      "instance_id": 358,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of hieronim augustyn lubomirski",
+        "who is the mother of jerzy sebastian lubomirski"
+      ]
+    },
+    {
+      "instance_id": 359,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of princess stphanie of monaco",
+        "what is the date of death of grace kelly"
+      ]
+    },
+    {
+      "instance_id": 360,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of eduardo frei ruiztagle",
+        "what is the date of death of eduardo frei montalva"
+      ]
+    },
+    {
+      "instance_id": 364,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of film is it easy to be young",
+        "what is the date of death of juris podnieks"
+      ]
+    },
+    {
+      "instance_id": 367,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of rudolph de trafford",
+        "what is the date of birth of sir humphrey de trafford 3rd baronet"
+      ]
+    },
+    {
+      "instance_id": 374,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of george cochrane politician",
+        "what is the date of death of thomas cochrane 8th earl of dundonald"
+      ]
+    },
+    {
+      "instance_id": 379,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of bratuku teruvu",
+        "who is the spouse of p s ramakrishna rao"
+      ]
+    },
+    {
+      "instance_id": 383,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the publisher of hrriyet"
+      ]
+    },
+    {
+      "instance_id": 389,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of william henry hare hedgeswhite 3rd earl of bantry",
+        "who is the father of richard white 1st earl of bantry"
+      ]
+    },
+    {
+      "instance_id": 391,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of eochaid mac fiachnai",
+        "who is the father of fiachnae mac edo rin"
+      ]
+    },
+    {
+      "instance_id": 401,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the director of manamagan thevai"
+      ]
+    },
+    {
+      "instance_id": 402,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the publisher of national contest journal"
+      ]
+    },
+    {
+      "instance_id": 403,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of tribal college journal",
+        "when was american indian higher education consortium founded"
+      ]
+    },
+    {
+      "instance_id": 431,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of constance of burgundy",
+        "what is the date of death of duke robert i of burgundy"
+      ]
+    },
+    {
+      "instance_id": 434,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of florentine rost van tonningen",
+        "what is the date of death of meinoud rost van tonningen"
+      ]
+    },
+    {
+      "instance_id": 438,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of a midwinters tale",
+        "where did kenneth branagh graduate from"
+      ]
+    },
+    {
+      "instance_id": 440,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of big picture",
+        "who is the founder of wellcome trust"
+      ]
+    },
+    {
+      "instance_id": 444,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the spouse of archie pitt",
+        "what is the place of death of gracie fields"
+      ]
+    },
+    {
+      "instance_id": 454,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of paolo ruspoli 5th marquis of boadilla del monte",
+        "what is the date of death of camillo ruspoli 4th marquis of boadilla del monte"
+      ]
+    },
+    {
+      "instance_id": 455,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of henri de la trmoille",
+        "what is the date of death of claude de la trmoille"
+      ]
+    },
+    {
+      "instance_id": 464,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of tingxing ye",
+        "what is the date of birth of william e bell"
+      ]
+    },
+    {
+      "instance_id": 466,
+      "fold": "B",
+      "n_questions": 3,
+      "qkeys": [
+        "who is the director of skirts ahoy",
+        "what is the place of burial of sidney lanfield",
+        "what is the time zone of westwood village memorial park cemetery"
+      ]
+    },
+    {
+      "instance_id": 469,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the third wife of roy rogers",
+        "what year did roy rogers and dale evans star in a film directed by frank mcdonald"
+      ]
+    },
+    {
+      "instance_id": 475,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is selena quintanillaprezs assistant and head of her fan club",
+        "yolanda saldvar will be eligible for parole on what date"
+      ]
+    },
+    {
+      "instance_id": 487,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "which king made the 1925 birthday honours",
+        "in which year was george v born"
+      ]
+    },
+    {
+      "instance_id": 488,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the birthdate of chelsea peretti"
+      ]
+    },
+    {
+      "instance_id": 507,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "in what year did the guild of music supervisors awards recognize carol"
+      ]
+    },
+    {
+      "instance_id": 508,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "the duke steps out stars which actress",
+        "joan crawford was ranked tenth on a list of greatest female hollywood stars in what year"
+      ]
+    },
+    {
+      "instance_id": 572,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of alessandro ruspoli 9th prince of cerveteri",
+        "what is the date of death of francesco ruspoli 8th prince of cerveteri"
+      ]
+    },
+    {
+      "instance_id": 574,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of film night of the twelve",
+        "what is the date of birth of hans schweikart"
+      ]
+    },
+    {
+      "instance_id": 575,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "seven brief lessons on physics was written by which italian physicist",
+        "carlo rovelli has worked in france since what year"
+      ]
+    },
+    {
+      "instance_id": 577,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of richard francis smith",
+        "what is the date of death of henry abel smith"
+      ]
+    },
+    {
+      "instance_id": 579,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the date of birth of thomas ashton 2nd baron ashton of hyde"
+      ]
+    },
+    {
+      "instance_id": 583,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of prince aage count of rosenborg",
+        "what is the date of death of prince valdemar of denmark"
+      ]
+    },
+    {
+      "instance_id": 584,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of musbah bint nasser",
+        "what is the place of death of abdullah i of jordan"
+      ]
+    },
+    {
+      "instance_id": 597,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of magnus prince of anhaltkthen",
+        "what is the date of death of adolph i prince of anhaltkthen"
+      ]
+    },
+    {
+      "instance_id": 598,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of film break the news",
+        "what is the date of death of ren clair"
+      ]
+    },
+    {
+      "instance_id": 606,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the spouse of louis i prince of monaco",
+        "what is the date of death of catherine charlotte de gramont"
+      ]
+    },
+    {
+      "instance_id": 607,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of robert james petre",
+        "who is the mother of robert petre 7th baron petre"
+      ]
+    },
+    {
+      "instance_id": 608,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of philibert i duke of savoy",
+        "what is the date of death of yolande of valois"
+      ]
+    },
+    {
+      "instance_id": 610,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of dolores gangotena",
+        "what is the date of birth of camilo ponce enrquez"
+      ]
+    },
+    {
+      "instance_id": 612,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of eric i duke of schleswig",
+        "what is the date of death of king abel of denmark"
+      ]
+    },
+    {
+      "instance_id": 618,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of maria isabel de alcntara countess of iguau",
+        "what is the date of death of domitila de castro marchioness of santos"
+      ]
+    },
+    {
+      "instance_id": 622,
+      "fold": "B",
+      "n_questions": 3,
+      "qkeys": [
+        "who is the director of april showers",
+        "what is the place of death of james v kern",
+        "what is the time zone of encino"
+      ]
+    },
+    {
+      "instance_id": 623,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of charles mills 1st baron hillingdon",
+        "what is the date of death of sir charles mills 1st baronet"
+      ]
+    },
+    {
+      "instance_id": 625,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of film motherland hotel",
+        "what is the date of death of mer kavur"
+      ]
+    },
+    {
+      "instance_id": 634,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of abu mansur fulad sutun",
+        "who is the father of abu kalijar"
+      ]
+    },
+    {
+      "instance_id": 642,
+      "fold": "A",
+      "n_questions": 3,
+      "qkeys": [
+        "who is the mother of joan of navarre",
+        "what is the place of death of joan of france",
+        "what is the time zone of vreux"
+      ]
+    },
+    {
+      "instance_id": 645,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of nallavan vazhvan",
+        "what is the date of death of palaniyaandi neelakantan"
+      ]
+    },
+    {
+      "instance_id": 654,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of ernest courant",
+        "what is the date of birth of richard courant"
+      ]
+    },
+    {
+      "instance_id": 660,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of frederick christian i",
+        "what is the date of death of christian august duke of schleswigholsteinsonderburgaugustenburg"
+      ]
+    },
+    {
+      "instance_id": 706,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the husband of ebba busch thor",
+        "what is the date of birth of niklas busch thor"
+      ]
+    },
+    {
+      "instance_id": 709,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of philip ii margrave of badenbaden",
+        "what is the date of birth of mechthild of bavaria"
+      ]
+    },
+    {
+      "instance_id": 710,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of badi alzaman mirza",
+        "what is the date of death of husayn bayqara"
+      ]
+    },
+    {
+      "instance_id": 713,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the director of film liberated hands"
+      ]
+    },
+    {
+      "instance_id": 715,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of kontiki 1950 film",
+        "what is the date of birth of thor heyerdahl"
+      ]
+    },
+    {
+      "instance_id": 725,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of mercy",
+        "who is the mother of damian harris"
+      ]
+    },
+    {
+      "instance_id": 761,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of nia segamain",
+        "who is the father of adamair"
+      ]
+    },
+    {
+      "instance_id": 771,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of octavius vernon harcourt",
+        "what is the date of birth of edward venablesvernonharcourt"
+      ]
+    },
+    {
+      "instance_id": 781,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the mother of margaret of hereford"
+      ]
+    },
+    {
+      "instance_id": 783,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the date of death of john manners 2nd duke of rutland"
+      ]
+    },
+    {
+      "instance_id": 787,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of margaret clifford countess of cumberland",
+        "what is the place of burial of francis russell 2nd earl of bedford"
+      ]
+    },
+    {
+      "instance_id": 789,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of cross current",
+        "what is the date of death of tonino ricci"
+      ]
+    },
+    {
+      "instance_id": 792,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of cosima von blow pavoncelli",
+        "what is the date of death of claus von blow"
+      ]
+    },
+    {
+      "instance_id": 803,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the director of frozen assets"
+      ]
+    },
+    {
+      "instance_id": 810,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the mother of princess elonore of belgium",
+        "what is the date of birth of queen mathilde of belgium"
+      ]
+    },
+    {
+      "instance_id": 812,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of edward cromwell 3rd baron cromwell",
+        "what is the date of death of henry cromwell 2nd baron cromwell"
+      ]
+    },
+    {
+      "instance_id": 820,
+      "fold": "A",
+      "n_questions": 3,
+      "qkeys": [
+        "who is the director of bodens boy",
+        "what is the place of birth of henry edwards",
+        "what is the time zone of westonsupermare somerset"
+      ]
+    },
+    {
+      "instance_id": 834,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the author of hannibal and scipio",
+        "where did thomas nabbes study"
+      ]
+    },
+    {
+      "instance_id": 837,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of fanny bornedal",
+        "what is the place of birth of ole bornedal"
+      ]
+    },
+    {
+      "instance_id": 848,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the creator of the mud bath",
+        "where did david bomberg study"
+      ]
+    },
+    {
+      "instance_id": 854,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the author of elizabeth and after",
+        "where did matt cohen study"
+      ]
+    },
+    {
+      "instance_id": 865,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the spouse of caroline leroy",
+        "who is the child of daniel webster"
+      ]
+    },
+    {
+      "instance_id": 866,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the performer of bang bang rock roll",
+        "who is part of art brut"
+      ]
+    },
+    {
+      "instance_id": 869,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the political party of dimuthu bandara abayakoon",
+        "who is the founder of janatha vimukthi peramuna"
+      ]
+    },
+    {
+      "instance_id": 878,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the spouse of empress wang",
+        "who is the father of yang pu"
+      ]
+    },
+    {
+      "instance_id": 884,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the creator of ruby loftus screwing a breech ring",
+        "who is the spouse of laura knight"
+      ]
+    },
+    {
+      "instance_id": 887,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the cast member of ice bound a womans survival at the south pole",
+        "who is the child of susan sarandon"
+      ]
+    },
+    {
+      "instance_id": 888,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the author of one more time",
+        "who is the child of carol burnett"
+      ]
+    },
+    {
+      "instance_id": 896,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the father of alice clere",
+        "who is the father of william boleyn"
+      ]
+    },
+    {
+      "instance_id": 901,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the performer of terminator",
+        "who is the spouse of arnold schwarzenegger"
+      ]
+    },
+    {
+      "instance_id": 905,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the father of frances freeling broderip"
+      ]
+    },
+    {
+      "instance_id": 907,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who played susan walker in miracle on 34th street",
+        "who is the sibling of natalie wood"
+      ]
+    },
+    {
+      "instance_id": 911,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "the father of chiang hsiaochang was who",
+        "who is the child of chiang chingkuo"
+      ]
+    },
+    {
+      "instance_id": 917,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who sponsored the resolution to reopen trade with vietnam along with kerry",
+        "who is the child of john mccain"
+      ]
+    },
+    {
+      "instance_id": 927,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who ran against obama in his first election"
+      ]
+    },
+    {
+      "instance_id": 934,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who plays nim in return to nims island",
+        "who is the mother of bindi irwin"
+      ]
+    },
+    {
+      "instance_id": 936,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "who is the father of bindi irwin"
+      ]
+    },
+    {
+      "instance_id": 941,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who has been the longest reigning british monarch",
+        "who is the spouse of elizabeth ii"
+      ]
+    },
+    {
+      "instance_id": 950,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "in which administrative territorial entity is holley located"
+      ]
+    },
+    {
+      "instance_id": 953,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "where is the headquarters of southern maryland electric cooperative",
+        "in which administrative territorial entity is hughesville located"
+      ]
+    },
+    {
+      "instance_id": 954,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "in which administrative territorial entity is kimbrough memorial stadium located",
+        "in which administrative territorial entity is canyon located"
+      ]
+    },
+    {
+      "instance_id": 955,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "in which administrative territorial entity is whiston located",
+        "what is the time zone of knowsley"
+      ]
+    },
+    {
+      "instance_id": 957,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of orleans county"
+      ]
+    },
+    {
+      "instance_id": 958,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the place of birth of tim dubois",
+        "in which administrative territorial entity is southwest city located"
+      ]
+    },
+    {
+      "instance_id": 959,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the publisher of in the shadow of greatness",
+        "where is the headquarters of united states naval institute"
+      ]
+    },
+    {
+      "instance_id": 961,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of charles county"
+      ]
+    },
+    {
+      "instance_id": 962,
+      "fold": "B",
+      "n_questions": 3,
+      "qkeys": [
+        "what is the place of birth of mark dismore",
+        "in which administrative territorial entity is greenfield located",
+        "what is the time zone of hancock county"
+      ]
+    },
+    {
+      "instance_id": 964,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of mcdonald county"
+      ]
+    },
+    {
+      "instance_id": 965,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the place of birth of larkin i smith",
+        "in which administrative territorial entity is poplarville located"
+      ]
+    },
+    {
+      "instance_id": 966,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the place of birth of erik hort",
+        "in which administrative territorial entity is montebello located"
+      ]
+    },
+    {
+      "instance_id": 967,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the author of marcinkus",
+        "what is the place of birth of tom flannery"
+      ]
+    },
+    {
+      "instance_id": 968,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the place of birth of james finch",
+        "in which administrative territorial entity is lynn haven located"
+      ]
+    },
+    {
+      "instance_id": 969,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of bay county"
+      ]
+    },
+    {
+      "instance_id": 970,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of annapolis"
+      ]
+    },
+    {
+      "instance_id": 971,
+      "fold": "A",
+      "n_questions": 2,
+      "qkeys": [
+        "who submitted the first version of the equal rights amendment to congress in 1923",
+        "what is the place of birth of alice paul"
+      ]
+    },
+    {
+      "instance_id": 972,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "what is the place of birth of gerald t whelan",
+        "in which administrative territorial entity is hastings located"
+      ]
+    },
+    {
+      "instance_id": 973,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "who formed and started the national womens party"
+      ]
+    },
+    {
+      "instance_id": 974,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of rockland county"
+      ]
+    },
+    {
+      "instance_id": 975,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of scranton"
+      ]
+    },
+    {
+      "instance_id": 976,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of mount laurel township"
+      ]
+    },
+    {
+      "instance_id": 977,
+      "fold": "A",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of pearl river county"
+      ]
+    },
+    {
+      "instance_id": 979,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of adams county"
+      ]
+    },
+    {
+      "instance_id": 992,
+      "fold": "B",
+      "n_questions": 2,
+      "qkeys": [
+        "who is the director of romulus and the sabines",
+        "what is the place of death of richard pottier"
+      ]
+    },
+    {
+      "instance_id": 993,
+      "fold": "B",
+      "n_questions": 1,
+      "qkeys": [
+        "what is the time zone of randall county"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "0.0",
+      "qkey": "salisbury woodland gardens links a zoo with which park",
+      "instance_id": 0,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "0.1",
+      "qkey": "stanley park is designed and built under the watchful eye of who",
+      "instance_id": 0,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "1.0",
+      "qkey": "who is the actress that plays kaylee frye in the series firefly",
+      "instance_id": 1,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "1.1",
+      "qkey": "jewel staite also stars with alan dale in a scifi tv film released in what year",
+      "instance_id": 1,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "2.0",
+      "qkey": "which 2016 film featuring the voice of townsend coleman",
+      "instance_id": 2,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "2.1",
+      "qkey": "who directed and wrote sing 2016 american film",
+      "instance_id": 2,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "3.0",
+      "qkey": "charles barkley changed his jersey number to 32 in honor of which player",
+      "instance_id": 3,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "3.1",
+      "qkey": "magic johnson was born in which year",
+      "instance_id": 3,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "4.1",
+      "qkey": "what year was boss bailey drafted",
+      "instance_id": 4,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "5.0",
+      "qkey": "tefik selim mborja was a part of which party",
+      "instance_id": 5,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "5.1",
+      "qkey": "albanian fascist party held power in albania until what year",
+      "instance_id": 5,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "6.0",
+      "qkey": "kam heskin plays paige morgan in which 2004 film",
+      "instance_id": 6,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "6.1",
+      "qkey": "the prince and me is directed by who",
+      "instance_id": 6,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "7.0",
+      "qkey": "which actor played colonel sherman t potter in mash",
+      "instance_id": 7,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "7.1",
+      "qkey": "what role did harry morgan play in kentucky jones",
+      "instance_id": 7,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "8.0",
+      "qkey": "operation light house was an experiment by wernher von braun and which man",
+      "instance_id": 8,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "8.1",
+      "qkey": "walter dornberger was born in what year",
+      "instance_id": 8,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "9.1",
+      "qkey": "who is the author of henry v",
+      "instance_id": 9,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "10.0",
+      "qkey": "three men on a horse is a play by which playwright",
+      "instance_id": 10,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "10.1",
+      "qkey": "george abbott is born in which year",
+      "instance_id": 10,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "11.0",
+      "qkey": "who is the mathematician husband of anneli cahn lax",
+      "instance_id": 11,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "11.1",
+      "qkey": "in what year was peter lax born",
+      "instance_id": 11,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "12.0",
+      "qkey": "who is the star of lady in a cage",
+      "instance_id": 12,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "12.1",
+      "qkey": "olivia de havilland was born in what year",
+      "instance_id": 12,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "13.0",
+      "qkey": "rejuvelac is kind of grain water invented and promoted by which holistic health practitioner",
+      "instance_id": 13,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "13.1",
+      "qkey": "ann wigmore was born in which year",
+      "instance_id": 13,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "14.1",
+      "qkey": "barbara bach married what former member of the beatles",
+      "instance_id": 14,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "15.0",
+      "qkey": "the 2015 austrian thriller film jack tells the story of which serial killer",
+      "instance_id": 15,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "15.1",
+      "qkey": "jack unterweger died in what year",
+      "instance_id": 15,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "16.0",
+      "qkey": "who is the actor appeared on charlottes shorts and weeds",
+      "instance_id": 16,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "16.1",
+      "qkey": "gary anthony williams was born in what year",
+      "instance_id": 16,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "17.0",
+      "qkey": "marvel classics comics specialized in adaptations of literary classics such as which novel",
+      "instance_id": 17,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "17.1",
+      "qkey": "mobydick by american writer herman melville was published in what year",
+      "instance_id": 17,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "24.0",
+      "qkey": "which actor starred in the tv land original series the soul man",
+      "instance_id": 24,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "24.1",
+      "qkey": "in what year did cedric the entertainer host the black movie awards",
+      "instance_id": 24,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "25.0",
+      "qkey": "the dogwoman telemovies were created by which actress",
+      "instance_id": 25,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "25.1",
+      "qkey": "magda szubanski was born in what year",
+      "instance_id": 25,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "26.0",
+      "qkey": "which actress was starred in streak with rumer willis",
+      "instance_id": 26,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "26.1",
+      "qkey": "in what year was brittany snow born",
+      "instance_id": 26,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "27.0",
+      "qkey": "rock springs is a collection of short stories by which author",
+      "instance_id": 27,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "27.1",
+      "qkey": "richard ford is born in what year",
+      "instance_id": 27,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "28.0",
+      "qkey": "who is the father of princess mafalda of savoy",
+      "instance_id": 28,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "28.1",
+      "qkey": "when was victor emmanuel iii of italy born",
+      "instance_id": 28,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "29.0",
+      "qkey": "who is acting jack from while you were sleeping",
+      "instance_id": 29,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "29.1",
+      "qkey": "bill pullman was born in what year",
+      "instance_id": 29,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "30.0",
+      "qkey": "which british author wrote the novel on which here we go round the mulberry bush was based",
+      "instance_id": 30,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "30.1",
+      "qkey": "when was hunter davies born",
+      "instance_id": 30,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "31.0",
+      "qkey": "what is the largest convention center in the us state of georgia",
+      "instance_id": 31,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "31.1",
+      "qkey": "what year did georgia world congress center open",
+      "instance_id": 31,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "32.0",
+      "qkey": "who is the danish chemist famous for the introduction of the concept of ph",
+      "instance_id": 32,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "32.1",
+      "qkey": "in what year did the danish plant ecologist who assisted s p l srensen die",
+      "instance_id": 32,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "33.0",
+      "qkey": "who was kalanipauahis niece",
+      "instance_id": 33,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "33.1",
+      "qkey": "who was bernice pauahi bishops husband",
+      "instance_id": 33,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "34.0",
+      "qkey": "which american short slasher film with frenchspeaking serial killers was released on october 31 2011",
+      "instance_id": 34,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "34.1",
+      "qkey": "when was the director of maniac born",
+      "instance_id": 34,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "35.0",
+      "qkey": "what is the 1994 american animated epic musical film which mel shaw animated",
+      "instance_id": 35,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "35.1",
+      "qkey": "who was the producer of the lion king",
+      "instance_id": 35,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "37.1",
+      "qkey": "who created the 2003 remake of spy hunter",
+      "instance_id": 37,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "38.0",
+      "qkey": "what is the film that centered on the fictional barden university and the bellas",
+      "instance_id": 38,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "38.1",
+      "qkey": "what is the name of the character portrayed by anna camp in pitch perfect 2",
+      "instance_id": 38,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "41.0",
+      "qkey": "what was christopher nolans magicthemed drama",
+      "instance_id": 41,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "41.1",
+      "qkey": "what year did the prestige film come out",
+      "instance_id": 41,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "42.1",
+      "qkey": "when did jessie 2011 tv series end",
+      "instance_id": 42,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "43.0",
+      "qkey": "who is the american lawyer lobbyist and political consultant who was a senior member of the presidential campaign of donald trump",
+      "instance_id": 43,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "43.1",
+      "qkey": "when was paul manafort born",
+      "instance_id": 43,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "45.1",
+      "qkey": "short circuit had a follow up sequel released in what year",
+      "instance_id": 45,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "46.0",
+      "qkey": "what is the upcoming british drama film directed by dominic cooke",
+      "instance_id": 46,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "46.1",
+      "qkey": "who will billy howle be seen opposite in on chesil beach film",
+      "instance_id": 46,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "48.0",
+      "qkey": "an cat dubh into the heart is a song from which u2 album",
+      "instance_id": 48,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "48.1",
+      "qkey": "boy album was released on what date",
+      "instance_id": 48,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "50.0",
+      "qkey": "who is the person known as the wild woman of buttle",
+      "instance_id": 50,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "50.1",
+      "qkey": "who is the psychologist who wrote about the disciple of mary maclane",
+      "instance_id": 50,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "51.0",
+      "qkey": "georgia rickard contributed in which american healthy lifestyle magazine",
+      "instance_id": 51,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "51.1",
+      "qkey": "what year was prevention started",
+      "instance_id": 51,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "54.1",
+      "qkey": "the grudge 2 was produced by which american film actor",
+      "instance_id": 54,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "56.0",
+      "qkey": "who is the actor that starred in death in paradise",
+      "instance_id": 56,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "56.1",
+      "qkey": "what character in father ted was played by ardal ohanlon",
+      "instance_id": 56,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "58.1",
+      "qkey": "what screenwriter with credits for evolution cowrote the family man",
+      "instance_id": 58,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "61.0",
+      "qkey": "which band did the song what lovers do",
+      "instance_id": 61,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "61.1",
+      "qkey": "who is the current drummer of maroon 5",
+      "instance_id": 61,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "62.0",
+      "qkey": "the third solo album by david gates of bread shares a name with which 1977 film",
+      "instance_id": 62,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "62.1",
+      "qkey": "goodbye girl was directed by who",
+      "instance_id": 62,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "63.0",
+      "qkey": "in which division cleveland browns placed fourth in 2009",
+      "instance_id": 63,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "63.1",
+      "qkey": "in which year did afc north adopt its current name",
+      "instance_id": 63,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "66.1",
+      "qkey": "when would wwe 2k18 be released",
+      "instance_id": 66,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "67.1",
+      "qkey": "masakazu katsura was born in what year",
+      "instance_id": 67,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "69.0",
+      "qkey": "which english inventor developed the richard hornsby sons oil engine",
+      "instance_id": 69,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "69.1",
+      "qkey": "what is the date of birth of herbert akroyd stuart",
+      "instance_id": 69,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "70.1",
+      "qkey": "on what date will the comedy film directed by kevin tent and starring nina dobrev be released on video on demand services",
+      "instance_id": 70,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "71.0",
+      "qkey": "which movement hans knirsch was an activist for",
+      "instance_id": 71,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "71.1",
+      "qkey": "what date did austrian national socialism officially gain traction",
+      "instance_id": 71,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "76.0",
+      "qkey": "which nbc sitcom johnny pemberton appears in as the character bo thompson",
+      "instance_id": 76,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "76.1",
+      "qkey": "who created superstore",
+      "instance_id": 76,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "77.0",
+      "qkey": "who is the architect of hook and ladder no 4 located in albany ny",
+      "instance_id": 77,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "77.1",
+      "qkey": "who was the brother of marcus t reynolds",
+      "instance_id": 77,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "81.0",
+      "qkey": "who was the plaintiff in the 1892 barbed wire patent case",
+      "instance_id": 81,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "81.1",
+      "qkey": "when was joseph glidden born",
+      "instance_id": 81,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "87.0",
+      "qkey": "which former indian cricketer made his odi debuts during the 2000 icc knockout trophy",
+      "instance_id": 87,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "87.1",
+      "qkey": "when was zaheer khan born",
+      "instance_id": 87,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "99.0",
+      "qkey": "luke null is an actor on which program",
+      "instance_id": 99,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "99.1",
+      "qkey": "saturday night live premiered its 43rd season on which date",
+      "instance_id": 99,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "100.0",
+      "qkey": "charlie mcdermott plays axl heck on which tv show",
+      "instance_id": 100,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "100.1",
+      "qkey": "the middle tv series premiered in what date",
+      "instance_id": 100,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "109.0",
+      "qkey": "what is the company that sponsors the cfl game of the week",
+      "instance_id": 109,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "109.1",
+      "qkey": "who founded wendys",
+      "instance_id": 109,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "116.0",
+      "qkey": "what is the rank held by sir charles comyn egertong",
+      "instance_id": 116,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "116.1",
+      "qkey": "sinch when has field marshal united kingdom been the highest in the british army",
+      "instance_id": 116,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "117.0",
+      "qkey": "angelspit toured the united states with which american electronic music duo from orlando florida",
+      "instance_id": 117,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "117.1",
+      "qkey": "blood on the dance floor formed in what year",
+      "instance_id": 117,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "130.0",
+      "qkey": "which irish entertainer is in the girl band maxi dick and twink",
+      "instance_id": 130,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "130.1",
+      "qkey": "what is the name of the daughter of adele king",
+      "instance_id": 130,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "131.0",
+      "qkey": "what is the song that some critics compared to fading with",
+      "instance_id": 131,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "131.1",
+      "qkey": "what year was take a bow rihanna song released",
+      "instance_id": 131,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "145.0",
+      "qkey": "who is the author of cock and bull",
+      "instance_id": 145,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "145.1",
+      "qkey": "what year was will self born",
+      "instance_id": 145,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "154.0",
+      "qkey": "who is the mother of mary tudor",
+      "instance_id": 154,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "154.1",
+      "qkey": "who is the mother of elizabeth of york",
+      "instance_id": 154,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "155.0",
+      "qkey": "who is the publisher of the rip off review of western culture",
+      "instance_id": 155,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "155.1",
+      "qkey": "when was rip off press founded",
+      "instance_id": 155,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "157.1",
+      "qkey": "coldplay formed in what year",
+      "instance_id": 157,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "158.0",
+      "qkey": "francisco jose hernandez was a participant in which invasion",
+      "instance_id": 158,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "158.1",
+      "qkey": "bay of pigs invasion took place in what year",
+      "instance_id": 158,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "159.0",
+      "qkey": "who is the publisher of bellingham review",
+      "instance_id": 159,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "159.1",
+      "qkey": "when was western washington university founded",
+      "instance_id": 159,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "160.0",
+      "qkey": "who is the father of josephandr taschereau",
+      "instance_id": 160,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "160.1",
+      "qkey": "who is the father of thomaspierrejoseph taschereau",
+      "instance_id": 160,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "161.0",
+      "qkey": "who is the publisher of hrriyet daily news",
+      "instance_id": 161,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "161.1",
+      "qkey": "when was doan media founded",
+      "instance_id": 161,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "162.0",
+      "qkey": "who is the publisher of africa renewal",
+      "instance_id": 162,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "162.1",
+      "qkey": "when was united nations founded",
+      "instance_id": 162,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "163.0",
+      "qkey": "who is the publisher of qst",
+      "instance_id": 163,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "163.1",
+      "qkey": "when was american radio relay league founded",
+      "instance_id": 163,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "165.0",
+      "qkey": "who is the director of operation gold ingot",
+      "instance_id": 165,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "165.1",
+      "qkey": "who is the mother of georges lautner",
+      "instance_id": 165,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "166.0",
+      "qkey": "who is the director of my 20th century",
+      "instance_id": 166,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "166.1",
+      "qkey": "who is the father of ildik enyedi",
+      "instance_id": 166,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "167.0",
+      "qkey": "who is the father of hugh montgomerie 7th earl of eglinton",
+      "instance_id": 167,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "167.1",
+      "qkey": "who is the mother of alexander montgomerie 6th earl of eglinton",
+      "instance_id": 167,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "168.0",
+      "qkey": "who is the mother of prince nikolai of denmark",
+      "instance_id": 168,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "168.1",
+      "qkey": "what is the date of birth of alexandra countess of frederiksborg",
+      "instance_id": 168,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "169.0",
+      "qkey": "who is the father of princess feodora of denmark",
+      "instance_id": 169,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "169.1",
+      "qkey": "what is the date of birth of prince harald of denmark",
+      "instance_id": 169,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "170.0",
+      "qkey": "who is the mother of duchess marie gabrielle in bavaria",
+      "instance_id": 170,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "170.1",
+      "qkey": "what is the date of birth of infanta maria josepha of portugal",
+      "instance_id": 170,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "171.0",
+      "qkey": "who is the father of mel ruanaid mac donnchada midi",
+      "instance_id": 171,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "171.1",
+      "qkey": "who is the father of donnchad midi",
+      "instance_id": 171,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "172.0",
+      "qkey": "who is the father of ahmosehenutemipet",
+      "instance_id": 172,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "172.1",
+      "qkey": "who is the father of seqenenre tao",
+      "instance_id": 172,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "173.0",
+      "qkey": "who is the mother of landgravine marie louise of hessekassel",
+      "instance_id": 173,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "173.1",
+      "qkey": "what is the date of death of maria amalia of courland",
+      "instance_id": 173,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "174.0",
+      "qkey": "who is the mother of robert count of burgundy",
+      "instance_id": 174,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "174.1",
+      "qkey": "what is the date of death of mahaut countess of artois",
+      "instance_id": 174,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "175.0",
+      "qkey": "who is the father of ferdinand maximilian of badenbaden",
+      "instance_id": 175,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "175.1",
+      "qkey": "who is the father of william margrave of badenbaden",
+      "instance_id": 175,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "176.0",
+      "qkey": "who is the mother of catherine of foix countess of candale",
+      "instance_id": 176,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "176.1",
+      "qkey": "what is the date of birth of eleanor of navarre",
+      "instance_id": 176,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "177.0",
+      "qkey": "who is the father of william louis of anhaltharzgerode",
+      "instance_id": 177,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "177.1",
+      "qkey": "what is the date of death of frederick prince of anhaltharzgerode",
+      "instance_id": 177,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "178.0",
+      "qkey": "who is the mother of viacheslav i of kiev",
+      "instance_id": 178,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "178.1",
+      "qkey": "who is the father of gytha of wessex",
+      "instance_id": 178,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "179.0",
+      "qkey": "who is the father of duleep singh",
+      "instance_id": 179,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "179.1",
+      "qkey": "what is the date of death of maharaja ranjit singh",
+      "instance_id": 179,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "180.0",
+      "qkey": "who is the mother of richard de clare 6th earl of gloucester",
+      "instance_id": 180,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "180.1",
+      "qkey": "what is the date of death of isabel marshal",
+      "instance_id": 180,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "181.0",
+      "qkey": "who is the father of bill patterson",
+      "instance_id": 181,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "181.1",
+      "qkey": "what is the date of death of gerald patterson",
+      "instance_id": 181,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "182.0",
+      "qkey": "who is the director of little joe",
+      "instance_id": 182,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "182.1",
+      "qkey": "who is the father of jessica hausner",
+      "instance_id": 182,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "183.0",
+      "qkey": "who is the performer of everybody needs a best friend",
+      "instance_id": 183,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "183.1",
+      "qkey": "who is the father of norah jones",
+      "instance_id": 183,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "184.0",
+      "qkey": "who is the father of sara ali khan",
+      "instance_id": 184,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "184.1",
+      "qkey": "who is the spouse of saif ali khan",
+      "instance_id": 184,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "185.0",
+      "qkey": "who is the father of edsel bryant ford ii",
+      "instance_id": 185,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "185.1",
+      "qkey": "who is the father of henry ford ii",
+      "instance_id": 185,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "186.0",
+      "qkey": "who is the director of snake in the eagles shadow",
+      "instance_id": 186,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "186.1",
+      "qkey": "who is the father of yuen wooping",
+      "instance_id": 186,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "187.0",
+      "qkey": "who is the father of chiang hsiaowu",
+      "instance_id": 187,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "187.1",
+      "qkey": "who is the father of chiang chingkuo",
+      "instance_id": 187,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "188.0",
+      "qkey": "who is the child of victoria josefa dolores catalina sackville",
+      "instance_id": 188,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "188.1",
+      "qkey": "who is the spouse of vita sackvillewest",
+      "instance_id": 188,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "189.0",
+      "qkey": "who is the father of baha aldawla",
+      "instance_id": 189,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "189.1",
+      "qkey": "who is the father of adud aldawla",
+      "instance_id": 189,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "190.0",
+      "qkey": "who is the director of sorority house",
+      "instance_id": 190,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "190.1",
+      "qkey": "who is the spouse of john farrow",
+      "instance_id": 190,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "191.0",
+      "qkey": "who is the father of hugh cholmondeley 1st earl of cholmondeley",
+      "instance_id": 191,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "191.1",
+      "qkey": "who is the mother of robert cholmondeley 1st viscount cholmondeley",
+      "instance_id": 191,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "193.1",
+      "qkey": "who is the father of yujiul yucheng",
+      "instance_id": 193,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "194.1",
+      "qkey": "what is the date of birth of sir henry st johnmildmay 3rd baronet",
+      "instance_id": 194,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "195.0",
+      "qkey": "who is the father of alexandre berthier 3rd prince of wagram",
+      "instance_id": 195,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "195.1",
+      "qkey": "who is the father of napolon alexandre berthier",
+      "instance_id": 195,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "196.0",
+      "qkey": "who is the mother of alphonse jourdain",
+      "instance_id": 196,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "196.1",
+      "qkey": "who is the mother of elvira of castile",
+      "instance_id": 196,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "198.0",
+      "qkey": "who is the performer of ill come running back to you",
+      "instance_id": 198,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "198.1",
+      "qkey": "what is the place of death of sam cooke",
+      "instance_id": 198,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "198.2",
+      "qkey": "what is the time zone of los angeles california",
+      "instance_id": 198,
+      "hop_idx": 2,
+      "fold": "A"
+    },
+    {
+      "id": "199.0",
+      "qkey": "who is the publisher of eye to the telescope",
+      "instance_id": 199,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "199.1",
+      "qkey": "when was science fiction poetry association founded",
+      "instance_id": 199,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "200.0",
+      "qkey": "who is the father of humphrey de bohun 2nd earl of hereford",
+      "instance_id": 200,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "200.1",
+      "qkey": "what is the date of death of henry de bohun 1st earl of hereford",
+      "instance_id": 200,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "202.0",
+      "qkey": "who is the father of raoul i of brienne count of eu",
+      "instance_id": 202,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "202.1",
+      "qkey": "what is the date of death of john ii of brienne count of eu",
+      "instance_id": 202,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "203.0",
+      "qkey": "who is the director of fireeater",
+      "instance_id": 203,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "203.1",
+      "qkey": "who is the spouse of pirjo honkasalo",
+      "instance_id": 203,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "205.0",
+      "qkey": "who is the father of princess isabelle of orlans",
+      "instance_id": 205,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "205.1",
+      "qkey": "what is the date of death of jean duke of guise",
+      "instance_id": 205,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "206.0",
+      "qkey": "who is the father of charles joseph kelly monck 3rd viscount monck",
+      "instance_id": 206,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "206.1",
+      "qkey": "who is the father of charles monck 1st viscount monck",
+      "instance_id": 206,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "207.0",
+      "qkey": "who is the father of philipp duke of saxemerseburglauchstdt",
+      "instance_id": 207,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "207.1",
+      "qkey": "what is the date of death of christian i duke of saxemerseburg",
+      "instance_id": 207,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "208.0",
+      "qkey": "who is the spouse of ove robert aunli",
+      "instance_id": 208,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "208.1",
+      "qkey": "who is the father of berit aunli",
+      "instance_id": 208,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "209.1",
+      "qkey": "who is the father of dale earnhardt",
+      "instance_id": 209,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "210.0",
+      "qkey": "who is the father of catherine of guelders",
+      "instance_id": 210,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "210.1",
+      "qkey": "what is the date of death of arnold duke of guelders",
+      "instance_id": 210,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "212.0",
+      "qkey": "who is the husband of maria of austria duchess of jlichclevesberg",
+      "instance_id": 212,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "212.1",
+      "qkey": "what is the date of birth of william duke of jlichclevesberg",
+      "instance_id": 212,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "213.0",
+      "qkey": "who is the director of the invisible menace",
+      "instance_id": 213,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "215.0",
+      "qkey": "who is the father of carlo i cybomalaspina",
+      "instance_id": 215,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "215.1",
+      "qkey": "what is the date of death of alderano cybomalaspina",
+      "instance_id": 215,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "216.0",
+      "qkey": "who is the mother of philip of ibelin",
+      "instance_id": 216,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "216.1",
+      "qkey": "who is the mother of maria komnene",
+      "instance_id": 216,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "218.0",
+      "qkey": "who is the composer of durval discos",
+      "instance_id": 218,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "218.1",
+      "qkey": "who is the father of andr abujamra",
+      "instance_id": 218,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "219.0",
+      "qkey": "who is the father of mervyn tuchet 4th earl of castlehaven",
+      "instance_id": 219,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "219.1",
+      "qkey": "who is the mother of mervyn tuchet 2nd earl of castlehaven",
+      "instance_id": 219,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "220.0",
+      "qkey": "who is the father of anthony william fairbank edwards",
+      "instance_id": 220,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "220.1",
+      "qkey": "what is the date of birth of harold c edwards",
+      "instance_id": 220,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "221.0",
+      "qkey": "who is the husband of susanne porsche",
+      "instance_id": 221,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "221.1",
+      "qkey": "what is the date of birth of wolfgang porsche",
+      "instance_id": 221,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "223.0",
+      "qkey": "who is the father of john tufton 2nd baron hothfield",
+      "instance_id": 223,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "223.1",
+      "qkey": "what is the date of death of henry tufton 1st baron hothfield",
+      "instance_id": 223,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "224.0",
+      "qkey": "who is the director of cop or hood",
+      "instance_id": 224,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "225.0",
+      "qkey": "who is the director of roses from the south",
+      "instance_id": 225,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "225.1",
+      "qkey": "what nationality is franz antel",
+      "instance_id": 225,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "226.0",
+      "qkey": "who is the father of hugh i 1057 august 29 1093 was duke of burgundy",
+      "instance_id": 226,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "226.1",
+      "qkey": "what is the place of death of henry of burgundy",
+      "instance_id": 226,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "227.0",
+      "qkey": "who is the father of tala mi thiri",
+      "instance_id": 227,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "227.1",
+      "qkey": "what is the place of death of binnya u",
+      "instance_id": 227,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "229.1",
+      "qkey": "what is the date of death of john cecil 5th earl of exeter",
+      "instance_id": 229,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "230.0",
+      "qkey": "who is the father of ludwig gruno of hessehomburg",
+      "instance_id": 230,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "230.1",
+      "qkey": "what is the date of birth of frederick iii landgrave of hessehomburg",
+      "instance_id": 230,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "231.0",
+      "qkey": "who is the composer of oomana thinkal",
+      "instance_id": 231,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "231.1",
+      "qkey": "what is the date of death of m b sreenivasan",
+      "instance_id": 231,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "232.0",
+      "qkey": "who is the director of film war italian style",
+      "instance_id": 232,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "232.1",
+      "qkey": "what is the date of birth of luigi scattini",
+      "instance_id": 232,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "235.0",
+      "qkey": "who is the director of american woman",
+      "instance_id": 235,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "235.1",
+      "qkey": "who is the father of jake scott",
+      "instance_id": 235,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "237.0",
+      "qkey": "who is the mother of dakota mayi johnson",
+      "instance_id": 237,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "237.1",
+      "qkey": "who is the mother of melanie griffith",
+      "instance_id": 237,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "238.0",
+      "qkey": "who is the founder of suez canal company",
+      "instance_id": 238,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "238.1",
+      "qkey": "what is the date of birth of ferdinand de lesseps",
+      "instance_id": 238,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "242.0",
+      "qkey": "who is the husband of margarete weikirchner",
+      "instance_id": 242,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "242.1",
+      "qkey": "what is the date of birth of count philipp i of hanaumnzenberg",
+      "instance_id": 242,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "244.0",
+      "qkey": "who is the father of mary of teck",
+      "instance_id": 244,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "244.1",
+      "qkey": "what is the date of birth of francis duke of teck",
+      "instance_id": 244,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "245.0",
+      "qkey": "who is the father of napier sturt 3rd baron alington",
+      "instance_id": 245,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "245.1",
+      "qkey": "what is the date of birth of humphrey sturt 2nd baron alington",
+      "instance_id": 245,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "247.0",
+      "qkey": "who is the director of la cage aux folles 3 the wedding",
+      "instance_id": 247,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "248.0",
+      "qkey": "who is the husband of stephanie von hohenlohe",
+      "instance_id": 248,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "248.1",
+      "qkey": "what is the date of birth of friedrich franz von hohenlohewaldenburgschillingsfrst",
+      "instance_id": 248,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "249.0",
+      "qkey": "who is the father of john annesley 4th earl of anglesey",
+      "instance_id": 249,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "249.1",
+      "qkey": "what is the date of death of james annesley 2nd earl of anglesey",
+      "instance_id": 249,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "251.0",
+      "qkey": "who is the father of edward wingfield 2nd viscount powerscourt",
+      "instance_id": 251,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "251.1",
+      "qkey": "who is the mother of richard wingfield 1st viscount powerscourt",
+      "instance_id": 251,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "252.0",
+      "qkey": "who is the father of mirza farkhunda shah",
+      "instance_id": 252,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "252.1",
+      "qkey": "what is the date of death of bahadur shah ii",
+      "instance_id": 252,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "254.0",
+      "qkey": "who is the father of mehmed i",
+      "instance_id": 254,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "254.1",
+      "qkey": "who is the mother of bayezid i",
+      "instance_id": 254,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "255.0",
+      "qkey": "who is the father of hj akitoki",
+      "instance_id": 255,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "255.1",
+      "qkey": "who is the father of kanezawa sanetoki",
+      "instance_id": 255,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "256.0",
+      "qkey": "who is the director of the cup",
+      "instance_id": 256,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "256.1",
+      "qkey": "who is the father of khyentse norbu",
+      "instance_id": 256,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "260.0",
+      "qkey": "who is the husband of tatiana tolstoypaus",
+      "instance_id": 260,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "260.1",
+      "qkey": "what is the date of death of herman paus",
+      "instance_id": 260,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "265.0",
+      "qkey": "who is the husband of sissel langenielsen",
+      "instance_id": 265,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "265.1",
+      "qkey": "what is the date of death of trygve langenielsen",
+      "instance_id": 265,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "266.0",
+      "qkey": "who is the publisher of american scientist",
+      "instance_id": 266,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "266.1",
+      "qkey": "when was sigma xi founded",
+      "instance_id": 266,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "268.0",
+      "qkey": "who is the director of slap her shes french",
+      "instance_id": 268,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "268.1",
+      "qkey": "what is the date of birth of melanie mayron",
+      "instance_id": 268,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "269.0",
+      "qkey": "who is the mother of vyacheslav yaroslavich",
+      "instance_id": 269,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "269.1",
+      "qkey": "who is the father of ingegerd olofsdotter of sweden",
+      "instance_id": 269,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "270.0",
+      "qkey": "who is the father of philip iii of namur",
+      "instance_id": 270,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "270.1",
+      "qkey": "what is the date of death of john i marquis of namur",
+      "instance_id": 270,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "271.1",
+      "qkey": "who is the mother of william paulet 3rd marquess of winchester",
+      "instance_id": 271,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "273.0",
+      "qkey": "who is the director of dino ki dulhaniya",
+      "instance_id": 273,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "273.1",
+      "qkey": "who is the father of mehreen jabbar",
+      "instance_id": 273,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "275.0",
+      "qkey": "who is the father of abaqa khan",
+      "instance_id": 275,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "275.1",
+      "qkey": "who is the mother of hulagu khan",
+      "instance_id": 275,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "276.0",
+      "qkey": "who is the father of ollom fotla",
+      "instance_id": 276,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "276.1",
+      "qkey": "who is the father of fachu fnscothach",
+      "instance_id": 276,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "278.0",
+      "qkey": "who is the director of hanneles journey to heaven",
+      "instance_id": 278,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "278.1",
+      "qkey": "who is the spouse of urban gad",
+      "instance_id": 278,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "280.0",
+      "qkey": "who is the father of james tuchet 5th earl of castlehaven",
+      "instance_id": 280,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "280.1",
+      "qkey": "who is the mother of mervyn tuchet 4th earl of castlehaven",
+      "instance_id": 280,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "281.0",
+      "qkey": "who is the father of sun luyu",
+      "instance_id": 281,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "281.1",
+      "qkey": "who is the father of sun quan",
+      "instance_id": 281,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "287.0",
+      "qkey": "who is the father of euphemia ii countess of ross",
+      "instance_id": 287,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "287.1",
+      "qkey": "who is the father of alexander leslie earl of ross",
+      "instance_id": 287,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "288.0",
+      "qkey": "who is the father of leopold david de rothschild",
+      "instance_id": 288,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "288.1",
+      "qkey": "what is the date of death of lionel nathan de rothschild",
+      "instance_id": 288,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "292.0",
+      "qkey": "who is the director of p solsiden",
+      "instance_id": 292,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "292.1",
+      "qkey": "who is the spouse of edith carlmar",
+      "instance_id": 292,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "294.0",
+      "qkey": "who is the father of princess batrice of bourbontwo sicilies",
+      "instance_id": 294,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "294.1",
+      "qkey": "what is the date of death of prince ferdinand duke of castro",
+      "instance_id": 294,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "297.0",
+      "qkey": "who is the father of dui finn",
+      "instance_id": 297,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "297.1",
+      "qkey": "who is the father of stna innarraid",
+      "instance_id": 297,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "299.0",
+      "qkey": "who is the director of the belles of st trinians",
+      "instance_id": 299,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "299.1",
+      "qkey": "who is the spouse of frank launder",
+      "instance_id": 299,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "303.0",
+      "qkey": "who is the director of a nohit norun summer",
+      "instance_id": 303,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "303.1",
+      "qkey": "who is the father of francis leclerc",
+      "instance_id": 303,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "308.0",
+      "qkey": "who is the mother of prince raphael rainer of thurn and taxis",
+      "instance_id": 308,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "308.1",
+      "qkey": "what is the date of birth of archduchess margarethe klementine of austria",
+      "instance_id": 308,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "309.0",
+      "qkey": "who is the father of diya aldawla",
+      "instance_id": 309,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "310.0",
+      "qkey": "who is the father of gustav von leonhard",
+      "instance_id": 310,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "310.1",
+      "qkey": "what is the date of death of karl csar von leonhard",
+      "instance_id": 310,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "312.0",
+      "qkey": "who is the spouse of albert gallatin simms",
+      "instance_id": 312,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "312.1",
+      "qkey": "who is the father of ruth hanna mccormick",
+      "instance_id": 312,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "313.0",
+      "qkey": "who is the father of joachim i prince of anhaltdessau",
+      "instance_id": 313,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "313.1",
+      "qkey": "what is the date of death of ernest i prince of anhaltdessau",
+      "instance_id": 313,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "314.0",
+      "qkey": "who is the husband of sophia of pomerania",
+      "instance_id": 314,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "314.1",
+      "qkey": "what is the date of death of eric ii duke of pomerania",
+      "instance_id": 314,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "315.0",
+      "qkey": "who is the father of louis i count of nassauweilburg",
+      "instance_id": 315,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "315.1",
+      "qkey": "what is the date of birth of john iii of nassauweilburg",
+      "instance_id": 315,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "316.1",
+      "qkey": "what is the date of death of stephen moore 1st earl mount cashell",
+      "instance_id": 316,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "317.0",
+      "qkey": "who is the father of jean nol destrhan",
+      "instance_id": 317,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "317.1",
+      "qkey": "what is the date of death of jean baptiste destrehan",
+      "instance_id": 317,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "318.0",
+      "qkey": "who is the father of timothy shriver",
+      "instance_id": 318,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "318.1",
+      "qkey": "what is the date of death of sargent shriver",
+      "instance_id": 318,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "320.0",
+      "qkey": "who is the director of film kalteva torni",
+      "instance_id": 320,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "320.1",
+      "qkey": "what is the date of birth of timo koivusalo",
+      "instance_id": 320,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "321.0",
+      "qkey": "who is the father of charles somerscocks 3rd earl somers",
+      "instance_id": 321,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "321.1",
+      "qkey": "what is the date of death of john somerscocks 2nd earl somers",
+      "instance_id": 321,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "322.0",
+      "qkey": "who is the husband of martha rika alonso",
+      "instance_id": 322,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "322.1",
+      "qkey": "what is the date of birth of rafael moreno valle rosas",
+      "instance_id": 322,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "323.0",
+      "qkey": "who is the father of john hodgettsfoley",
+      "instance_id": 323,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "323.1",
+      "qkey": "what is the date of birth of edward foley",
+      "instance_id": 323,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "324.0",
+      "qkey": "who is the father of fitzroy john somerset 5th baron raglan",
+      "instance_id": 324,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "324.1",
+      "qkey": "what is the date of death of fitzroy richard somerset",
+      "instance_id": 324,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "325.0",
+      "qkey": "who is the father of josephdouard perrault",
+      "instance_id": 325,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "325.1",
+      "qkey": "what is the date of birth of josephstanislas perrault",
+      "instance_id": 325,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "327.0",
+      "qkey": "who is the director of tangos the exile of gardel",
+      "instance_id": 327,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "327.1",
+      "qkey": "what is the date of birth of fernando solanas",
+      "instance_id": 327,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "329.0",
+      "qkey": "who is the father of albert margrave of meissen",
+      "instance_id": 329,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "329.1",
+      "qkey": "what is the date of death of friedrich christian margrave of meissen",
+      "instance_id": 329,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "332.0",
+      "qkey": "who is the father of george louis i count of erbacherbach",
+      "instance_id": 332,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "332.1",
+      "qkey": "what is the date of birth of george albert i count of erbachschnberg",
+      "instance_id": 332,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "336.0",
+      "qkey": "who is the publisher of the miscellany news",
+      "instance_id": 336,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "336.1",
+      "qkey": "when was vassar college founded",
+      "instance_id": 336,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "338.0",
+      "qkey": "who is the father of zita of bourbonparma",
+      "instance_id": 338,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "338.1",
+      "qkey": "what is the date of death of robert i duke of parma",
+      "instance_id": 338,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "345.0",
+      "qkey": "who is the father of geoffrey denis erskine russell 4th baron ampthill",
+      "instance_id": 345,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "345.1",
+      "qkey": "who is the father of john russell 3rd baron ampthill",
+      "instance_id": 345,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "347.0",
+      "qkey": "who is the father of augusta marie of holsteingottorp",
+      "instance_id": 347,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "347.1",
+      "qkey": "what is the date of death of frederick iii duke of holsteingottorp",
+      "instance_id": 347,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "348.0",
+      "qkey": "who is the director of brenda brave",
+      "instance_id": 348,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "348.1",
+      "qkey": "who is the mother of daniel bergman",
+      "instance_id": 348,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "349.0",
+      "qkey": "who is the mother of eva chamberlain",
+      "instance_id": 349,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "349.1",
+      "qkey": "who is the mother of cosima wagner",
+      "instance_id": 349,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "351.0",
+      "qkey": "who is the director of the monocle laughs",
+      "instance_id": 351,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "353.0",
+      "qkey": "who is the husband of marie anna of saxony",
+      "instance_id": 353,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "353.1",
+      "qkey": "what is the date of birth of leopold ii grand duke of tuscany",
+      "instance_id": 353,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "354.0",
+      "qkey": "who is the director of stella orlofi",
+      "instance_id": 354,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "354.1",
+      "qkey": "who is the child of rhildur orleifsdttir",
+      "instance_id": 354,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "356.0",
+      "qkey": "who is the mother of harriet hemings",
+      "instance_id": 356,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "356.1",
+      "qkey": "who is the father of sally hemings",
+      "instance_id": 356,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "358.0",
+      "qkey": "who is the father of hieronim augustyn lubomirski",
+      "instance_id": 358,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "358.1",
+      "qkey": "who is the mother of jerzy sebastian lubomirski",
+      "instance_id": 358,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "359.0",
+      "qkey": "who is the mother of princess stphanie of monaco",
+      "instance_id": 359,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "359.1",
+      "qkey": "what is the date of death of grace kelly",
+      "instance_id": 359,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "360.0",
+      "qkey": "who is the father of eduardo frei ruiztagle",
+      "instance_id": 360,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "360.1",
+      "qkey": "what is the date of death of eduardo frei montalva",
+      "instance_id": 360,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "364.0",
+      "qkey": "who is the director of film is it easy to be young",
+      "instance_id": 364,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "364.1",
+      "qkey": "what is the date of death of juris podnieks",
+      "instance_id": 364,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "367.0",
+      "qkey": "who is the father of rudolph de trafford",
+      "instance_id": 367,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "367.1",
+      "qkey": "what is the date of birth of sir humphrey de trafford 3rd baronet",
+      "instance_id": 367,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "374.0",
+      "qkey": "who is the father of george cochrane politician",
+      "instance_id": 374,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "374.1",
+      "qkey": "what is the date of death of thomas cochrane 8th earl of dundonald",
+      "instance_id": 374,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "379.0",
+      "qkey": "who is the director of bratuku teruvu",
+      "instance_id": 379,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "379.1",
+      "qkey": "who is the spouse of p s ramakrishna rao",
+      "instance_id": 379,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "383.0",
+      "qkey": "who is the publisher of hrriyet",
+      "instance_id": 383,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "389.0",
+      "qkey": "who is the father of william henry hare hedgeswhite 3rd earl of bantry",
+      "instance_id": 389,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "389.1",
+      "qkey": "who is the father of richard white 1st earl of bantry",
+      "instance_id": 389,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "391.0",
+      "qkey": "who is the father of eochaid mac fiachnai",
+      "instance_id": 391,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "391.1",
+      "qkey": "who is the father of fiachnae mac edo rin",
+      "instance_id": 391,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "401.0",
+      "qkey": "who is the director of manamagan thevai",
+      "instance_id": 401,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "402.0",
+      "qkey": "who is the publisher of national contest journal",
+      "instance_id": 402,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "403.0",
+      "qkey": "who is the publisher of tribal college journal",
+      "instance_id": 403,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "403.1",
+      "qkey": "when was american indian higher education consortium founded",
+      "instance_id": 403,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "431.0",
+      "qkey": "who is the father of constance of burgundy",
+      "instance_id": 431,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "431.1",
+      "qkey": "what is the date of death of duke robert i of burgundy",
+      "instance_id": 431,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "434.0",
+      "qkey": "who is the husband of florentine rost van tonningen",
+      "instance_id": 434,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "434.1",
+      "qkey": "what is the date of death of meinoud rost van tonningen",
+      "instance_id": 434,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "438.0",
+      "qkey": "who is the director of a midwinters tale",
+      "instance_id": 438,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "438.1",
+      "qkey": "where did kenneth branagh graduate from",
+      "instance_id": 438,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "440.0",
+      "qkey": "who is the publisher of big picture",
+      "instance_id": 440,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "440.1",
+      "qkey": "who is the founder of wellcome trust",
+      "instance_id": 440,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "444.0",
+      "qkey": "who is the spouse of archie pitt",
+      "instance_id": 444,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "444.1",
+      "qkey": "what is the place of death of gracie fields",
+      "instance_id": 444,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "454.0",
+      "qkey": "who is the father of paolo ruspoli 5th marquis of boadilla del monte",
+      "instance_id": 454,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "454.1",
+      "qkey": "what is the date of death of camillo ruspoli 4th marquis of boadilla del monte",
+      "instance_id": 454,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "455.0",
+      "qkey": "who is the father of henri de la trmoille",
+      "instance_id": 455,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "455.1",
+      "qkey": "what is the date of death of claude de la trmoille",
+      "instance_id": 455,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "464.0",
+      "qkey": "who is the husband of tingxing ye",
+      "instance_id": 464,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "464.1",
+      "qkey": "what is the date of birth of william e bell",
+      "instance_id": 464,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "466.0",
+      "qkey": "who is the director of skirts ahoy",
+      "instance_id": 466,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "466.1",
+      "qkey": "what is the place of burial of sidney lanfield",
+      "instance_id": 466,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "466.2",
+      "qkey": "what is the time zone of westwood village memorial park cemetery",
+      "instance_id": 466,
+      "hop_idx": 2,
+      "fold": "B"
+    },
+    {
+      "id": "469.0",
+      "qkey": "who is the third wife of roy rogers",
+      "instance_id": 469,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "469.1",
+      "qkey": "what year did roy rogers and dale evans star in a film directed by frank mcdonald",
+      "instance_id": 469,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "475.0",
+      "qkey": "who is selena quintanillaprezs assistant and head of her fan club",
+      "instance_id": 475,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "475.1",
+      "qkey": "yolanda saldvar will be eligible for parole on what date",
+      "instance_id": 475,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "487.0",
+      "qkey": "which king made the 1925 birthday honours",
+      "instance_id": 487,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "487.1",
+      "qkey": "in which year was george v born",
+      "instance_id": 487,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "488.1",
+      "qkey": "what is the birthdate of chelsea peretti",
+      "instance_id": 488,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "507.1",
+      "qkey": "in what year did the guild of music supervisors awards recognize carol",
+      "instance_id": 507,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "508.0",
+      "qkey": "the duke steps out stars which actress",
+      "instance_id": 508,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "508.1",
+      "qkey": "joan crawford was ranked tenth on a list of greatest female hollywood stars in what year",
+      "instance_id": 508,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "572.0",
+      "qkey": "who is the father of alessandro ruspoli 9th prince of cerveteri",
+      "instance_id": 572,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "572.1",
+      "qkey": "what is the date of death of francesco ruspoli 8th prince of cerveteri",
+      "instance_id": 572,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "574.0",
+      "qkey": "who is the director of film night of the twelve",
+      "instance_id": 574,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "574.1",
+      "qkey": "what is the date of birth of hans schweikart",
+      "instance_id": 574,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "575.0",
+      "qkey": "seven brief lessons on physics was written by which italian physicist",
+      "instance_id": 575,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "575.1",
+      "qkey": "carlo rovelli has worked in france since what year",
+      "instance_id": 575,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "577.0",
+      "qkey": "who is the father of richard francis smith",
+      "instance_id": 577,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "577.1",
+      "qkey": "what is the date of death of henry abel smith",
+      "instance_id": 577,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "579.1",
+      "qkey": "what is the date of birth of thomas ashton 2nd baron ashton of hyde",
+      "instance_id": 579,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "583.0",
+      "qkey": "who is the father of prince aage count of rosenborg",
+      "instance_id": 583,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "583.1",
+      "qkey": "what is the date of death of prince valdemar of denmark",
+      "instance_id": 583,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "584.0",
+      "qkey": "who is the husband of musbah bint nasser",
+      "instance_id": 584,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "584.1",
+      "qkey": "what is the place of death of abdullah i of jordan",
+      "instance_id": 584,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "597.0",
+      "qkey": "who is the father of magnus prince of anhaltkthen",
+      "instance_id": 597,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "597.1",
+      "qkey": "what is the date of death of adolph i prince of anhaltkthen",
+      "instance_id": 597,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "598.0",
+      "qkey": "who is the director of film break the news",
+      "instance_id": 598,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "598.1",
+      "qkey": "what is the date of death of ren clair",
+      "instance_id": 598,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "606.0",
+      "qkey": "who is the spouse of louis i prince of monaco",
+      "instance_id": 606,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "606.1",
+      "qkey": "what is the date of death of catherine charlotte de gramont",
+      "instance_id": 606,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "607.0",
+      "qkey": "who is the father of robert james petre",
+      "instance_id": 607,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "607.1",
+      "qkey": "who is the mother of robert petre 7th baron petre",
+      "instance_id": 607,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "608.0",
+      "qkey": "who is the mother of philibert i duke of savoy",
+      "instance_id": 608,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "608.1",
+      "qkey": "what is the date of death of yolande of valois",
+      "instance_id": 608,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "610.0",
+      "qkey": "who is the husband of dolores gangotena",
+      "instance_id": 610,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "610.1",
+      "qkey": "what is the date of birth of camilo ponce enrquez",
+      "instance_id": 610,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "612.0",
+      "qkey": "who is the father of eric i duke of schleswig",
+      "instance_id": 612,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "612.1",
+      "qkey": "what is the date of death of king abel of denmark",
+      "instance_id": 612,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "618.0",
+      "qkey": "who is the mother of maria isabel de alcntara countess of iguau",
+      "instance_id": 618,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "618.1",
+      "qkey": "what is the date of death of domitila de castro marchioness of santos",
+      "instance_id": 618,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "622.0",
+      "qkey": "who is the director of april showers",
+      "instance_id": 622,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "622.1",
+      "qkey": "what is the place of death of james v kern",
+      "instance_id": 622,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "622.2",
+      "qkey": "what is the time zone of encino",
+      "instance_id": 622,
+      "hop_idx": 2,
+      "fold": "B"
+    },
+    {
+      "id": "623.0",
+      "qkey": "who is the father of charles mills 1st baron hillingdon",
+      "instance_id": 623,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "623.1",
+      "qkey": "what is the date of death of sir charles mills 1st baronet",
+      "instance_id": 623,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "625.0",
+      "qkey": "who is the director of film motherland hotel",
+      "instance_id": 625,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "625.1",
+      "qkey": "what is the date of death of mer kavur",
+      "instance_id": 625,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "634.0",
+      "qkey": "who is the father of abu mansur fulad sutun",
+      "instance_id": 634,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "634.1",
+      "qkey": "who is the father of abu kalijar",
+      "instance_id": 634,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "642.0",
+      "qkey": "who is the mother of joan of navarre",
+      "instance_id": 642,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "642.1",
+      "qkey": "what is the place of death of joan of france",
+      "instance_id": 642,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "642.2",
+      "qkey": "what is the time zone of vreux",
+      "instance_id": 642,
+      "hop_idx": 2,
+      "fold": "A"
+    },
+    {
+      "id": "645.0",
+      "qkey": "who is the director of nallavan vazhvan",
+      "instance_id": 645,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "645.1",
+      "qkey": "what is the date of death of palaniyaandi neelakantan",
+      "instance_id": 645,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "654.0",
+      "qkey": "who is the father of ernest courant",
+      "instance_id": 654,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "654.1",
+      "qkey": "what is the date of birth of richard courant",
+      "instance_id": 654,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "660.0",
+      "qkey": "who is the father of frederick christian i",
+      "instance_id": 660,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "660.1",
+      "qkey": "what is the date of death of christian august duke of schleswigholsteinsonderburgaugustenburg",
+      "instance_id": 660,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "706.0",
+      "qkey": "who is the husband of ebba busch thor",
+      "instance_id": 706,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "706.1",
+      "qkey": "what is the date of birth of niklas busch thor",
+      "instance_id": 706,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "709.0",
+      "qkey": "who is the mother of philip ii margrave of badenbaden",
+      "instance_id": 709,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "709.1",
+      "qkey": "what is the date of birth of mechthild of bavaria",
+      "instance_id": 709,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "710.0",
+      "qkey": "who is the father of badi alzaman mirza",
+      "instance_id": 710,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "710.1",
+      "qkey": "what is the date of death of husayn bayqara",
+      "instance_id": 710,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "713.0",
+      "qkey": "who is the director of film liberated hands",
+      "instance_id": 713,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "715.0",
+      "qkey": "who is the director of kontiki 1950 film",
+      "instance_id": 715,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "715.1",
+      "qkey": "what is the date of birth of thor heyerdahl",
+      "instance_id": 715,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "725.0",
+      "qkey": "who is the director of mercy",
+      "instance_id": 725,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "725.1",
+      "qkey": "who is the mother of damian harris",
+      "instance_id": 725,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "761.0",
+      "qkey": "who is the father of nia segamain",
+      "instance_id": 761,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "761.1",
+      "qkey": "who is the father of adamair",
+      "instance_id": 761,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "771.0",
+      "qkey": "who is the father of octavius vernon harcourt",
+      "instance_id": 771,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "771.1",
+      "qkey": "what is the date of birth of edward venablesvernonharcourt",
+      "instance_id": 771,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "781.0",
+      "qkey": "who is the mother of margaret of hereford",
+      "instance_id": 781,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "783.1",
+      "qkey": "what is the date of death of john manners 2nd duke of rutland",
+      "instance_id": 783,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "787.0",
+      "qkey": "who is the father of margaret clifford countess of cumberland",
+      "instance_id": 787,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "787.1",
+      "qkey": "what is the place of burial of francis russell 2nd earl of bedford",
+      "instance_id": 787,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "789.0",
+      "qkey": "who is the director of cross current",
+      "instance_id": 789,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "789.1",
+      "qkey": "what is the date of death of tonino ricci",
+      "instance_id": 789,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "792.0",
+      "qkey": "who is the father of cosima von blow pavoncelli",
+      "instance_id": 792,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "792.1",
+      "qkey": "what is the date of death of claus von blow",
+      "instance_id": 792,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "803.0",
+      "qkey": "who is the director of frozen assets",
+      "instance_id": 803,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "810.0",
+      "qkey": "who is the mother of princess elonore of belgium",
+      "instance_id": 810,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "810.1",
+      "qkey": "what is the date of birth of queen mathilde of belgium",
+      "instance_id": 810,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "812.0",
+      "qkey": "who is the father of edward cromwell 3rd baron cromwell",
+      "instance_id": 812,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "812.1",
+      "qkey": "what is the date of death of henry cromwell 2nd baron cromwell",
+      "instance_id": 812,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "820.0",
+      "qkey": "who is the director of bodens boy",
+      "instance_id": 820,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "820.1",
+      "qkey": "what is the place of birth of henry edwards",
+      "instance_id": 820,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "820.2",
+      "qkey": "what is the time zone of westonsupermare somerset",
+      "instance_id": 820,
+      "hop_idx": 2,
+      "fold": "A"
+    },
+    {
+      "id": "834.0",
+      "qkey": "who is the author of hannibal and scipio",
+      "instance_id": 834,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "834.1",
+      "qkey": "where did thomas nabbes study",
+      "instance_id": 834,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "837.0",
+      "qkey": "who is the father of fanny bornedal",
+      "instance_id": 837,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "837.1",
+      "qkey": "what is the place of birth of ole bornedal",
+      "instance_id": 837,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "848.0",
+      "qkey": "who is the creator of the mud bath",
+      "instance_id": 848,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "848.1",
+      "qkey": "where did david bomberg study",
+      "instance_id": 848,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "854.0",
+      "qkey": "who is the author of elizabeth and after",
+      "instance_id": 854,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "854.1",
+      "qkey": "where did matt cohen study",
+      "instance_id": 854,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "865.0",
+      "qkey": "who is the spouse of caroline leroy",
+      "instance_id": 865,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "865.1",
+      "qkey": "who is the child of daniel webster",
+      "instance_id": 865,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "866.0",
+      "qkey": "who is the performer of bang bang rock roll",
+      "instance_id": 866,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "866.1",
+      "qkey": "who is part of art brut",
+      "instance_id": 866,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "869.0",
+      "qkey": "what is the political party of dimuthu bandara abayakoon",
+      "instance_id": 869,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "869.1",
+      "qkey": "who is the founder of janatha vimukthi peramuna",
+      "instance_id": 869,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "878.0",
+      "qkey": "who is the spouse of empress wang",
+      "instance_id": 878,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "878.1",
+      "qkey": "who is the father of yang pu",
+      "instance_id": 878,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "884.0",
+      "qkey": "who is the creator of ruby loftus screwing a breech ring",
+      "instance_id": 884,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "884.1",
+      "qkey": "who is the spouse of laura knight",
+      "instance_id": 884,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "887.0",
+      "qkey": "who is the cast member of ice bound a womans survival at the south pole",
+      "instance_id": 887,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "887.1",
+      "qkey": "who is the child of susan sarandon",
+      "instance_id": 887,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "888.0",
+      "qkey": "who is the author of one more time",
+      "instance_id": 888,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "888.1",
+      "qkey": "who is the child of carol burnett",
+      "instance_id": 888,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "896.0",
+      "qkey": "who is the father of alice clere",
+      "instance_id": 896,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "896.1",
+      "qkey": "who is the father of william boleyn",
+      "instance_id": 896,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "901.0",
+      "qkey": "who is the performer of terminator",
+      "instance_id": 901,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "901.1",
+      "qkey": "who is the spouse of arnold schwarzenegger",
+      "instance_id": 901,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "905.0",
+      "qkey": "who is the father of frances freeling broderip",
+      "instance_id": 905,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "907.0",
+      "qkey": "who played susan walker in miracle on 34th street",
+      "instance_id": 907,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "907.1",
+      "qkey": "who is the sibling of natalie wood",
+      "instance_id": 907,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "911.0",
+      "qkey": "the father of chiang hsiaochang was who",
+      "instance_id": 911,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "911.1",
+      "qkey": "who is the child of chiang chingkuo",
+      "instance_id": 911,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "917.0",
+      "qkey": "who sponsored the resolution to reopen trade with vietnam along with kerry",
+      "instance_id": 917,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "917.1",
+      "qkey": "who is the child of john mccain",
+      "instance_id": 917,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "927.0",
+      "qkey": "who ran against obama in his first election",
+      "instance_id": 927,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "934.0",
+      "qkey": "who plays nim in return to nims island",
+      "instance_id": 934,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "934.1",
+      "qkey": "who is the mother of bindi irwin",
+      "instance_id": 934,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "936.1",
+      "qkey": "who is the father of bindi irwin",
+      "instance_id": 936,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "941.0",
+      "qkey": "who has been the longest reigning british monarch",
+      "instance_id": 941,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "941.1",
+      "qkey": "who is the spouse of elizabeth ii",
+      "instance_id": 941,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "950.1",
+      "qkey": "in which administrative territorial entity is holley located",
+      "instance_id": 950,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "953.0",
+      "qkey": "where is the headquarters of southern maryland electric cooperative",
+      "instance_id": 953,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "953.1",
+      "qkey": "in which administrative territorial entity is hughesville located",
+      "instance_id": 953,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "954.0",
+      "qkey": "in which administrative territorial entity is kimbrough memorial stadium located",
+      "instance_id": 954,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "954.1",
+      "qkey": "in which administrative territorial entity is canyon located",
+      "instance_id": 954,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "955.1",
+      "qkey": "in which administrative territorial entity is whiston located",
+      "instance_id": 955,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "955.2",
+      "qkey": "what is the time zone of knowsley",
+      "instance_id": 955,
+      "hop_idx": 2,
+      "fold": "B"
+    },
+    {
+      "id": "957.2",
+      "qkey": "what is the time zone of orleans county",
+      "instance_id": 957,
+      "hop_idx": 2,
+      "fold": "A"
+    },
+    {
+      "id": "958.0",
+      "qkey": "what is the place of birth of tim dubois",
+      "instance_id": 958,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "958.1",
+      "qkey": "in which administrative territorial entity is southwest city located",
+      "instance_id": 958,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "959.0",
+      "qkey": "who is the publisher of in the shadow of greatness",
+      "instance_id": 959,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "959.1",
+      "qkey": "where is the headquarters of united states naval institute",
+      "instance_id": 959,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "961.2",
+      "qkey": "what is the time zone of charles county",
+      "instance_id": 961,
+      "hop_idx": 2,
+      "fold": "B"
+    },
+    {
+      "id": "962.0",
+      "qkey": "what is the place of birth of mark dismore",
+      "instance_id": 962,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "962.1",
+      "qkey": "in which administrative territorial entity is greenfield located",
+      "instance_id": 962,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "962.2",
+      "qkey": "what is the time zone of hancock county",
+      "instance_id": 962,
+      "hop_idx": 2,
+      "fold": "B"
+    },
+    {
+      "id": "964.2",
+      "qkey": "what is the time zone of mcdonald county",
+      "instance_id": 964,
+      "hop_idx": 2,
+      "fold": "A"
+    },
+    {
+      "id": "965.0",
+      "qkey": "what is the place of birth of larkin i smith",
+      "instance_id": 965,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "965.1",
+      "qkey": "in which administrative territorial entity is poplarville located",
+      "instance_id": 965,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "966.0",
+      "qkey": "what is the place of birth of erik hort",
+      "instance_id": 966,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "966.1",
+      "qkey": "in which administrative territorial entity is montebello located",
+      "instance_id": 966,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "967.0",
+      "qkey": "who is the author of marcinkus",
+      "instance_id": 967,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "967.1",
+      "qkey": "what is the place of birth of tom flannery",
+      "instance_id": 967,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "968.0",
+      "qkey": "what is the place of birth of james finch",
+      "instance_id": 968,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "968.1",
+      "qkey": "in which administrative territorial entity is lynn haven located",
+      "instance_id": 968,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "969.2",
+      "qkey": "what is the time zone of bay county",
+      "instance_id": 969,
+      "hop_idx": 2,
+      "fold": "B"
+    },
+    {
+      "id": "970.2",
+      "qkey": "what is the time zone of annapolis",
+      "instance_id": 970,
+      "hop_idx": 2,
+      "fold": "A"
+    },
+    {
+      "id": "971.0",
+      "qkey": "who submitted the first version of the equal rights amendment to congress in 1923",
+      "instance_id": 971,
+      "hop_idx": 0,
+      "fold": "A"
+    },
+    {
+      "id": "971.1",
+      "qkey": "what is the place of birth of alice paul",
+      "instance_id": 971,
+      "hop_idx": 1,
+      "fold": "A"
+    },
+    {
+      "id": "972.0",
+      "qkey": "what is the place of birth of gerald t whelan",
+      "instance_id": 972,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "972.1",
+      "qkey": "in which administrative territorial entity is hastings located",
+      "instance_id": 972,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "973.0",
+      "qkey": "who formed and started the national womens party",
+      "instance_id": 973,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "974.2",
+      "qkey": "what is the time zone of rockland county",
+      "instance_id": 974,
+      "hop_idx": 2,
+      "fold": "A"
+    },
+    {
+      "id": "975.2",
+      "qkey": "what is the time zone of scranton",
+      "instance_id": 975,
+      "hop_idx": 2,
+      "fold": "B"
+    },
+    {
+      "id": "976.2",
+      "qkey": "what is the time zone of mount laurel township",
+      "instance_id": 976,
+      "hop_idx": 2,
+      "fold": "A"
+    },
+    {
+      "id": "977.2",
+      "qkey": "what is the time zone of pearl river county",
+      "instance_id": 977,
+      "hop_idx": 2,
+      "fold": "A"
+    },
+    {
+      "id": "979.2",
+      "qkey": "what is the time zone of adams county",
+      "instance_id": 979,
+      "hop_idx": 2,
+      "fold": "B"
+    },
+    {
+      "id": "992.0",
+      "qkey": "who is the director of romulus and the sabines",
+      "instance_id": 992,
+      "hop_idx": 0,
+      "fold": "B"
+    },
+    {
+      "id": "992.1",
+      "qkey": "what is the place of death of richard pottier",
+      "instance_id": 992,
+      "hop_idx": 1,
+      "fold": "B"
+    },
+    {
+      "id": "993.2",
+      "qkey": "what is the time zone of randall county",
+      "instance_id": 993,
+      "hop_idx": 2,
+      "fold": "B"
+    }
+  ],
+  "split_content_sha256": "6b60097d2ae9b600c781a24801b16ec709f6548516fda7759ed6d3bdd7729bcd",
+  "code_commit": "db8d28e",
+  "builder_sha256": "b39e2a479e75f4043ab447050e744b2ea20aa923941d472e51085580e86db0f3"
+}

@@ -1,0 +1,675 @@
+{
+ "schema": "acknowledgment-round-v1",
+ "generated": "2026-07-27",
+ "inputs": {
+  "annotator_b": "outputs\\ack_human_20260727\\ack_annotator_b.xlsx",
+  "annotator_a": "outputs\\ack_human_20260727\\ack_team.xlsx",
+  "bridge": "design\\qc_csv\\ack_bridge_internal.json"
+ },
+ "n": 120,
+ "raw_agreement": 0.9833,
+ "disagreements": 2,
+ "cohen_kappa": 0.0,
+ "kappa_note": "undefined or uninformative: with a near-zero positive rate the chance-correction term collapses; report raw agreement and prevalence instead",
+ "acknowledgment": {
+  "k": 0,
+  "n": 120,
+  "rate": 0.0,
+  "ci95_clopper_pearson": [
+   0.0,
+   0.0303
+  ]
+ },
+ "legacy_anchor": {
+  "k": 11,
+  "n": 118,
+  "rate": 0.0932,
+  "ci95_clopper_pearson": [
+   0.0475,
+   0.1607
+  ],
+  "canon": "pre-curation (an early QC round)"
+ },
+ "intervals_disjoint": true,
+ "per_model": {
+  "base": {
+   "k": 0,
+   "n": 24,
+   "rate": 0.0
+  },
+  "gemma": {
+   "k": 0,
+   "n": 24,
+   "rate": 0.0
+  },
+  "llamai": {
+   "k": 0,
+   "n": 24,
+   "rate": 0.0
+  },
+  "mistral": {
+   "k": 0,
+   "n": 24,
+   "rate": 0.0
+  },
+  "qwen": {
+   "k": 0,
+   "n": 24,
+   "rate": 0.0
+  }
+ },
+ "per_cell": {
+  "arb": {
+   "k": 0,
+   "n": 38,
+   "rate": 0.0
+  },
+  "both_wrong": {
+   "k": 0,
+   "n": 82,
+   "rate": 0.0
+  }
+ },
+ "labels": {
+  "ack-001": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-002": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-003": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-004": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-005": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-006": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-007": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-008": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-009": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-010": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-011": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-012": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-013": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-014": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-015": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-016": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-017": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-018": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-019": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-020": {
+   "annotator_b": "no",
+   "annotator_a": "yes",
+   "final": "no"
+  },
+  "ack-021": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-022": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-023": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-024": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-025": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-026": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-027": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-028": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-029": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-030": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-031": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-032": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-033": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-034": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-035": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-036": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-037": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-038": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-039": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-040": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-041": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-042": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-043": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-044": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-045": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-046": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-047": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-048": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-049": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-050": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-051": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-052": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-053": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-054": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-055": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-056": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-057": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-058": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-059": {
+   "annotator_b": "no",
+   "annotator_a": "yes",
+   "final": "no"
+  },
+  "ack-060": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-061": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-062": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-063": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-064": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-065": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-066": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-067": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-068": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-069": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-070": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-071": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-072": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-073": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-074": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-075": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-076": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-077": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-078": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-079": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-080": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-081": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-082": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-083": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-084": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-085": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-086": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-087": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-088": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-089": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-090": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-091": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-092": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-093": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-094": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-095": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-096": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-097": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-098": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-099": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-100": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-101": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-102": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-103": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-104": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-105": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-106": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-107": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-108": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-109": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-110": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-111": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-112": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-113": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-114": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-115": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-116": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-117": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-118": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-119": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  },
+  "ack-120": {
+   "annotator_b": "no",
+   "annotator_a": "no",
+   "final": "no"
+  }
+ }
+}

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+code/results/
+code/ToolHop.json
+code/out/
+code/stage/

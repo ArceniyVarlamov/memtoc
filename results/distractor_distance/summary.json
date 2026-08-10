@@ -1,0 +1,1528 @@
+{
+ "meta": {
+  "layer": "memtoc-divergence-protocol-summary-v1",
+  "primary": "judged (a single judge pass)",
+  "sensitivity": "det (scorer v1.3)",
+  "families": {
+   "A": "far_keep: 5 models, keep on arb, Holm inside the family",
+   "B": "protocol_keep: anchor llamai, a single contrast"
+  },
+  "arms": "pv0 only (far and the protocol are defined on pv0 alone)",
+  "stats": "imported from scripts.build_paired_treatment_summary (bootstrap n=1000, sign-flip n=10000, seed 0)",
+  "code_commit": "ef8356b"
+ },
+ "judged": {
+  "far": {
+   "base": {
+    "keep": {
+     "contrast": {
+      "delta": 0.1942,
+      "ci95": [
+       0.0971,
+       0.2913
+      ],
+      "p_signflip": 0.0003,
+      "n_units": 103,
+      "n_questions": 103,
+      "n_arm_only": 0,
+      "n_canonical_only": 33
+     },
+     "canonical_point": {
+      "ci95": [
+       0.1397,
+       0.2794
+      ],
+      "n_units": 136,
+      "n_questions": 136,
+      "rate": 0.2059
+     },
+     "far_point": {
+      "ci95": [
+       0.3107,
+       0.4951
+      ],
+      "n_units": 103,
+      "n_questions": 103,
+      "rate": 0.4078
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": 0.1845,
+      "ci95": [
+       0.0874,
+       0.2816
+      ],
+      "p_signflip": 0.0009,
+      "n_units": 103,
+      "n_questions": 103,
+      "n_arm_only": 0,
+      "n_canonical_only": 33
+     },
+     "canonical_point": {
+      "ci95": [
+       0.1471,
+       0.2868
+      ],
+      "n_units": 136,
+      "n_questions": 136,
+      "rate": 0.2132
+     },
+     "far_point": {
+      "ci95": [
+       0.3107,
+       0.4951
+      ],
+      "n_units": 103,
+      "n_questions": 103,
+      "rate": 0.4078
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.0818,
+      "ci95": [
+       -0.1321,
+       -0.0314
+      ],
+      "p_signflip": 0.0027,
+      "n_units": 318,
+      "n_questions": 318,
+      "n_arm_only": 0,
+      "n_canonical_only": 60
+     },
+     "canonical_point": {
+      "ci95": [
+       0.7884,
+       0.8677
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.828
+     },
+     "far_point": {
+      "ci95": [
+       0.6824,
+       0.7799
+      ],
+      "n_units": 318,
+      "n_questions": 318,
+      "rate": 0.7327
+     }
+    }
+   },
+   "gemma": {
+    "keep": {
+     "contrast": {
+      "delta": 0.0309,
+      "ci95": [
+       -0.0206,
+       0.0825
+      ],
+      "p_signflip": 0.460254,
+      "n_units": 97,
+      "n_questions": 97,
+      "n_arm_only": 0,
+      "n_canonical_only": 27
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0161,
+       0.0887
+      ],
+      "n_units": 124,
+      "n_questions": 124,
+      "rate": 0.0484
+     },
+     "far_point": {
+      "ci95": [
+       0.0206,
+       0.1134
+      ],
+      "n_units": 97,
+      "n_questions": 97,
+      "rate": 0.0619
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": 0.0412,
+      "ci95": [
+       0.0,
+       0.0928
+      ],
+      "p_signflip": 0.222978,
+      "n_units": 97,
+      "n_questions": 97,
+      "n_arm_only": 0,
+      "n_canonical_only": 27
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0081,
+       0.0806
+      ],
+      "n_units": 124,
+      "n_questions": 124,
+      "rate": 0.0403
+     },
+     "far_point": {
+      "ci95": [
+       0.0206,
+       0.1134
+      ],
+      "n_units": 97,
+      "n_questions": 97,
+      "rate": 0.0619
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.1974,
+      "ci95": [
+       -0.2618,
+       -0.1373
+      ],
+      "p_signflip": 0.0001,
+      "n_units": 233,
+      "n_questions": 233,
+      "n_arm_only": 0,
+      "n_canonical_only": 60
+     },
+     "canonical_point": {
+      "ci95": [
+       0.6928,
+       0.7918
+      ],
+      "n_units": 293,
+      "n_questions": 293,
+      "rate": 0.7406
+     },
+     "far_point": {
+      "ci95": [
+       0.4335,
+       0.5579
+      ],
+      "n_units": 233,
+      "n_questions": 233,
+      "rate": 0.4936
+     }
+    }
+   },
+   "llamai": {
+    "keep": {
+     "contrast": {
+      "delta": 0.0312,
+      "ci95": [
+       -0.0391,
+       0.1016
+      ],
+      "p_signflip": 0.49905,
+      "n_units": 128,
+      "n_questions": 128,
+      "n_arm_only": 0,
+      "n_canonical_only": 34
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0494,
+       0.142
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.0926
+     },
+     "far_point": {
+      "ci95": [
+       0.0625,
+       0.1719
+      ],
+      "n_units": 128,
+      "n_questions": 128,
+      "rate": 0.1172
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": 0.0391,
+      "ci95": [
+       -0.0312,
+       0.1094
+      ],
+      "p_signflip": 0.380462,
+      "n_units": 128,
+      "n_questions": 128,
+      "n_arm_only": 0,
+      "n_canonical_only": 34
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0617,
+       0.1543
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.1049
+     },
+     "far_point": {
+      "ci95": [
+       0.0859,
+       0.2031
+      ],
+      "n_units": 128,
+      "n_questions": 128,
+      "rate": 0.1406
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.1214,
+      "ci95": [
+       -0.1885,
+       -0.0511
+      ],
+      "p_signflip": 0.0004,
+      "n_units": 313,
+      "n_questions": 313,
+      "n_arm_only": 0,
+      "n_canonical_only": 65
+     },
+     "canonical_point": {
+      "ci95": [
+       0.6667,
+       0.7566
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.7143
+     },
+     "far_point": {
+      "ci95": [
+       0.524,
+       0.6294
+      ],
+      "n_units": 313,
+      "n_questions": 313,
+      "rate": 0.5783
+     }
+    }
+   },
+   "mistral": {
+    "keep": {
+     "contrast": {
+      "delta": -0.0211,
+      "ci95": [
+       -0.1053,
+       0.0526
+      ],
+      "p_signflip": 0.767923,
+      "n_units": 95,
+      "n_questions": 95,
+      "n_arm_only": 0,
+      "n_canonical_only": 32
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0551,
+       0.1575
+      ],
+      "n_units": 127,
+      "n_questions": 127,
+      "rate": 0.1024
+     },
+     "far_point": {
+      "ci95": [
+       0.0421,
+       0.1684
+      ],
+      "n_units": 95,
+      "n_questions": 95,
+      "rate": 0.1053
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": 0.1789,
+      "ci95": [
+       0.0632,
+       0.2842
+      ],
+      "p_signflip": 0.0036,
+      "n_units": 95,
+      "n_questions": 95,
+      "n_arm_only": 0,
+      "n_canonical_only": 32
+     },
+     "canonical_point": {
+      "ci95": [
+       0.1102,
+       0.2362
+      ],
+      "n_units": 127,
+      "n_questions": 127,
+      "rate": 0.1732
+     },
+     "far_point": {
+      "ci95": [
+       0.2632,
+       0.4632
+      ],
+      "n_units": 95,
+      "n_questions": 95,
+      "rate": 0.3579
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.0918,
+      "ci95": [
+       -0.1424,
+       -0.0348
+      ],
+      "p_signflip": 0.0022,
+      "n_units": 316,
+      "n_questions": 316,
+      "n_arm_only": 0,
+      "n_canonical_only": 64
+     },
+     "canonical_point": {
+      "ci95": [
+       0.7895,
+       0.8658
+      ],
+      "n_units": 380,
+      "n_questions": 380,
+      "rate": 0.8289
+     },
+     "far_point": {
+      "ci95": [
+       0.6709,
+       0.7627
+      ],
+      "n_units": 316,
+      "n_questions": 316,
+      "rate": 0.7184
+     }
+    }
+   },
+   "qwen": {
+    "keep": {
+     "contrast": {
+      "delta": 0.0417,
+      "ci95": [
+       -0.1042,
+       0.1875
+      ],
+      "p_signflip": 0.768923,
+      "n_units": 48,
+      "n_questions": 48,
+      "n_arm_only": 0,
+      "n_canonical_only": 19
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0597,
+       0.194
+      ],
+      "n_units": 67,
+      "n_questions": 67,
+      "rate": 0.1194
+     },
+     "far_point": {
+      "ci95": [
+       0.0625,
+       0.2708
+      ],
+      "n_units": 48,
+      "n_questions": 48,
+      "rate": 0.1667
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": -0.0208,
+      "ci95": [
+       -0.1667,
+       0.125
+      ],
+      "p_signflip": 1.0,
+      "n_units": 48,
+      "n_questions": 48,
+      "n_arm_only": 0,
+      "n_canonical_only": 19
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0896,
+       0.2537
+      ],
+      "n_units": 67,
+      "n_questions": 67,
+      "rate": 0.1642
+     },
+     "far_point": {
+      "ci95": [
+       0.0625,
+       0.2708
+      ],
+      "n_units": 48,
+      "n_questions": 48,
+      "rate": 0.1667
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.1445,
+      "ci95": [
+       -0.2065,
+       -0.0796
+      ],
+      "p_signflip": 0.0001,
+      "n_units": 339,
+      "n_questions": 339,
+      "n_arm_only": 0,
+      "n_canonical_only": 75
+     },
+     "canonical_point": {
+      "ci95": [
+       0.7101,
+       0.7947
+      ],
+      "n_units": 414,
+      "n_questions": 414,
+      "rate": 0.7536
+     },
+     "far_point": {
+      "ci95": [
+       0.5369,
+       0.6401
+      ],
+      "n_units": 339,
+      "n_questions": 339,
+      "rate": 0.59
+     }
+    }
+   }
+  },
+  "protocol": {
+   "llamai": {
+    "keep": {
+     "contrast": {
+      "delta": -0.0185,
+      "ci95": [
+       -0.0679,
+       0.0309
+      ],
+      "p_signflip": 0.651335,
+      "n_units": 162,
+      "n_questions": 162,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0494,
+       0.142
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.0926
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.037,
+       0.1173
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.0741
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": -0.0185,
+      "ci95": [
+       -0.0741,
+       0.0309
+      ],
+      "p_signflip": 0.650135,
+      "n_units": 162,
+      "n_questions": 162,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0617,
+       0.1543
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.1049
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.0432,
+       0.1296
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.0864
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.0291,
+      "ci95": [
+       -0.0688,
+       0.0159
+      ],
+      "p_signflip": 0.236776,
+      "n_units": 378,
+      "n_questions": 378,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.6667,
+       0.7566
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.7143
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.6402,
+       0.7302
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.6852
+     }
+    },
+    "tool_gold_follow": {
+     "contrast": {
+      "delta": -0.0926,
+      "ci95": [
+       -0.1376,
+       -0.0476
+      ],
+      "p_signflip": 0.0002,
+      "n_units": 378,
+      "n_questions": 378,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.8466,
+       0.9101
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.8783
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.7407,
+       0.828
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.7857
+     }
+    },
+    "te_abstain": {
+     "contrast": {
+      "delta": -0.0332,
+      "ci95": [
+       -0.0664,
+       0.0018
+      ],
+      "p_signflip": 0.069093,
+      "n_units": 542,
+      "n_questions": 542,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.8653,
+       0.9188
+      ],
+      "n_units": 542,
+      "n_questions": 542,
+      "rate": 0.893
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.8303,
+       0.8875
+      ],
+      "n_units": 542,
+      "n_questions": 542,
+      "rate": 0.8598
+     }
+    },
+    "nc_CRA": {
+     "contrast": {
+      "delta": -0.0556,
+      "ci95": [
+       -0.0952,
+       -0.0106
+      ],
+      "p_signflip": 0.011199,
+      "n_units": 378,
+      "n_questions": 378,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.8254,
+       0.8968
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.8598
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.7646,
+       0.8439
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.8042
+     }
+    }
+   }
+  },
+  "far_keep_holm": {
+   "base": {
+    "delta": 0.1942,
+    "ci95": [
+     0.0971,
+     0.2913
+    ],
+    "p_signflip": 0.0003,
+    "n_units": 103,
+    "n_questions": 103,
+    "n_arm_only": 0,
+    "n_canonical_only": 33,
+    "p_holm": 0.0015
+   },
+   "gemma": {
+    "delta": 0.0309,
+    "ci95": [
+     -0.0206,
+     0.0825
+    ],
+    "p_signflip": 0.460254,
+    "n_units": 97,
+    "n_questions": 97,
+    "n_arm_only": 0,
+    "n_canonical_only": 27,
+    "p_holm": 1.0
+   },
+   "llamai": {
+    "delta": 0.0312,
+    "ci95": [
+     -0.0391,
+     0.1016
+    ],
+    "p_signflip": 0.49905,
+    "n_units": 128,
+    "n_questions": 128,
+    "n_arm_only": 0,
+    "n_canonical_only": 34,
+    "p_holm": 1.0
+   },
+   "mistral": {
+    "delta": -0.0211,
+    "ci95": [
+     -0.1053,
+     0.0526
+    ],
+    "p_signflip": 0.767923,
+    "n_units": 95,
+    "n_questions": 95,
+    "n_arm_only": 0,
+    "n_canonical_only": 32,
+    "p_holm": 1.0
+   },
+   "qwen": {
+    "delta": 0.0417,
+    "ci95": [
+     -0.1042,
+     0.1875
+    ],
+    "p_signflip": 0.768923,
+    "n_units": 48,
+    "n_questions": 48,
+    "n_arm_only": 0,
+    "n_canonical_only": 19,
+    "p_holm": 1.0
+   }
+  }
+ },
+ "det": {
+  "far": {
+   "base": {
+    "keep": {
+     "contrast": {
+      "delta": 0.1845,
+      "ci95": [
+       0.0874,
+       0.2816
+      ],
+      "p_signflip": 0.0005,
+      "n_units": 103,
+      "n_questions": 103,
+      "n_arm_only": 0,
+      "n_canonical_only": 33
+     },
+     "canonical_point": {
+      "ci95": [
+       0.1324,
+       0.2721
+      ],
+      "n_units": 136,
+      "n_questions": 136,
+      "rate": 0.1985
+     },
+     "far_point": {
+      "ci95": [
+       0.2913,
+       0.4854
+      ],
+      "n_units": 103,
+      "n_questions": 103,
+      "rate": 0.3883
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": 0.1845,
+      "ci95": [
+       0.0874,
+       0.2816
+      ],
+      "p_signflip": 0.0009,
+      "n_units": 103,
+      "n_questions": 103,
+      "n_arm_only": 0,
+      "n_canonical_only": 33
+     },
+     "canonical_point": {
+      "ci95": [
+       0.1471,
+       0.2868
+      ],
+      "n_units": 136,
+      "n_questions": 136,
+      "rate": 0.2132
+     },
+     "far_point": {
+      "ci95": [
+       0.3107,
+       0.4951
+      ],
+      "n_units": 103,
+      "n_questions": 103,
+      "rate": 0.4078
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.0818,
+      "ci95": [
+       -0.1321,
+       -0.0314
+      ],
+      "p_signflip": 0.0027,
+      "n_units": 318,
+      "n_questions": 318,
+      "n_arm_only": 0,
+      "n_canonical_only": 60
+     },
+     "canonical_point": {
+      "ci95": [
+       0.7857,
+       0.8651
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.8254
+     },
+     "far_point": {
+      "ci95": [
+       0.6824,
+       0.7799
+      ],
+      "n_units": 318,
+      "n_questions": 318,
+      "rate": 0.7327
+     }
+    }
+   },
+   "gemma": {
+    "keep": {
+     "contrast": {
+      "delta": 0.0309,
+      "ci95": [
+       -0.0206,
+       0.0825
+      ],
+      "p_signflip": 0.460254,
+      "n_units": 97,
+      "n_questions": 97,
+      "n_arm_only": 0,
+      "n_canonical_only": 27
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0161,
+       0.0887
+      ],
+      "n_units": 124,
+      "n_questions": 124,
+      "rate": 0.0484
+     },
+     "far_point": {
+      "ci95": [
+       0.0206,
+       0.1134
+      ],
+      "n_units": 97,
+      "n_questions": 97,
+      "rate": 0.0619
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": 0.0412,
+      "ci95": [
+       0.0,
+       0.0928
+      ],
+      "p_signflip": 0.222978,
+      "n_units": 97,
+      "n_questions": 97,
+      "n_arm_only": 0,
+      "n_canonical_only": 27
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0081,
+       0.0806
+      ],
+      "n_units": 124,
+      "n_questions": 124,
+      "rate": 0.0403
+     },
+     "far_point": {
+      "ci95": [
+       0.0206,
+       0.1134
+      ],
+      "n_units": 97,
+      "n_questions": 97,
+      "rate": 0.0619
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.1974,
+      "ci95": [
+       -0.2618,
+       -0.1373
+      ],
+      "p_signflip": 0.0001,
+      "n_units": 233,
+      "n_questions": 233,
+      "n_arm_only": 0,
+      "n_canonical_only": 60
+     },
+     "canonical_point": {
+      "ci95": [
+       0.6928,
+       0.7918
+      ],
+      "n_units": 293,
+      "n_questions": 293,
+      "rate": 0.7406
+     },
+     "far_point": {
+      "ci95": [
+       0.4335,
+       0.5579
+      ],
+      "n_units": 233,
+      "n_questions": 233,
+      "rate": 0.4936
+     }
+    }
+   },
+   "llamai": {
+    "keep": {
+     "contrast": {
+      "delta": -0.0156,
+      "ci95": [
+       -0.0703,
+       0.0391
+      ],
+      "p_signflip": 0.788021,
+      "n_units": 128,
+      "n_questions": 128,
+      "n_arm_only": 0,
+      "n_canonical_only": 34
+     },
+     "canonical_point": {
+      "ci95": [
+       0.037,
+       0.1111
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.0741
+     },
+     "far_point": {
+      "ci95": [
+       0.0234,
+       0.0938
+      ],
+      "n_units": 128,
+      "n_questions": 128,
+      "rate": 0.0547
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": 0.0391,
+      "ci95": [
+       -0.0312,
+       0.1094
+      ],
+      "p_signflip": 0.380462,
+      "n_units": 128,
+      "n_questions": 128,
+      "n_arm_only": 0,
+      "n_canonical_only": 34
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0617,
+       0.1543
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.1049
+     },
+     "far_point": {
+      "ci95": [
+       0.0859,
+       0.2031
+      ],
+      "n_units": 128,
+      "n_questions": 128,
+      "rate": 0.1406
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.1214,
+      "ci95": [
+       -0.1885,
+       -0.0511
+      ],
+      "p_signflip": 0.0004,
+      "n_units": 313,
+      "n_questions": 313,
+      "n_arm_only": 0,
+      "n_canonical_only": 65
+     },
+     "canonical_point": {
+      "ci95": [
+       0.6614,
+       0.7513
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.709
+     },
+     "far_point": {
+      "ci95": [
+       0.524,
+       0.6294
+      ],
+      "n_units": 313,
+      "n_questions": 313,
+      "rate": 0.5783
+     }
+    }
+   },
+   "mistral": {
+    "keep": {
+     "contrast": {
+      "delta": -0.0211,
+      "ci95": [
+       -0.1053,
+       0.0526
+      ],
+      "p_signflip": 0.767923,
+      "n_units": 95,
+      "n_questions": 95,
+      "n_arm_only": 0,
+      "n_canonical_only": 32
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0551,
+       0.1575
+      ],
+      "n_units": 127,
+      "n_questions": 127,
+      "rate": 0.1024
+     },
+     "far_point": {
+      "ci95": [
+       0.0421,
+       0.1684
+      ],
+      "n_units": 95,
+      "n_questions": 95,
+      "rate": 0.1053
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": 0.1789,
+      "ci95": [
+       0.0632,
+       0.2842
+      ],
+      "p_signflip": 0.0036,
+      "n_units": 95,
+      "n_questions": 95,
+      "n_arm_only": 0,
+      "n_canonical_only": 32
+     },
+     "canonical_point": {
+      "ci95": [
+       0.1102,
+       0.2362
+      ],
+      "n_units": 127,
+      "n_questions": 127,
+      "rate": 0.1732
+     },
+     "far_point": {
+      "ci95": [
+       0.2632,
+       0.4632
+      ],
+      "n_units": 95,
+      "n_questions": 95,
+      "rate": 0.3579
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.0886,
+      "ci95": [
+       -0.1424,
+       -0.0316
+      ],
+      "p_signflip": 0.003,
+      "n_units": 316,
+      "n_questions": 316,
+      "n_arm_only": 0,
+      "n_canonical_only": 64
+     },
+     "canonical_point": {
+      "ci95": [
+       0.7842,
+       0.8605
+      ],
+      "n_units": 380,
+      "n_questions": 380,
+      "rate": 0.8237
+     },
+     "far_point": {
+      "ci95": [
+       0.6709,
+       0.7627
+      ],
+      "n_units": 316,
+      "n_questions": 316,
+      "rate": 0.7184
+     }
+    }
+   },
+   "qwen": {
+    "keep": {
+     "contrast": {
+      "delta": -0.0208,
+      "ci95": [
+       -0.1458,
+       0.1042
+      ],
+      "p_signflip": 1.0,
+      "n_units": 48,
+      "n_questions": 48,
+      "n_arm_only": 0,
+      "n_canonical_only": 19
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0448,
+       0.1791
+      ],
+      "n_units": 67,
+      "n_questions": 67,
+      "rate": 0.1045
+     },
+     "far_point": {
+      "ci95": [
+       0.0208,
+       0.1875
+      ],
+      "n_units": 48,
+      "n_questions": 48,
+      "rate": 0.1042
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": -0.0208,
+      "ci95": [
+       -0.1667,
+       0.125
+      ],
+      "p_signflip": 1.0,
+      "n_units": 48,
+      "n_questions": 48,
+      "n_arm_only": 0,
+      "n_canonical_only": 19
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0896,
+       0.2537
+      ],
+      "n_units": 67,
+      "n_questions": 67,
+      "rate": 0.1642
+     },
+     "far_point": {
+      "ci95": [
+       0.0625,
+       0.2708
+      ],
+      "n_units": 48,
+      "n_questions": 48,
+      "rate": 0.1667
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.1445,
+      "ci95": [
+       -0.2065,
+       -0.0796
+      ],
+      "p_signflip": 0.0001,
+      "n_units": 339,
+      "n_questions": 339,
+      "n_arm_only": 0,
+      "n_canonical_only": 75
+     },
+     "canonical_point": {
+      "ci95": [
+       0.7101,
+       0.7947
+      ],
+      "n_units": 414,
+      "n_questions": 414,
+      "rate": 0.7536
+     },
+     "far_point": {
+      "ci95": [
+       0.5369,
+       0.6401
+      ],
+      "n_units": 339,
+      "n_questions": 339,
+      "rate": 0.59
+     }
+    }
+   }
+  },
+  "protocol": {
+   "llamai": {
+    "keep": {
+     "contrast": {
+      "delta": -0.0247,
+      "ci95": [
+       -0.0679,
+       0.0185
+      ],
+      "p_signflip": 0.425957,
+      "n_units": 162,
+      "n_questions": 162,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.037,
+       0.1111
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.0741
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.0185,
+       0.0864
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.0494
+     }
+    },
+    "CRA_arb": {
+     "contrast": {
+      "delta": -0.0185,
+      "ci95": [
+       -0.0741,
+       0.0309
+      ],
+      "p_signflip": 0.650135,
+      "n_units": 162,
+      "n_questions": 162,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.0617,
+       0.1543
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.1049
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.0432,
+       0.1296
+      ],
+      "n_units": 162,
+      "n_questions": 162,
+      "rate": 0.0864
+     }
+    },
+    "prior_bw": {
+     "contrast": {
+      "delta": -0.0265,
+      "ci95": [
+       -0.0688,
+       0.0185
+      ],
+      "p_signflip": 0.285971,
+      "n_units": 378,
+      "n_questions": 378,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.6614,
+       0.7513
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.709
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.6376,
+       0.7275
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.6825
+     }
+    },
+    "tool_gold_follow": {
+     "contrast": {
+      "delta": -0.0926,
+      "ci95": [
+       -0.1376,
+       -0.0476
+      ],
+      "p_signflip": 0.0002,
+      "n_units": 378,
+      "n_questions": 378,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.8466,
+       0.9101
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.8783
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.7407,
+       0.828
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.7857
+     }
+    },
+    "te_abstain": {
+     "contrast": {
+      "delta": -0.0332,
+      "ci95": [
+       -0.0664,
+       0.0018
+      ],
+      "p_signflip": 0.069093,
+      "n_units": 542,
+      "n_questions": 542,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.8653,
+       0.9188
+      ],
+      "n_units": 542,
+      "n_questions": 542,
+      "rate": 0.893
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.8303,
+       0.8875
+      ],
+      "n_units": 542,
+      "n_questions": 542,
+      "rate": 0.8598
+     }
+    },
+    "nc_CRA": {
+     "contrast": {
+      "delta": -0.0556,
+      "ci95": [
+       -0.0952,
+       -0.0106
+      ],
+      "p_signflip": 0.011199,
+      "n_units": 378,
+      "n_questions": 378,
+      "n_arm_only": 0,
+      "n_canonical_only": 0
+     },
+     "canonical_point": {
+      "ci95": [
+       0.8254,
+       0.8968
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.8598
+     },
+     "nosentence_point": {
+      "ci95": [
+       0.7646,
+       0.8439
+      ],
+      "n_units": 378,
+      "n_questions": 378,
+      "rate": 0.8042
+     }
+    }
+   }
+  },
+  "far_keep_holm": {
+   "base": {
+    "delta": 0.1845,
+    "ci95": [
+     0.0874,
+     0.2816
+    ],
+    "p_signflip": 0.0005,
+    "n_units": 103,
+    "n_questions": 103,
+    "n_arm_only": 0,
+    "n_canonical_only": 33,
+    "p_holm": 0.0025
+   },
+   "gemma": {
+    "delta": 0.0309,
+    "ci95": [
+     -0.0206,
+     0.0825
+    ],
+    "p_signflip": 0.460254,
+    "n_units": 97,
+    "n_questions": 97,
+    "n_arm_only": 0,
+    "n_canonical_only": 27,
+    "p_holm": 1.0
+   },
+   "llamai": {
+    "delta": -0.0156,
+    "ci95": [
+     -0.0703,
+     0.0391
+    ],
+    "p_signflip": 0.788021,
+    "n_units": 128,
+    "n_questions": 128,
+    "n_arm_only": 0,
+    "n_canonical_only": 34,
+    "p_holm": 1.0
+   },
+   "mistral": {
+    "delta": -0.0211,
+    "ci95": [
+     -0.1053,
+     0.0526
+    ],
+    "p_signflip": 0.767923,
+    "n_units": 95,
+    "n_questions": 95,
+    "n_arm_only": 0,
+    "n_canonical_only": 32,
+    "p_holm": 1.0
+   },
+   "qwen": {
+    "delta": -0.0208,
+    "ci95": [
+     -0.1458,
+     0.1042
+    ],
+    "p_signflip": 1.0,
+    "n_units": 48,
+    "n_questions": 48,
+    "n_arm_only": 0,
+    "n_canonical_only": 19,
+    "p_holm": 1.0
+   }
+  }
+ }
+}

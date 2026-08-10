@@ -1,0 +1,28 @@
+{
+  "schema_version": "memtoc-crossfit-verification-v1",
+  "status": "PASS",
+  "mapping_sha256": "560dea277c736caecf5a6f4c6396a0ab00fda962f1891ef7bfa2ca066569e3d7",
+  "split_sha256": "e1da0ab2242cda25caecc6c53b55eb2ab8fba903a06026508ab236c74761765a",
+  "crossfit_manifest_sha256": "daf7ae634f1e9c904ca3dc313294b797f7f5a1901978954c53598662c9fe9474",
+  "n_questions": 575,
+  "n_instances": 309,
+  "zero_instance_leakage": true,
+  "out_of_fold_eval_union": 575,
+  "tasks": {
+    "train_A_eval_B": {
+      "n_train_questions": 287,
+      "n_eval_questions": 288,
+      "n_pairs": 574,
+      "instance_overlap": 0,
+      "eval_episodes_per_pv": 1440
+    },
+    "train_B_eval_A": {
+      "n_train_questions": 288,
+      "n_eval_questions": 287,
+      "n_pairs": 576,
+      "instance_overlap": 0,
+      "eval_episodes_per_pv": 1435
+    }
+  },
+  "verifier_sha256": "44ad1df5739513b74ef48c0d2170c39801f0b4a4f2f67420d34a1e41b907e8eb"
+}

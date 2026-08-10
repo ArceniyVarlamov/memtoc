@@ -1,0 +1,113 @@
+{
+ "schema_version": "memtoc-materialize-v3-report-v1",
+ "arms": {
+  "canonical_pv0": {
+   "out": "episodes_e096_v3_canonical_pv0.json",
+   "sha256": "cb41af4a1a047db8f4b9298df14768f93ae63e2cc2ca3e3ae810f644072d72f5",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "canonical_pv1": {
+   "out": "episodes_e096_v3_canonical_pv1.json",
+   "sha256": "bd60b52f6a63559bdad5c694ee52abb079707f572992c2b525a3e566d55d3f4e",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "canonical_pv2": {
+   "out": "episodes_e096_v3_canonical_pv2.json",
+   "sha256": "c2b34f1259a9fd2ddd4cb5f3ac6158d5f8bdd25eb7a5fdc53109fc87f43ef360",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "presentation_toolns_pv0": {
+   "out": "episodes_e096_v3_presentation_toolns_pv0.json",
+   "sha256": "b69021816128d6ff5bbd310d114e91f74507af3b208b5c8ed5cf73863d4c6d3b",
+   "n_episodes": 1150,
+   "equivalence_audit": null
+  },
+  "presentation_toolns_pv1": {
+   "out": "episodes_e096_v3_presentation_toolns_pv1.json",
+   "sha256": "4612c4e465c4302a974cb8ae38272b7b22e46aee34afdc796956086443187e8d",
+   "n_episodes": 1150,
+   "equivalence_audit": null
+  },
+  "presentation_toolns_pv2": {
+   "out": "episodes_e096_v3_presentation_toolns_pv2.json",
+   "sha256": "cf2f5aa3308dbc42e115cba2a5496011740a0ae4c3c91f8adc18f8bbd0119d58",
+   "n_episodes": 1150,
+   "equivalence_audit": null
+  },
+  "presentation_ragsnip_pv0": {
+   "out": "episodes_e096_v3_presentation_ragsnip_pv0.json",
+   "sha256": "2dce992ed601c92e8421bf9efac293515fa7a900d90cd96e0f30a6ec0e27bb8a",
+   "n_episodes": 1150,
+   "equivalence_audit": null
+  },
+  "presentation_ragsnip_pv1": {
+   "out": "episodes_e096_v3_presentation_ragsnip_pv1.json",
+   "sha256": "121c2c07479473d31bebf00d1993729b32b24c472e55bb5c36711a75e94c765c",
+   "n_episodes": 1150,
+   "equivalence_audit": null
+  },
+  "presentation_ragsnip_pv2": {
+   "out": "episodes_e096_v3_presentation_ragsnip_pv2.json",
+   "sha256": "e05e5525b88e45c2f23383c2ddced0622bd28e5806f09b3d1d51db8b28b2365e",
+   "n_episodes": 1150,
+   "equivalence_audit": null
+  },
+  "control_warn_pv0": {
+   "out": "episodes_e096_v3_control_warn_pv0.json",
+   "sha256": "dbbc4a61f4ed2eebe2fcf0ee614c1e7a18defc831db273259ac80fc0b7fba0c8",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "control_warn_pv1": {
+   "out": "episodes_e096_v3_control_warn_pv1.json",
+   "sha256": "79ce6554cc65901b8e1d8ccc4c3bcd1e9974d4b03ba015bda4c528f14953cdf5",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "control_warn_pv2": {
+   "out": "episodes_e096_v3_control_warn_pv2.json",
+   "sha256": "b2e2ca8b6b4998f807ac60a0695afe4c9726c27feb9c41e1e38938d6653d9b71",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "control_prior_pv0": {
+   "out": "episodes_e096_v3_control_prior_pv0.json",
+   "sha256": "455529fa67cc2fff425957b3d0b53a2d87003a6855489dc32c2ff92c6baaa44c",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "control_prior_pv1": {
+   "out": "episodes_e096_v3_control_prior_pv1.json",
+   "sha256": "dfa98d5551b9afd9f55c60cda0a4fb0b160c2c88e29e896e5533aff68c7d2e71",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "control_prior_pv2": {
+   "out": "episodes_e096_v3_control_prior_pv2.json",
+   "sha256": "bad9e489c53c3872bc910e80aa3cfdc13091ebe499450e8ce304c60c78106a28",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "control_flag_pv0": {
+   "out": "episodes_e096_v3_control_flag_pv0.json",
+   "sha256": "6a03ecf72c00d75710bbd228de740f944f258c5abbd44f9ec84726ebe6d2a311",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "control_flag_pv1": {
+   "out": "episodes_e096_v3_control_flag_pv1.json",
+   "sha256": "8350d239e2c0c366c828a12a706e37aba0db431d671baa02194486c5b6169dee",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  },
+  "control_flag_pv2": {
+   "out": "episodes_e096_v3_control_flag_pv2.json",
+   "sha256": "d617692e037f2071de150a8c09c5c83c3cf4e098e7e8575561eef39de445735d",
+   "n_episodes": 2875,
+   "equivalence_audit": null
+  }
+ }
+}

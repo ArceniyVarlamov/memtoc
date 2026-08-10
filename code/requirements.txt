@@ -1,0 +1,12 @@
+# Offline construction, QC packets, and analysis helpers.
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.2.3
+openpyxl==3.1.5
+
+# Training/serving versions used by the recorded control runs.
+accelerate==1.6.0
+datasets==3.5.0
+peft==0.15.2
+trl==0.17.0
+vllm==0.8.5

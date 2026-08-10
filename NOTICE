@@ -1,0 +1,35 @@
+MemToC — supplementary artifact
+Copyright 2026 The MemToC Authors
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+these files except in compliance with the License. You may obtain a copy of the
+License in the accompanying LICENSE file or at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+
+--------------------------------------------------------------------------------
+Third-party material
+
+This work is derived from ToolHop, a dataset released by ByteDance Ltd. under
+the Apache License, Version 2.0:
+
+    https://huggingface.co/datasets/bytedance-research/ToolHop
+
+The benchmark's question texts, tool schemas and executable tool functions are
+derived from ToolHop instances. ToolHop itself is NOT redistributed in this
+archive; README.md gives the download URL and the sha256 the pipeline pins
+(0a51f71a44b7025645e452123af3caf2e348301922af91778e268db0188a7fab).
+
+Gold answers and distractor values were verified and sourced against Wikidata
+(https://www.wikidata.org), whose data is dedicated to the public domain under
+CC0 1.0. Wikidata content is not redistributed here either; the querying code
+is in code/scripts/build_distractors_wikidata.py and
+code/scripts/verify_gold_wikidata.py.
+
+Model weights, adapters and any evaluated third-party models are not included
+in this archive and remain under their own licenses.

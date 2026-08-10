@@ -1,0 +1,3499 @@
+{
+ "summary": {
+  "schema_version": "memtoc-episodes-question-v2",
+  "dataset_row": "memtoc-v1",
+  "version": "question-v2",
+  "n_questions": 575,
+  "n_episodes": 39,
+  "conditions": [
+   "tool_right",
+   "tool_wrong",
+   "tool_error",
+   "no_tool",
+   "no_conflict"
+  ],
+  "prompt_variant": 1,
+  "prompt_version": 2,
+  "divergence": "near",
+  "seed": 20260721,
+  "mapping_status": "frozen",
+  "mapping_sha256": "6f108b6e7595462c93ba1333eb6c392ed140144983f200bcdac0f8ceb9f6ec7a",
+  "toolhop_sha256": "0a51f71a44b7025645e452123af3caf2e348301922af91778e268db0188a7fab",
+  "tau_distribution": {
+   "place": 50,
+   "person": 304,
+   "year": 44,
+   "work": 8,
+   "organization": 23,
+   "other_string": 17,
+   "date": 111,
+   "timezone": 18
+  },
+  "family_distribution": {
+   "free_form": 190,
+   "creator_role": 65,
+   "genealogy": 206,
+   "birth_death_date": 96,
+   "birth_death_place": 18
+  },
+  "distractor_source": {
+   "dual_human_adjudication": 148,
+   "wikidata_or_deterministic_generator": 381,
+   "manual_spotcheck_repair": 7,
+   "qc_adjudication_repair": 39
+  },
+  "distractor_method": {
+   "human_authorized": 148,
+   "wikidata_person": 171,
+   "nonentity": 173,
+   "machine_repaired": 7,
+   "wikidata_organization": 15,
+   "assistant_draft_human_approved": 39,
+   "wikidata_place": 22
+  },
+  "qc_flagged": 0,
+  "config": {
+   "mapping": "results/quality_control/frozen_distractors_v3_575.json",
+   "toolhop": "data/ToolHop.json",
+   "conditions": [
+    "tool_right",
+    "tool_wrong",
+    "tool_error",
+    "no_tool",
+    "no_conflict"
+   ],
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "seed": 20260721
+  },
+  "code_commit": "1af0d39",
+  "builder_sha256": "464c6c06c6ef71bef1b4781e24c24b0d15cc81ffe7b2687babc25eedf3631755",
+  "patch_of": "episodes_question_v2_near_pv1.json",
+  "patch_kind": "memtoc-repair-39"
+ },
+ "episodes": [
+  {
+   "episode_id": "13-0-tool_wrong-v1",
+   "instance_id": 13,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "free_form",
+   "divergence_bucket": "near",
+   "question": "Rejuvelac is kind of grain water invented and promoted by which \"holistic health\" practitioner?",
+   "gold_answer": "Ann Wigmore",
+   "tool_output": {
+    "result": "Adelle Davis"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "holistic_health_practitioner_finder",
+    "description": "An advanced tool designed to identify holistic health practitioners based on their contributions, inventions, or promotions of specific health products or practices, with enhanced search criteria and output options.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "product_name": {
+       "type": "string",
+       "description": "The name of the health product or practice to search for, e.g., 'Rejuvelac'."
+      },
+      "search_scope": {
+       "type": "string",
+       "enum": [
+        "invention",
+        "promotion",
+        "both"
+       ],
+       "description": "The scope of the search, whether to look for the inventor, promoter, or both."
+      },
+      "time_period": {
+       "type": "string",
+       "description": "The time period to narrow down the search, formatted as a range (e.g., '1900-1950'). Optional."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name_only",
+        "detailed",
+        "contact_info",
+        "publications"
+       ],
+       "description": "The format of the output. 'name_only' returns just the name, 'detailed' includes additional information about the practitioner, 'contact_info' provides contact details, and 'publications' includes links to relevant publications."
+      },
+      "location": {
+       "type": "string",
+       "description": "The geographical location to narrow down the search, e.g., 'California, USA'. Optional."
+      },
+      "qualifications": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "A list of qualifications or certifications to filter practitioners, e.g., ['Naturopath', 'Herbalist']. Optional."
+      },
+      "user_ratings": {
+       "type": "boolean",
+       "description": "Whether to include user ratings in the search results. Optional."
+      }
+     },
+     "required": [
+      "product_name"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Rejuvelac is kind of grain water invented and promoted by which \"holistic health\" practitioner?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"holistic_health_practitioner_finder\", \"description\": \"An advanced tool designed to identify holistic health practitioners based on their contributions, inventions, or promotions of specific health products or practices, with enhanced search criteria and output options.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"product_name\": {\"type\": \"string\", \"description\": \"The name of the health product or practice to search for, e.g., 'Rejuvelac'.\"}, \"search_scope\": {\"type\": \"string\", \"enum\": [\"invention\", \"promotion\", \"both\"], \"description\": \"The scope of the search, whether to look for the inventor, promoter, or both.\"}, \"time_period\": {\"type\": \"string\", \"description\": \"The time period to narrow down the search, formatted as a range (e.g., '1900-1950'). Optional.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name_only\", \"detailed\", \"contact_info\", \"publications\"], \"description\": \"The format of the output. 'name_only' returns just the name, 'detailed' includes additional information about the practitioner, 'contact_info' provides contact details, and 'publications' includes links to relevant publications.\"}, \"location\": {\"type\": \"string\", \"description\": \"The geographical location to narrow down the search, e.g., 'California, USA'. Optional.\"}, \"qualifications\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}, \"description\": \"A list of qualifications or certifications to filter practitioners, e.g., ['Naturopath', 'Herbalist']. Optional.\"}, \"user_ratings\": {\"type\": \"boolean\", \"description\": \"Whether to include user ratings in the search results. Optional.\"}}, \"required\": [\"product_name\"]}}\nResult: {\"result\": \"Adelle Davis\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Rejuvelac is kind of grain water invented and promoted by which \"holistic health\" practitioner?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 13,
+    "hop_idx": 0,
+    "qkey": "rejuvelac is kind of grain water invented and promoted by which holistic health practitioner",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Adelle Davis"
+  },
+  {
+   "episode_id": "15-0-tool_wrong-v1",
+   "instance_id": 15,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "free_form",
+   "divergence_bucket": "near",
+   "question": "The 2015 Austrian thriller film Jack tells the story of which serial killer?",
+   "gold_answer": "Jack Unterweger",
+   "tool_output": {
+    "result": "Fritz Haarmann"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "film_info_retriever",
+    "description": "An advanced tool designed to retrieve comprehensive information about films, including plots, characters, trivia, reviews, ratings, and box office performance. It supports multilingual queries and can access a wide range of film databases, providing detailed insights into films.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "film_title": {
+       "type": "string",
+       "description": "The title of the film to retrieve information about."
+      },
+      "year": {
+       "type": "integer",
+       "description": "The release year of the film to narrow down the search."
+      },
+      "language": {
+       "type": "string",
+       "description": "The language of the film or query, default is English."
+      },
+      "info_type": {
+       "type": "string",
+       "enum": [
+        "plot",
+        "characters",
+        "trivia",
+        "reviews",
+        "ratings",
+        "box_office"
+       ],
+       "description": "The type of information to retrieve about the film."
+      },
+      "director": {
+       "type": "string",
+       "description": "The director of the film to refine the search."
+      },
+      "genre": {
+       "type": "string",
+       "description": "The genre of the film to narrow down the search."
+      },
+      "cast": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "A list of main cast members to refine the search."
+      }
+     },
+     "required": [
+      "film_title"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: The 2015 Austrian thriller film Jack tells the story of which serial killer?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"film_info_retriever\", \"description\": \"An advanced tool designed to retrieve comprehensive information about films, including plots, characters, trivia, reviews, ratings, and box office performance. It supports multilingual queries and can access a wide range of film databases, providing detailed insights into films.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"film_title\": {\"type\": \"string\", \"description\": \"The title of the film to retrieve information about.\"}, \"year\": {\"type\": \"integer\", \"description\": \"The release year of the film to narrow down the search.\"}, \"language\": {\"type\": \"string\", \"description\": \"The language of the film or query, default is English.\"}, \"info_type\": {\"type\": \"string\", \"enum\": [\"plot\", \"characters\", \"trivia\", \"reviews\", \"ratings\", \"box_office\"], \"description\": \"The type of information to retrieve about the film.\"}, \"director\": {\"type\": \"string\", \"description\": \"The director of the film to refine the search.\"}, \"genre\": {\"type\": \"string\", \"description\": \"The genre of the film to narrow down the search.\"}, \"cast\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}, \"description\": \"A list of main cast members to refine the search.\"}}, \"required\": [\"film_title\"]}}\nResult: {\"result\": \"Fritz Haarmann\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: The 2015 Austrian thriller film Jack tells the story of which serial killer?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 15,
+    "hop_idx": 0,
+    "qkey": "the 2015 austrian thriller film jack tells the story of which serial killer",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Fritz Haarmann"
+  },
+  {
+   "episode_id": "25-0-tool_wrong-v1",
+   "instance_id": 25,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "free_form",
+   "divergence_bucket": "near",
+   "question": "The Dogwoman telemovies were created by which actress?",
+   "gold_answer": "Magda Szubanski",
+   "tool_output": {
+    "result": "Gina Riley"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "filmography_search",
+    "description": "An advanced tool for searching film and television credits to identify creators, actors, and other personnel associated with specific titles, with enhanced filtering options.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "titles": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "description": "A list of film or television show titles to search for. Each must be a non-empty string."
+       },
+       "description": "The titles of the films or television shows to search for. Must contain at least one title."
+      },
+      "role": {
+       "type": "string",
+       "enum": [
+        "actor",
+        "director",
+        "writer",
+        "producer",
+        "composer",
+        "cinematographer",
+        "editor"
+       ],
+       "description": "The role of the person to identify. Defaults to 'actor'."
+      },
+      "year": {
+       "type": "integer",
+       "description": "The year of release to narrow down the search, optional."
+      },
+      "exact_match": {
+       "type": "boolean",
+       "description": "Whether to search for an exact match of the title. Defaults to false."
+      },
+      "genre": {
+       "type": "string",
+       "description": "The genre of the film or television show to narrow down the search, optional."
+      },
+      "language": {
+       "type": "string",
+       "description": "The language of the film or television show to narrow down the search, optional."
+      }
+     },
+     "required": [
+      "titles"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: The Dogwoman telemovies were created by which actress?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"filmography_search\", \"description\": \"An advanced tool for searching film and television credits to identify creators, actors, and other personnel associated with specific titles, with enhanced filtering options.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"titles\": {\"type\": \"array\", \"items\": {\"type\": \"string\", \"description\": \"A list of film or television show titles to search for. Each must be a non-empty string.\"}, \"description\": \"The titles of the films or television shows to search for. Must contain at least one title.\"}, \"role\": {\"type\": \"string\", \"enum\": [\"actor\", \"director\", \"writer\", \"producer\", \"composer\", \"cinematographer\", \"editor\"], \"description\": \"The role of the person to identify. Defaults to 'actor'.\"}, \"year\": {\"type\": \"integer\", \"description\": \"The year of release to narrow down the search, optional.\"}, \"exact_match\": {\"type\": \"boolean\", \"description\": \"Whether to search for an exact match of the title. Defaults to false.\"}, \"genre\": {\"type\": \"string\", \"description\": \"The genre of the film or television show to narrow down the search, optional.\"}, \"language\": {\"type\": \"string\", \"description\": \"The language of the film or television show to narrow down the search, optional.\"}}, \"required\": [\"titles\"]}}\nResult: {\"result\": \"Gina Riley\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: The Dogwoman telemovies were created by which actress?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 25,
+    "hop_idx": 0,
+    "qkey": "the dogwoman telemovies were created by which actress",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Gina Riley"
+  },
+  {
+   "episode_id": "29-0-tool_wrong-v1",
+   "instance_id": 29,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "free_form",
+   "divergence_bucket": "near",
+   "question": "Who is acting Jack from While You Were Sleeping?",
+   "gold_answer": "Bill Pullman",
+   "tool_output": {
+    "result": "Aidan Quinn"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "movie_cast_lookup",
+    "description": "An advanced tool designed to find actors based on character names and movie titles, with enhanced search capabilities and output customization options.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "movie_title": {
+       "type": "string",
+       "description": "The title of the movie to search within. This is a required field."
+      },
+      "character_name": {
+       "type": "string",
+       "description": "The name of the character whose actor is to be identified. This is a required field."
+      },
+      "release_year": {
+       "type": "integer",
+       "description": "The year the movie was released. Useful for narrowing down searches when multiple movies have the same title."
+      },
+      "genre": {
+       "type": "string",
+       "description": "The genre of the movie. Useful for refining search results."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name_only",
+        "detailed",
+        "full_profile"
+       ],
+       "description": "The format of the output. 'name_only' returns just the actor's name, 'detailed' provides additional information such as the actor's biography or filmography, and 'full_profile' includes comprehensive details like awards and social media links. Defaults to 'name_only'."
+      }
+     },
+     "required": [
+      "movie_title",
+      "character_name"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is acting Jack from While You Were Sleeping?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"movie_cast_lookup\", \"description\": \"An advanced tool designed to find actors based on character names and movie titles, with enhanced search capabilities and output customization options.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"movie_title\": {\"type\": \"string\", \"description\": \"The title of the movie to search within. This is a required field.\"}, \"character_name\": {\"type\": \"string\", \"description\": \"The name of the character whose actor is to be identified. This is a required field.\"}, \"release_year\": {\"type\": \"integer\", \"description\": \"The year the movie was released. Useful for narrowing down searches when multiple movies have the same title.\"}, \"genre\": {\"type\": \"string\", \"description\": \"The genre of the movie. Useful for refining search results.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name_only\", \"detailed\", \"full_profile\"], \"description\": \"The format of the output. 'name_only' returns just the actor's name, 'detailed' provides additional information such as the actor's biography or filmography, and 'full_profile' includes comprehensive details like awards and social media links. Defaults to 'name_only'.\"}}, \"required\": [\"movie_title\", \"character_name\"]}}\nResult: {\"result\": \"Aidan Quinn\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is acting Jack from While You Were Sleeping?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 29,
+    "hop_idx": 0,
+    "qkey": "who is acting jack from while you were sleeping",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Aidan Quinn"
+  },
+  {
+   "episode_id": "62-1-tool_wrong-v1",
+   "instance_id": 62,
+   "hop_idx": 1,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "free_form",
+   "divergence_bucket": "near",
+   "question": "Goodbye Girl was directed by who?",
+   "gold_answer": "Herbert Ross",
+   "tool_output": {
+    "result": "Arthur Hiller"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "film_info_query",
+    "description": "An advanced tool for querying comprehensive information about films, including directors, release years, cast members, genres, runtimes, and ratings. It is designed to handle a wide range of film-related queries efficiently, supporting multiple query types in a single request.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "film_title": {
+       "type": "string",
+       "description": "The title of the film to query information about. This is a required field."
+      },
+      "query_types": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "director",
+         "release_year",
+         "cast",
+         "genre",
+         "runtime",
+         "rating"
+        ],
+        "description": "The types of information to retrieve about the film. Can include multiple types."
+       },
+       "description": "The types of information to retrieve about the film. Defaults to ['director'] if not specified."
+      },
+      "exact_match": {
+       "type": "boolean",
+       "description": "Whether to match the film title exactly or allow partial matches. Defaults to true."
+      },
+      "language": {
+       "type": "string",
+       "description": "The language of the film to narrow down the search. Optional field."
+      },
+      "release_year_range": {
+       "type": "object",
+       "properties": {
+        "start_year": {
+         "type": "integer",
+         "description": "The start year of the release year range."
+        },
+        "end_year": {
+         "type": "integer",
+         "description": "The end year of the release year range."
+        }
+       },
+       "description": "The range of release years to filter the films. Optional field."
+      }
+     },
+     "required": [
+      "film_title"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Goodbye Girl was directed by who?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"film_info_query\", \"description\": \"An advanced tool for querying comprehensive information about films, including directors, release years, cast members, genres, runtimes, and ratings. It is designed to handle a wide range of film-related queries efficiently, supporting multiple query types in a single request.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"film_title\": {\"type\": \"string\", \"description\": \"The title of the film to query information about. This is a required field.\"}, \"query_types\": {\"type\": \"array\", \"items\": {\"type\": \"string\", \"enum\": [\"director\", \"release_year\", \"cast\", \"genre\", \"runtime\", \"rating\"], \"description\": \"The types of information to retrieve about the film. Can include multiple types.\"}, \"description\": \"The types of information to retrieve about the film. Defaults to ['director'] if not specified.\"}, \"exact_match\": {\"type\": \"boolean\", \"description\": \"Whether to match the film title exactly or allow partial matches. Defaults to true.\"}, \"language\": {\"type\": \"string\", \"description\": \"The language of the film to narrow down the search. Optional field.\"}, \"release_year_range\": {\"type\": \"object\", \"properties\": {\"start_year\": {\"type\": \"integer\", \"description\": \"The start year of the release year range.\"}, \"end_year\": {\"type\": \"integer\", \"description\": \"The end year of the release year range.\"}}, \"description\": \"The range of release years to filter the films. Optional field.\"}}, \"required\": [\"film_title\"]}}\nResult: {\"result\": \"Arthur Hiller\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Goodbye Girl was directed by who?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 62,
+    "hop_idx": 1,
+    "qkey": "goodbye girl was directed by who",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Arthur Hiller"
+  },
+  {
+   "episode_id": "77-0-tool_wrong-v1",
+   "instance_id": 77,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "free_form",
+   "divergence_bucket": "near",
+   "question": "Who is the architect of Hook and Ladder No. 4 located in Albany, NY?",
+   "gold_answer": "Marcus T. Reynolds",
+   "tool_output": {
+    "result": "Albert W. Fuller"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "architect_finder",
+    "description": "An advanced tool designed to identify the architect of a specified building by querying architectural databases. It supports comprehensive search functionalities, handling partial or varied input data, and offers enhanced output customization.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "building_name": {
+       "type": "string",
+       "description": "The name of the building to search for. Partial names are accepted."
+      },
+      "location": {
+       "type": "string",
+       "description": "The location of the building, such as city or state. This helps narrow down the search."
+      },
+      "building_type": {
+       "type": "string",
+       "description": "The type of building, e.g., fire station, library, etc. Optional but can refine search results."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name_only",
+        "detailed",
+        "full_report"
+       ],
+       "description": "The format of the output. 'name_only' returns just the architect's name, 'detailed' provides additional information about the architect and building, and 'full_report' includes historical context and architectural style."
+      },
+      "architectural_style": {
+       "type": "string",
+       "description": "The architectural style of the building, e.g., Gothic, Modernist. Optional but can refine search results."
+      },
+      "construction_year": {
+       "type": "integer",
+       "description": "The year the building was constructed. Optional but can refine search results."
+      }
+     },
+     "required": [
+      "building_name",
+      "location"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the architect of Hook and Ladder No. 4 located in Albany, NY?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"architect_finder\", \"description\": \"An advanced tool designed to identify the architect of a specified building by querying architectural databases. It supports comprehensive search functionalities, handling partial or varied input data, and offers enhanced output customization.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"building_name\": {\"type\": \"string\", \"description\": \"The name of the building to search for. Partial names are accepted.\"}, \"location\": {\"type\": \"string\", \"description\": \"The location of the building, such as city or state. This helps narrow down the search.\"}, \"building_type\": {\"type\": \"string\", \"description\": \"The type of building, e.g., fire station, library, etc. Optional but can refine search results.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name_only\", \"detailed\", \"full_report\"], \"description\": \"The format of the output. 'name_only' returns just the architect's name, 'detailed' provides additional information about the architect and building, and 'full_report' includes historical context and architectural style.\"}, \"architectural_style\": {\"type\": \"string\", \"description\": \"The architectural style of the building, e.g., Gothic, Modernist. Optional but can refine search results.\"}, \"construction_year\": {\"type\": \"integer\", \"description\": \"The year the building was constructed. Optional but can refine search results.\"}}, \"required\": [\"building_name\", \"location\"]}}\nResult: {\"result\": \"Albert W. Fuller\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the architect of Hook and Ladder No. 4 located in Albany, NY?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 77,
+    "hop_idx": 0,
+    "qkey": "who is the architect of hook and ladder no 4 located in albany ny",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Albert W. Fuller"
+  },
+  {
+   "episode_id": "117-0-tool_wrong-v1",
+   "instance_id": 117,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "organization",
+   "family": "free_form",
+   "divergence_bucket": "near",
+   "question": "Angelspit toured the United States with which American electronic music duo from Orlando, Florida?",
+   "gold_answer": "Blood on the Dance Floor (band)",
+   "tool_output": {
+    "result": "Breathe Carolina"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "music_tour_query",
+    "description": "An advanced tool for querying detailed music tour data, artist collaborations, and geographical information about music groups. It provides comprehensive insights into tours, collaborations, and related events.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "artist_name": {
+       "type": "string",
+       "description": "The name of the artist or band to query about."
+      },
+      "collaboration_type": {
+       "type": "string",
+       "enum": [
+        "tour",
+        "album",
+        "single",
+        "festival",
+        "guest_appearance"
+       ],
+       "description": "The type of collaboration to query, default is 'tour'."
+      },
+      "location": {
+       "type": "string",
+       "description": "The geographical location to filter the query, e.g., 'Orlando, Florida'."
+      },
+      "time_period": {
+       "type": "string",
+       "description": "The time period to filter the query, e.g., '2000-2010'. Supports specific dates and date ranges, e.g., '2023-01-01 to 2023-12-31'."
+      },
+      "genre": {
+       "type": "string",
+       "description": "The music genre to filter the query, e.g., 'rock', 'pop', 'jazz'."
+      },
+      "ticket_availability": {
+       "type": "boolean",
+       "description": "Filter results based on ticket availability."
+      },
+      "venue_size": {
+       "type": "string",
+       "enum": [
+        "small",
+        "medium",
+        "large"
+       ],
+       "description": "The size of the venue to filter the query, e.g., 'small', 'medium', 'large'."
+      }
+     },
+     "required": [
+      "artist_name",
+      "collaboration_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Angelspit toured the United States with which American electronic music duo from Orlando, Florida?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"music_tour_query\", \"description\": \"An advanced tool for querying detailed music tour data, artist collaborations, and geographical information about music groups. It provides comprehensive insights into tours, collaborations, and related events.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"artist_name\": {\"type\": \"string\", \"description\": \"The name of the artist or band to query about.\"}, \"collaboration_type\": {\"type\": \"string\", \"enum\": [\"tour\", \"album\", \"single\", \"festival\", \"guest_appearance\"], \"description\": \"The type of collaboration to query, default is 'tour'.\"}, \"location\": {\"type\": \"string\", \"description\": \"The geographical location to filter the query, e.g., 'Orlando, Florida'.\"}, \"time_period\": {\"type\": \"string\", \"description\": \"The time period to filter the query, e.g., '2000-2010'. Supports specific dates and date ranges, e.g., '2023-01-01 to 2023-12-31'.\"}, \"genre\": {\"type\": \"string\", \"description\": \"The music genre to filter the query, e.g., 'rock', 'pop', 'jazz'.\"}, \"ticket_availability\": {\"type\": \"boolean\", \"description\": \"Filter results based on ticket availability.\"}, \"venue_size\": {\"type\": \"string\", \"enum\": [\"small\", \"medium\", \"large\"], \"description\": \"The size of the venue to filter the query, e.g., 'small', 'medium', 'large'.\"}}, \"required\": [\"artist_name\", \"collaboration_type\"]}}\nResult: {\"result\": \"Breathe Carolina\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Angelspit toured the United States with which American electronic music duo from Orlando, Florida?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 117,
+    "hop_idx": 0,
+    "qkey": "angelspit toured the united states with which american electronic music duo from orlando florida",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Breathe Carolina"
+  },
+  {
+   "episode_id": "160-0-tool_wrong-v1",
+   "instance_id": 160,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Joseph-André Taschereau?",
+   "gold_answer": "Thomas-Pierre-Joseph Taschereau",
+   "tool_output": {
+    "result": "Gabriel-Elzéar Taschereau"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "historical_relationship_finder",
+    "description": "An advanced tool designed to retrieve and analyze familial relationships of historical figures by searching through genealogical and historical databases, with enhanced capabilities for temporal and geographical specificity.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "figure_name": {
+       "type": "string",
+       "description": "The name of the historical figure whose familial relationship is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "spouse",
+        "child",
+        "sibling",
+        "grandparent",
+        "grandchild"
+       ],
+       "description": "The type of familial relationship to retrieve."
+      },
+      "database_source": {
+       "type": "string",
+       "description": "The source database or historical record to search for the information. Defaults to a comprehensive genealogical database."
+      },
+      "name_variants": {
+       "type": "boolean",
+       "description": "Whether to consider name variants and aliases in the search. Defaults to true."
+      },
+      "time_period": {
+       "type": "string",
+       "description": "The specific time period to focus the search on, formatted as a range (e.g., '1500-1600')."
+      },
+      "geographical_context": {
+       "type": "string",
+       "description": "The geographical area to narrow the search, such as a country or region."
+      }
+     },
+     "required": [
+      "figure_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Joseph-André Taschereau?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"historical_relationship_finder\", \"description\": \"An advanced tool designed to retrieve and analyze familial relationships of historical figures by searching through genealogical and historical databases, with enhanced capabilities for temporal and geographical specificity.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"figure_name\": {\"type\": \"string\", \"description\": \"The name of the historical figure whose familial relationship is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"spouse\", \"child\", \"sibling\", \"grandparent\", \"grandchild\"], \"description\": \"The type of familial relationship to retrieve.\"}, \"database_source\": {\"type\": \"string\", \"description\": \"The source database or historical record to search for the information. Defaults to a comprehensive genealogical database.\"}, \"name_variants\": {\"type\": \"boolean\", \"description\": \"Whether to consider name variants and aliases in the search. Defaults to true.\"}, \"time_period\": {\"type\": \"string\", \"description\": \"The specific time period to focus the search on, formatted as a range (e.g., '1500-1600').\"}, \"geographical_context\": {\"type\": \"string\", \"description\": \"The geographical area to narrow the search, such as a country or region.\"}}, \"required\": [\"figure_name\", \"relationship_type\"]}}\nResult: {\"result\": \"Gabriel-Elzéar Taschereau\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Joseph-André Taschereau?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 160,
+    "hop_idx": 0,
+    "qkey": "who is the father of josephandr taschereau",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Gabriel-Elzéar Taschereau"
+  },
+  {
+   "episode_id": "161-0-tool_wrong-v1",
+   "instance_id": 161,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "organization",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the publisher of Hürriyet Daily News?",
+   "gold_answer": "Doğan Media",
+   "tool_output": {
+    "result": "Ciner Media Group"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "newspaper_publisher_lookup",
+    "description": "An advanced tool designed to find the publisher of a given newspaper. It queries a comprehensive database of newspapers and their publishers, providing accurate and up-to-date information. The tool now supports additional query parameters for enhanced precision and flexibility.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "newspaper_name": {
+       "type": "string",
+       "description": "The name of the newspaper whose publisher is to be found."
+      },
+      "date": {
+       "type": "string",
+       "format": "date",
+       "description": "The date for which the publisher information is relevant, useful for newspapers with historical changes in publishers."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name_only",
+        "detailed",
+        "full_report"
+       ],
+       "description": "The format of the output. 'name_only' returns just the publisher's name, 'detailed' provides additional information such as contact details or history, and 'full_report' includes comprehensive data such as publication frequency and circulation numbers."
+      },
+      "language": {
+       "type": "string",
+       "description": "The language in which the newspaper is published, allowing for more precise searches in multilingual databases."
+      },
+      "region": {
+       "type": "string",
+       "description": "The geographical region or country where the newspaper is published, useful for narrowing down searches in global databases."
+      }
+     },
+     "required": [
+      "newspaper_name"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the publisher of Hürriyet Daily News?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"newspaper_publisher_lookup\", \"description\": \"An advanced tool designed to find the publisher of a given newspaper. It queries a comprehensive database of newspapers and their publishers, providing accurate and up-to-date information. The tool now supports additional query parameters for enhanced precision and flexibility.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"newspaper_name\": {\"type\": \"string\", \"description\": \"The name of the newspaper whose publisher is to be found.\"}, \"date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The date for which the publisher information is relevant, useful for newspapers with historical changes in publishers.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name_only\", \"detailed\", \"full_report\"], \"description\": \"The format of the output. 'name_only' returns just the publisher's name, 'detailed' provides additional information such as contact details or history, and 'full_report' includes comprehensive data such as publication frequency and circulation numbers.\"}, \"language\": {\"type\": \"string\", \"description\": \"The language in which the newspaper is published, allowing for more precise searches in multilingual databases.\"}, \"region\": {\"type\": \"string\", \"description\": \"The geographical region or country where the newspaper is published, useful for narrowing down searches in global databases.\"}}, \"required\": [\"newspaper_name\"]}}\nResult: {\"result\": \"Ciner Media Group\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the publisher of Hürriyet Daily News?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 161,
+    "hop_idx": 0,
+    "qkey": "who is the publisher of hrriyet daily news",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Ciner Media Group"
+  },
+  {
+   "episode_id": "162-0-tool_wrong-v1",
+   "instance_id": 162,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "organization",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the publisher of Africa Renewal?",
+   "gold_answer": "United Nations",
+   "tool_output": {
+    "result": "African Union"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "publication_info_retriever",
+    "description": "An advanced tool designed to retrieve comprehensive information about publications, including detailed metadata such as publishers, publication dates, editors, ISSN, and more. It also supports historical data retrieval and advanced querying capabilities.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "publication_name": {
+       "type": "string",
+       "description": "The name of the publication for which information is being requested."
+      },
+      "info_type": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "publisher",
+         "publication_date",
+         "editor",
+         "ISSN",
+         "volume",
+         "issue",
+         "DOI",
+         "citation_count"
+        ],
+        "description": "The type of information requested about the publication."
+       },
+       "minItems": 1,
+       "description": "A list of information types to retrieve for the publication."
+      },
+      "historical_data": {
+       "type": "object",
+       "properties": {
+        "include": {
+         "type": "boolean",
+         "description": "Whether to include historical data about the publication, such as past publishers or changes over time. Defaults to false."
+        },
+        "depth": {
+         "type": "integer",
+         "description": "The depth of historical data to retrieve, indicating how many past records should be included. Defaults to 1.",
+         "default": 1
+        }
+       },
+       "required": [
+        "include"
+       ],
+       "description": "Options for retrieving historical data about the publication."
+      },
+      "query_filters": {
+       "type": "object",
+       "properties": {
+        "date_range": {
+         "type": "object",
+         "properties": {
+          "start_date": {
+           "type": "string",
+           "format": "date",
+           "description": "The start date for filtering publication data."
+          },
+          "end_date": {
+           "type": "string",
+           "format": "date",
+           "description": "The end date for filtering publication data."
+          }
+         },
+         "required": [
+          "start_date",
+          "end_date"
+         ],
+         "description": "A date range to filter the publication data."
+        },
+        "language": {
+         "type": "string",
+         "description": "The language of the publication to filter results by."
+        }
+       },
+       "description": "Additional filters to refine the publication information retrieval."
+      }
+     },
+     "required": [
+      "publication_name",
+      "info_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the publisher of Africa Renewal?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"publication_info_retriever\", \"description\": \"An advanced tool designed to retrieve comprehensive information about publications, including detailed metadata such as publishers, publication dates, editors, ISSN, and more. It also supports historical data retrieval and advanced querying capabilities.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"publication_name\": {\"type\": \"string\", \"description\": \"The name of the publication for which information is being requested.\"}, \"info_type\": {\"type\": \"array\", \"items\": {\"type\": \"string\", \"enum\": [\"publisher\", \"publication_date\", \"editor\", \"ISSN\", \"volume\", \"issue\", \"DOI\", \"citation_count\"], \"description\": \"The type of information requested about the publication.\"}, \"minItems\": 1, \"description\": \"A list of information types to retrieve for the publication.\"}, \"historical_data\": {\"type\": \"object\", \"properties\": {\"include\": {\"type\": \"boolean\", \"description\": \"Whether to include historical data about the publication, such as past publishers or changes over time. Defaults to false.\"}, \"depth\": {\"type\": \"integer\", \"description\": \"The depth of historical data to retrieve, indicating how many past records should be included. Defaults to 1.\", \"default\": 1}}, \"required\": [\"include\"], \"description\": \"Options for retrieving historical data about the publication.\"}, \"query_filters\": {\"type\": \"object\", \"properties\": {\"date_range\": {\"type\": \"object\", \"properties\": {\"start_date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The start date for filtering publication data.\"}, \"end_date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The end date for filtering publication data.\"}}, \"required\": [\"start_date\", \"end_date\"], \"description\": \"A date range to filter the publication data.\"}, \"language\": {\"type\": \"string\", \"description\": \"The language of the publication to filter results by.\"}}, \"description\": \"Additional filters to refine the publication information retrieval.\"}}, \"required\": [\"publication_name\", \"info_type\"]}}\nResult: {\"result\": \"African Union\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the publisher of Africa Renewal?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 162,
+    "hop_idx": 0,
+    "qkey": "who is the publisher of africa renewal",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "African Union"
+  },
+  {
+   "episode_id": "165-0-tool_wrong-v1",
+   "instance_id": 165,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the director of Operation Gold Ingot?",
+   "gold_answer": "Georges Lautner",
+   "tool_output": {
+    "result": "Jacques Deray"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "operation_director_lookup",
+    "description": "An advanced tool designed to search and retrieve detailed information about the director of a specified operation from a comprehensive dataset. It supports complex queries for various operations, provides additional filtering options, and returns enriched metadata.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "operation_name": {
+       "type": "string",
+       "description": "The name of the operation for which the director is to be found. Supports partial matches and regex patterns."
+      },
+      "dataset": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "operation": {
+          "type": "string",
+          "description": "The name of the operation."
+         },
+         "director": {
+          "type": "string",
+          "description": "The name of the director of the operation."
+         },
+         "start_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The start date of the operation."
+         },
+         "end_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The end date of the operation."
+         },
+         "status": {
+          "type": "string",
+          "enum": [
+           "ongoing",
+           "completed",
+           "planned"
+          ],
+          "description": "The current status of the operation."
+         },
+         "department": {
+          "type": "string",
+          "description": "The department responsible for the operation."
+         }
+        },
+        "required": [
+         "operation",
+         "director"
+        ]
+       },
+       "description": "The dataset containing detailed information about operations and their directors."
+      },
+      "case_sensitive": {
+       "type": "boolean",
+       "description": "Whether the search should be case-sensitive. Defaults to false.",
+       "default": false
+      },
+      "include_metadata": {
+       "type": "boolean",
+       "description": "Whether to include additional metadata about the operation and director in the results. Defaults to true.",
+       "default": true
+      },
+      "filter_by_status": {
+       "type": "string",
+       "enum": [
+        "ongoing",
+        "completed",
+        "planned"
+       ],
+       "description": "Filter operations by their status."
+      }
+     },
+     "required": [
+      "operation_name",
+      "dataset"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of Operation Gold Ingot?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"operation_director_lookup\", \"description\": \"An advanced tool designed to search and retrieve detailed information about the director of a specified operation from a comprehensive dataset. It supports complex queries for various operations, provides additional filtering options, and returns enriched metadata.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"operation_name\": {\"type\": \"string\", \"description\": \"The name of the operation for which the director is to be found. Supports partial matches and regex patterns.\"}, \"dataset\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"operation\": {\"type\": \"string\", \"description\": \"The name of the operation.\"}, \"director\": {\"type\": \"string\", \"description\": \"The name of the director of the operation.\"}, \"start_date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The start date of the operation.\"}, \"end_date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The end date of the operation.\"}, \"status\": {\"type\": \"string\", \"enum\": [\"ongoing\", \"completed\", \"planned\"], \"description\": \"The current status of the operation.\"}, \"department\": {\"type\": \"string\", \"description\": \"The department responsible for the operation.\"}}, \"required\": [\"operation\", \"director\"]}, \"description\": \"The dataset containing detailed information about operations and their directors.\"}, \"case_sensitive\": {\"type\": \"boolean\", \"description\": \"Whether the search should be case-sensitive. Defaults to false.\", \"default\": false}, \"include_metadata\": {\"type\": \"boolean\", \"description\": \"Whether to include additional metadata about the operation and director in the results. Defaults to true.\", \"default\": true}, \"filter_by_status\": {\"type\": \"string\", \"enum\": [\"ongoing\", \"completed\", \"planned\"], \"description\": \"Filter operations by their status.\"}}, \"required\": [\"operation_name\", \"dataset\"]}}\nResult: {\"result\": \"Jacques Deray\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of Operation Gold Ingot?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 165,
+    "hop_idx": 0,
+    "qkey": "who is the director of operation gold ingot",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Jacques Deray"
+  },
+  {
+   "episode_id": "166-0-tool_wrong-v1",
+   "instance_id": 166,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the director of My 20Th Century?",
+   "gold_answer": "Ildikó Enyedi",
+   "tool_output": {
+    "result": "Márta Mészáros"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "film_director_lookup",
+    "description": "An advanced tool for retrieving detailed information about the director of a specified film. It queries a comprehensive film database to provide accurate and up-to-date information, with enhanced search capabilities and output options.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "film_title": {
+       "type": "string",
+       "description": "The title of the film for which the director's name and details are to be retrieved."
+      },
+      "case_sensitive": {
+       "type": "boolean",
+       "description": "Whether the search should be case-sensitive. Defaults to false.",
+       "default": false
+      },
+      "include_alternative_titles": {
+       "type": "boolean",
+       "description": "Whether to include alternative titles in the search. Defaults to true.",
+       "default": true
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "text",
+        "json",
+        "xml"
+       ],
+       "description": "The format of the output. Defaults to text (the director's name).",
+       "default": "text"
+      },
+      "include_director_bio": {
+       "type": "boolean",
+       "description": "Whether to include a brief biography of the director in the output. Defaults to false.",
+       "default": false
+      },
+      "search_by_year": {
+       "type": "integer",
+       "description": "The year of the film's release to narrow down the search, if known."
+      },
+      "database_source": {
+       "type": "string",
+       "enum": [
+        "IMDb",
+        "TMDb",
+        "Rotten Tomatoes"
+       ],
+       "description": "The film database to query for information. Defaults to IMDb.",
+       "default": "IMDb"
+      }
+     },
+     "required": [
+      "film_title"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of My 20Th Century?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"film_director_lookup\", \"description\": \"An advanced tool for retrieving detailed information about the director of a specified film. It queries a comprehensive film database to provide accurate and up-to-date information, with enhanced search capabilities and output options.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"film_title\": {\"type\": \"string\", \"description\": \"The title of the film for which the director's name and details are to be retrieved.\"}, \"case_sensitive\": {\"type\": \"boolean\", \"description\": \"Whether the search should be case-sensitive. Defaults to false.\", \"default\": false}, \"include_alternative_titles\": {\"type\": \"boolean\", \"description\": \"Whether to include alternative titles in the search. Defaults to true.\", \"default\": true}, \"output_format\": {\"type\": \"string\", \"enum\": [\"text\", \"json\", \"xml\"], \"description\": \"The format of the output. Defaults to text (the director's name).\", \"default\": \"text\"}, \"include_director_bio\": {\"type\": \"boolean\", \"description\": \"Whether to include a brief biography of the director in the output. Defaults to false.\", \"default\": false}, \"search_by_year\": {\"type\": \"integer\", \"description\": \"The year of the film's release to narrow down the search, if known.\"}, \"database_source\": {\"type\": \"string\", \"enum\": [\"IMDb\", \"TMDb\", \"Rotten Tomatoes\"], \"description\": \"The film database to query for information. Defaults to IMDb.\", \"default\": \"IMDb\"}}, \"required\": [\"film_title\"]}}\nResult: {\"result\": \"Márta Mészáros\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of My 20Th Century?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 166,
+    "hop_idx": 0,
+    "qkey": "who is the director of my 20th century",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Márta Mészáros"
+  },
+  {
+   "episode_id": "185-1-tool_wrong-v1",
+   "instance_id": 185,
+   "hop_idx": 1,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Henry Ford Ii?",
+   "gold_answer": "Edsel Ford",
+   "tool_output": {
+    "result": "Henry Ford"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "family_relationship_finder",
+    "description": "An advanced tool designed to retrieve and analyze familial relationships for a given individual, providing comprehensive details about specified relatives such as parents, siblings, children, and extended family members.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "person_name": {
+       "type": "string",
+       "description": "The name of the individual whose familial relationship is to be found."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "sibling",
+        "child",
+        "grandparent",
+        "grandchild",
+        "aunt",
+        "uncle",
+        "cousin"
+       ],
+       "description": "The type of familial relationship to retrieve."
+      },
+      "data_source": {
+       "type": "string",
+       "description": "The source of the genealogical data, such as a database, dataset, or API."
+      },
+      "case_sensitive": {
+       "type": "boolean",
+       "description": "Whether the search should be case-sensitive. Defaults to false.",
+       "default": false
+      },
+      "include_extended_family": {
+       "type": "boolean",
+       "description": "Whether to include extended family members in the search results. Defaults to false.",
+       "default": false
+      },
+      "multiple_sources": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "description": "List of multiple data sources to be used for retrieving genealogical data."
+       },
+       "description": "An array of data sources to be used for a more comprehensive search."
+      },
+      "name_disambiguation": {
+       "type": "boolean",
+       "description": "Whether to attempt disambiguation of common names. Defaults to true.",
+       "default": true
+      }
+     },
+     "required": [
+      "person_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Henry Ford Ii?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"family_relationship_finder\", \"description\": \"An advanced tool designed to retrieve and analyze familial relationships for a given individual, providing comprehensive details about specified relatives such as parents, siblings, children, and extended family members.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"person_name\": {\"type\": \"string\", \"description\": \"The name of the individual whose familial relationship is to be found.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"sibling\", \"child\", \"grandparent\", \"grandchild\", \"aunt\", \"uncle\", \"cousin\"], \"description\": \"The type of familial relationship to retrieve.\"}, \"data_source\": {\"type\": \"string\", \"description\": \"The source of the genealogical data, such as a database, dataset, or API.\"}, \"case_sensitive\": {\"type\": \"boolean\", \"description\": \"Whether the search should be case-sensitive. Defaults to false.\", \"default\": false}, \"include_extended_family\": {\"type\": \"boolean\", \"description\": \"Whether to include extended family members in the search results. Defaults to false.\", \"default\": false}, \"multiple_sources\": {\"type\": \"array\", \"items\": {\"type\": \"string\", \"description\": \"List of multiple data sources to be used for retrieving genealogical data.\"}, \"description\": \"An array of data sources to be used for a more comprehensive search.\"}, \"name_disambiguation\": {\"type\": \"boolean\", \"description\": \"Whether to attempt disambiguation of common names. Defaults to true.\", \"default\": true}}, \"required\": [\"person_name\", \"relationship_type\"]}}\nResult: {\"result\": \"Henry Ford\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Henry Ford Ii?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 185,
+    "hop_idx": 1,
+    "qkey": "who is the father of henry ford ii",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Henry Ford"
+  },
+  {
+   "episode_id": "186-0-tool_wrong-v1",
+   "instance_id": 186,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the director of Snake In The Eagle'S Shadow?",
+   "gold_answer": "Yuen Woo-ping",
+   "tool_output": {
+    "result": "Lau Kar-leung"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "movie_info_retriever",
+    "description": "An advanced tool for retrieving detailed information about movies, including directors, release dates, cast members, genres, runtime, and ratings. It is designed to handle variations in title formatting and provide accurate results from a comprehensive movie database, with options for language preference and result limits.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "movie_title": {
+       "type": "string",
+       "description": "The title of the movie for which information is being requested. The tool should handle variations in capitalization and punctuation."
+      },
+      "information_type": {
+       "type": "string",
+       "enum": [
+        "director",
+        "release_date",
+        "cast",
+        "genre",
+        "runtime",
+        "rating",
+        "all"
+       ],
+       "description": "The type of information requested about the movie. Defaults to 'director'."
+      },
+      "case_sensitive": {
+       "type": "boolean",
+       "description": "Whether the search should be case-sensitive. Defaults to false."
+      },
+      "language": {
+       "type": "string",
+       "description": "The preferred language for the movie information. Defaults to 'en' (English)."
+      },
+      "result_limit": {
+       "type": "integer",
+       "description": "The maximum number of results to return. Defaults to 10."
+      }
+     },
+     "required": [
+      "movie_title"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of Snake In The Eagle'S Shadow?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"movie_info_retriever\", \"description\": \"An advanced tool for retrieving detailed information about movies, including directors, release dates, cast members, genres, runtime, and ratings. It is designed to handle variations in title formatting and provide accurate results from a comprehensive movie database, with options for language preference and result limits.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"movie_title\": {\"type\": \"string\", \"description\": \"The title of the movie for which information is being requested. The tool should handle variations in capitalization and punctuation.\"}, \"information_type\": {\"type\": \"string\", \"enum\": [\"director\", \"release_date\", \"cast\", \"genre\", \"runtime\", \"rating\", \"all\"], \"description\": \"The type of information requested about the movie. Defaults to 'director'.\"}, \"case_sensitive\": {\"type\": \"boolean\", \"description\": \"Whether the search should be case-sensitive. Defaults to false.\"}, \"language\": {\"type\": \"string\", \"description\": \"The preferred language for the movie information. Defaults to 'en' (English).\"}, \"result_limit\": {\"type\": \"integer\", \"description\": \"The maximum number of results to return. Defaults to 10.\"}}, \"required\": [\"movie_title\"]}}\nResult: {\"result\": \"Lau Kar-leung\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of Snake In The Eagle'S Shadow?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 186,
+    "hop_idx": 0,
+    "qkey": "who is the director of snake in the eagles shadow",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Lau Kar-leung"
+  },
+  {
+   "episode_id": "191-0-tool_wrong-v1",
+   "instance_id": 191,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Hugh Cholmondeley, 1St Earl Of Cholmondeley?",
+   "gold_answer": "Robert Cholmondeley, 1st Viscount Cholmondeley",
+   "tool_output": {
+    "result": "Thomas Cholmondeley of Vale Royal"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "genealogy_query",
+    "description": "An advanced tool designed to query genealogical databases to find detailed family relationships of historical figures, with enhanced search parameters for accuracy and flexibility.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "figure_name": {
+       "type": "string",
+       "description": "The full name of the historical figure whose parentage or family relationships are being queried."
+      },
+      "title": {
+       "type": "string",
+       "description": "The title or rank of the historical figure, if applicable, to ensure accurate identification."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "siblings",
+        "children",
+        "grandparents",
+        "grandchildren",
+        "aunts",
+        "uncles",
+        "cousins"
+       ],
+       "description": "The type of family relationship to query. Defaults to 'father'."
+      },
+      "historical_period": {
+       "type": "string",
+       "description": "The historical period or century to narrow down the search. Defaults to 'unknown' if not specified."
+      },
+      "geographical_location": {
+       "type": "string",
+       "description": "The geographical location associated with the historical figure to refine the search."
+      },
+      "database_selection": {
+       "type": "string",
+       "description": "The specific genealogical database to query, if multiple databases are available."
+      },
+      "date_range": {
+       "type": "string",
+       "description": "The specific date range to consider for the query, formatted as 'YYYY-YYYY'."
+      }
+     },
+     "required": [
+      "figure_name"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Hugh Cholmondeley, 1St Earl Of Cholmondeley?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"genealogy_query\", \"description\": \"An advanced tool designed to query genealogical databases to find detailed family relationships of historical figures, with enhanced search parameters for accuracy and flexibility.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"figure_name\": {\"type\": \"string\", \"description\": \"The full name of the historical figure whose parentage or family relationships are being queried.\"}, \"title\": {\"type\": \"string\", \"description\": \"The title or rank of the historical figure, if applicable, to ensure accurate identification.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"siblings\", \"children\", \"grandparents\", \"grandchildren\", \"aunts\", \"uncles\", \"cousins\"], \"description\": \"The type of family relationship to query. Defaults to 'father'.\"}, \"historical_period\": {\"type\": \"string\", \"description\": \"The historical period or century to narrow down the search. Defaults to 'unknown' if not specified.\"}, \"geographical_location\": {\"type\": \"string\", \"description\": \"The geographical location associated with the historical figure to refine the search.\"}, \"database_selection\": {\"type\": \"string\", \"description\": \"The specific genealogical database to query, if multiple databases are available.\"}, \"date_range\": {\"type\": \"string\", \"description\": \"The specific date range to consider for the query, formatted as 'YYYY-YYYY'.\"}}, \"required\": [\"figure_name\"]}}\nResult: {\"result\": \"Thomas Cholmondeley of Vale Royal\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Hugh Cholmondeley, 1St Earl Of Cholmondeley?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 191,
+    "hop_idx": 0,
+    "qkey": "who is the father of hugh cholmondeley 1st earl of cholmondeley",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Thomas Cholmondeley of Vale Royal"
+  },
+  {
+   "episode_id": "207-0-tool_wrong-v1",
+   "instance_id": 207,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Philipp, Duke Of Saxe-Merseburg-Lauchstädt?",
+   "gold_answer": "Christian I, Duke of Saxe-Merseburg",
+   "tool_output": {
+    "result": "John George II, Elector of Saxony"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "genealogy_query",
+    "description": "An advanced tool designed to retrieve detailed genealogical information about historical figures, including a wide range of familial relationships and additional contextual data.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "person_name": {
+       "type": "string",
+       "description": "The full name of the historical figure whose genealogical information is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "spouse",
+        "children",
+        "siblings",
+        "grandparents",
+        "grandchildren",
+        "aunts",
+        "uncles",
+        "cousins"
+       ],
+       "description": "The type of familial relationship to query. Defaults to 'father'."
+      },
+      "name_variants": {
+       "type": "boolean",
+       "description": "Whether to consider name variants and alternate spellings. Defaults to true."
+      },
+      "data_source": {
+       "type": "string",
+       "description": "The specific database or knowledge base to query for genealogical information."
+      },
+      "time_period": {
+       "type": "string",
+       "description": "The specific time period to consider for the genealogical information, formatted as a range (e.g., '1800-1900')."
+      },
+      "data_accuracy": {
+       "type": "string",
+       "enum": [
+        "high",
+        "medium",
+        "low"
+       ],
+       "description": "The desired level of data accuracy, affecting the sources and methods used for retrieval."
+      }
+     },
+     "required": [
+      "person_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Philipp, Duke Of Saxe-Merseburg-Lauchstädt?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"genealogy_query\", \"description\": \"An advanced tool designed to retrieve detailed genealogical information about historical figures, including a wide range of familial relationships and additional contextual data.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"person_name\": {\"type\": \"string\", \"description\": \"The full name of the historical figure whose genealogical information is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"spouse\", \"children\", \"siblings\", \"grandparents\", \"grandchildren\", \"aunts\", \"uncles\", \"cousins\"], \"description\": \"The type of familial relationship to query. Defaults to 'father'.\"}, \"name_variants\": {\"type\": \"boolean\", \"description\": \"Whether to consider name variants and alternate spellings. Defaults to true.\"}, \"data_source\": {\"type\": \"string\", \"description\": \"The specific database or knowledge base to query for genealogical information.\"}, \"time_period\": {\"type\": \"string\", \"description\": \"The specific time period to consider for the genealogical information, formatted as a range (e.g., '1800-1900').\"}, \"data_accuracy\": {\"type\": \"string\", \"enum\": [\"high\", \"medium\", \"low\"], \"description\": \"The desired level of data accuracy, affecting the sources and methods used for retrieval.\"}}, \"required\": [\"person_name\", \"relationship_type\"]}}\nResult: {\"result\": \"John George II, Elector of Saxony\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Philipp, Duke Of Saxe-Merseburg-Lauchstädt?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 207,
+    "hop_idx": 0,
+    "qkey": "who is the father of philipp duke of saxemerseburglauchstdt",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "John George II, Elector of Saxony"
+  },
+  {
+   "episode_id": "213-0-tool_wrong-v1",
+   "instance_id": 213,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the director of The Invisible Menace?",
+   "gold_answer": "John Farrow",
+   "tool_output": {
+    "result": "William Clemens"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "movie_info_retriever",
+    "description": "An advanced tool for retrieving comprehensive information about movies, including directors, release years, cast members, genres, runtimes, and ratings. It is designed to handle complex queries for various movie attributes and provide accurate results.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "movie_title": {
+       "type": "string",
+       "description": "The title of the movie for which information is being requested."
+      },
+      "attributes": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "director",
+         "release_year",
+         "cast",
+         "genre",
+         "runtime",
+         "rating"
+        ],
+        "description": "The specific attributes of the movie to retrieve. Defaults to ['director']."
+       },
+       "description": "A list of attributes to retrieve for the specified movie."
+      },
+      "exact_match": {
+       "type": "boolean",
+       "description": "Whether to search for an exact match of the movie title. Defaults to true."
+      },
+      "language": {
+       "type": "string",
+       "description": "The language of the movie, if applicable, to narrow down the search."
+      },
+      "release_date_range": {
+       "type": "object",
+       "properties": {
+        "start_year": {
+         "type": "integer",
+         "description": "The start year of the release date range."
+        },
+        "end_year": {
+         "type": "integer",
+         "description": "The end year of the release date range."
+        }
+       },
+       "description": "The range of release years to filter the search results."
+      },
+      "minimum_rating": {
+       "type": "number",
+       "description": "The minimum rating to filter the search results."
+      }
+     },
+     "required": [
+      "movie_title"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of The Invisible Menace?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"movie_info_retriever\", \"description\": \"An advanced tool for retrieving comprehensive information about movies, including directors, release years, cast members, genres, runtimes, and ratings. It is designed to handle complex queries for various movie attributes and provide accurate results.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"movie_title\": {\"type\": \"string\", \"description\": \"The title of the movie for which information is being requested.\"}, \"attributes\": {\"type\": \"array\", \"items\": {\"type\": \"string\", \"enum\": [\"director\", \"release_year\", \"cast\", \"genre\", \"runtime\", \"rating\"], \"description\": \"The specific attributes of the movie to retrieve. Defaults to ['director'].\"}, \"description\": \"A list of attributes to retrieve for the specified movie.\"}, \"exact_match\": {\"type\": \"boolean\", \"description\": \"Whether to search for an exact match of the movie title. Defaults to true.\"}, \"language\": {\"type\": \"string\", \"description\": \"The language of the movie, if applicable, to narrow down the search.\"}, \"release_date_range\": {\"type\": \"object\", \"properties\": {\"start_year\": {\"type\": \"integer\", \"description\": \"The start year of the release date range.\"}, \"end_year\": {\"type\": \"integer\", \"description\": \"The end year of the release date range.\"}}, \"description\": \"The range of release years to filter the search results.\"}, \"minimum_rating\": {\"type\": \"number\", \"description\": \"The minimum rating to filter the search results.\"}}, \"required\": [\"movie_title\"]}}\nResult: {\"result\": \"William Clemens\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of The Invisible Menace?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 213,
+    "hop_idx": 0,
+    "qkey": "who is the director of the invisible menace",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "William Clemens"
+  },
+  {
+   "episode_id": "224-0-tool_wrong-v1",
+   "instance_id": 224,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the director of Cop Or Hood?",
+   "gold_answer": "Georges Lautner",
+   "tool_output": {
+    "result": "Henri Verneuil"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "film_info_retriever",
+    "description": "An enhanced tool designed to retrieve comprehensive information about films, including directors, from an extensive film database. It supports flexible and advanced search options, providing detailed film insights.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "title": {
+       "type": "string",
+       "description": "The title of the film to search for. Supports partial titles and advanced matching techniques."
+      },
+      "case_sensitive": {
+       "type": "boolean",
+       "description": "Whether the title search should be case sensitive. Defaults to false.",
+       "default": false
+      },
+      "additional_info": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "release_year",
+         "main_cast",
+         "genre",
+         "runtime",
+         "director",
+         "box_office",
+         "awards",
+         "language",
+         "country"
+        ],
+        "description": "Additional information to retrieve about the film."
+       }
+      },
+      "release_year_range": {
+       "type": "object",
+       "properties": {
+        "start_year": {
+         "type": "integer",
+         "description": "The start year for the film's release year range."
+        },
+        "end_year": {
+         "type": "integer",
+         "description": "The end year for the film's release year range."
+        }
+       },
+       "description": "Specify a range of years to filter the film's release date."
+      },
+      "genre_filter": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "description": "Genres to filter the search results."
+       },
+       "description": "Filter films by specific genres."
+      }
+     },
+     "required": [
+      "title"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of Cop Or Hood?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"film_info_retriever\", \"description\": \"An enhanced tool designed to retrieve comprehensive information about films, including directors, from an extensive film database. It supports flexible and advanced search options, providing detailed film insights.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"title\": {\"type\": \"string\", \"description\": \"The title of the film to search for. Supports partial titles and advanced matching techniques.\"}, \"case_sensitive\": {\"type\": \"boolean\", \"description\": \"Whether the title search should be case sensitive. Defaults to false.\", \"default\": false}, \"additional_info\": {\"type\": \"array\", \"items\": {\"type\": \"string\", \"enum\": [\"release_year\", \"main_cast\", \"genre\", \"runtime\", \"director\", \"box_office\", \"awards\", \"language\", \"country\"], \"description\": \"Additional information to retrieve about the film.\"}}, \"release_year_range\": {\"type\": \"object\", \"properties\": {\"start_year\": {\"type\": \"integer\", \"description\": \"The start year for the film's release year range.\"}, \"end_year\": {\"type\": \"integer\", \"description\": \"The end year for the film's release year range.\"}}, \"description\": \"Specify a range of years to filter the film's release date.\"}, \"genre_filter\": {\"type\": \"array\", \"items\": {\"type\": \"string\", \"description\": \"Genres to filter the search results.\"}, \"description\": \"Filter films by specific genres.\"}}, \"required\": [\"title\"]}}\nResult: {\"result\": \"Henri Verneuil\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of Cop Or Hood?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 224,
+    "hop_idx": 0,
+    "qkey": "who is the director of cop or hood",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Henri Verneuil"
+  },
+  {
+   "episode_id": "237-0-tool_wrong-v1",
+   "instance_id": 237,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the mother of Dakota Mayi Johnson?",
+   "gold_answer": "Melanie Griffith",
+   "tool_output": {
+    "result": "Kelly McGillis"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "family_relationship_finder",
+    "description": "An advanced tool designed to find and analyze familial relationships of individuals, focusing on a wide range of connections including parent-child, sibling, and extended family relationships. It can handle complex queries about various people and their family members, providing accurate and comprehensive information.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "individual_name": {
+       "type": "string",
+       "description": "The name of the individual whose family relationship is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "mother",
+        "father",
+        "sibling",
+        "child",
+        "grandparent",
+        "grandchild",
+        "aunt",
+        "uncle",
+        "cousin"
+       ],
+       "description": "The type of familial relationship to find. Defaults to 'mother'."
+      },
+      "data_source": {
+       "type": "string",
+       "description": "The source of the data, such as a specific database or API. This ensures the tool can access the necessary information."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name_only",
+        "detailed",
+        "full_tree"
+       ],
+       "description": "'name_only' returns just the name, 'detailed' provides additional information such as birthdate or occupation, and 'full_tree' offers a complete family tree view."
+      },
+      "depth": {
+       "type": "integer",
+       "description": "The depth of the family tree to explore, where 1 represents immediate family and higher numbers include extended family."
+      },
+      "filter_criteria": {
+       "type": "object",
+       "properties": {
+        "age_range": {
+         "type": "array",
+         "items": {
+          "type": "integer"
+         },
+         "description": "An array specifying the minimum and maximum age of family members to include in the results."
+        },
+        "location": {
+         "type": "string",
+         "description": "Filter family members by their current or last known location."
+        }
+       },
+       "description": "Criteria to filter the results, such as age range or location."
+      }
+     },
+     "required": [
+      "individual_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the mother of Dakota Mayi Johnson?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"family_relationship_finder\", \"description\": \"An advanced tool designed to find and analyze familial relationships of individuals, focusing on a wide range of connections including parent-child, sibling, and extended family relationships. It can handle complex queries about various people and their family members, providing accurate and comprehensive information.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"individual_name\": {\"type\": \"string\", \"description\": \"The name of the individual whose family relationship is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"mother\", \"father\", \"sibling\", \"child\", \"grandparent\", \"grandchild\", \"aunt\", \"uncle\", \"cousin\"], \"description\": \"The type of familial relationship to find. Defaults to 'mother'.\"}, \"data_source\": {\"type\": \"string\", \"description\": \"The source of the data, such as a specific database or API. This ensures the tool can access the necessary information.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name_only\", \"detailed\", \"full_tree\"], \"description\": \"'name_only' returns just the name, 'detailed' provides additional information such as birthdate or occupation, and 'full_tree' offers a complete family tree view.\"}, \"depth\": {\"type\": \"integer\", \"description\": \"The depth of the family tree to explore, where 1 represents immediate family and higher numbers include extended family.\"}, \"filter_criteria\": {\"type\": \"object\", \"properties\": {\"age_range\": {\"type\": \"array\", \"items\": {\"type\": \"integer\"}, \"description\": \"An array specifying the minimum and maximum age of family members to include in the results.\"}, \"location\": {\"type\": \"string\", \"description\": \"Filter family members by their current or last known location.\"}}, \"description\": \"Criteria to filter the results, such as age range or location.\"}}, \"required\": [\"individual_name\", \"relationship_type\"]}}\nResult: {\"result\": \"Kelly McGillis\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the mother of Dakota Mayi Johnson?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 237,
+    "hop_idx": 0,
+    "qkey": "who is the mother of dakota mayi johnson",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Kelly McGillis"
+  },
+  {
+   "episode_id": "275-0-tool_wrong-v1",
+   "instance_id": 275,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Abaqa Khan?",
+   "gold_answer": "Hulagu Khan",
+   "tool_output": {
+    "result": "Möngke Khan"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "historical_lineage_retriever",
+    "description": "An advanced tool designed to retrieve comprehensive genealogical information about historical figures, focusing on a wide range of familial relationships and contextual details such as geographical location and historical era.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "figure_name": {
+       "type": "string",
+       "description": "The name of the historical figure whose lineage information is being requested."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "siblings",
+        "children",
+        "grandparents",
+        "cousins",
+        "spouse"
+       ],
+       "description": "The type of familial relationship to retrieve information about."
+      },
+      "name_variations": {
+       "type": "boolean",
+       "description": "Whether to consider variations in the spelling of the figure's name. Defaults to true."
+      },
+      "time_period": {
+       "type": "object",
+       "properties": {
+        "start_year": {
+         "type": "integer",
+         "description": "The start year of the time period to consider for the historical figure."
+        },
+        "end_year": {
+         "type": "integer",
+         "description": "The end year of the time period to consider for the historical figure."
+        }
+       },
+       "description": "The specific time period to consider for the historical figure, to help disambiguate between figures with similar names."
+      },
+      "geographical_context": {
+       "type": "string",
+       "description": "The geographical location to consider when retrieving lineage information, to provide more context."
+      },
+      "data_source_preference": {
+       "type": "string",
+       "enum": [
+        "primary_sources",
+        "secondary_sources",
+        "archival_records"
+       ],
+       "description": "The preferred type of data source for retrieving information."
+      }
+     },
+     "required": [
+      "figure_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Abaqa Khan?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"historical_lineage_retriever\", \"description\": \"An advanced tool designed to retrieve comprehensive genealogical information about historical figures, focusing on a wide range of familial relationships and contextual details such as geographical location and historical era.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"figure_name\": {\"type\": \"string\", \"description\": \"The name of the historical figure whose lineage information is being requested.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"siblings\", \"children\", \"grandparents\", \"cousins\", \"spouse\"], \"description\": \"The type of familial relationship to retrieve information about.\"}, \"name_variations\": {\"type\": \"boolean\", \"description\": \"Whether to consider variations in the spelling of the figure's name. Defaults to true.\"}, \"time_period\": {\"type\": \"object\", \"properties\": {\"start_year\": {\"type\": \"integer\", \"description\": \"The start year of the time period to consider for the historical figure.\"}, \"end_year\": {\"type\": \"integer\", \"description\": \"The end year of the time period to consider for the historical figure.\"}}, \"description\": \"The specific time period to consider for the historical figure, to help disambiguate between figures with similar names.\"}, \"geographical_context\": {\"type\": \"string\", \"description\": \"The geographical location to consider when retrieving lineage information, to provide more context.\"}, \"data_source_preference\": {\"type\": \"string\", \"enum\": [\"primary_sources\", \"secondary_sources\", \"archival_records\"], \"description\": \"The preferred type of data source for retrieving information.\"}}, \"required\": [\"figure_name\", \"relationship_type\"]}}\nResult: {\"result\": \"Möngke Khan\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Abaqa Khan?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 275,
+    "hop_idx": 0,
+    "qkey": "who is the father of abaqa khan",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Möngke Khan"
+  },
+  {
+   "episode_id": "299-1-tool_wrong-v1",
+   "instance_id": 299,
+   "hop_idx": 1,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the spouse of Frank Launder?",
+   "gold_answer": "Bernadette O'Farrell",
+   "tool_output": {
+    "result": "Joyce Grenfell"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "biographical_relationship_query",
+    "description": "An enhanced tool designed to retrieve detailed personal relationship information from structured biographical datasets. It supports complex queries about familial, personal, and professional relationships of individuals, with improved data source integration.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "individual_name": {
+       "type": "string",
+       "description": "The name of the individual whose relationship information is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "spouse",
+        "parent",
+        "child",
+        "sibling",
+        "grandparent",
+        "grandchild",
+        "cousin",
+        "aunt",
+        "uncle",
+        "nephew",
+        "niece",
+        "friend",
+        "colleague"
+       ],
+       "description": "The type of relationship information to retrieve."
+      },
+      "data_source": {
+       "type": "string",
+       "description": "The source of the biographical data, such as a specific database, dataset, or API endpoint."
+      },
+      "date_range": {
+       "type": "object",
+       "properties": {
+        "start_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The start date for the relationship data query."
+        },
+        "end_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The end date for the relationship data query."
+        }
+       },
+       "description": "The date range for which the relationship information is relevant."
+      },
+      "include_extended_family": {
+       "type": "boolean",
+       "description": "Whether to include extended family relationships in the query results."
+      }
+     },
+     "required": [
+      "individual_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the spouse of Frank Launder?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"biographical_relationship_query\", \"description\": \"An enhanced tool designed to retrieve detailed personal relationship information from structured biographical datasets. It supports complex queries about familial, personal, and professional relationships of individuals, with improved data source integration.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"individual_name\": {\"type\": \"string\", \"description\": \"The name of the individual whose relationship information is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"spouse\", \"parent\", \"child\", \"sibling\", \"grandparent\", \"grandchild\", \"cousin\", \"aunt\", \"uncle\", \"nephew\", \"niece\", \"friend\", \"colleague\"], \"description\": \"The type of relationship information to retrieve.\"}, \"data_source\": {\"type\": \"string\", \"description\": \"The source of the biographical data, such as a specific database, dataset, or API endpoint.\"}, \"date_range\": {\"type\": \"object\", \"properties\": {\"start_date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The start date for the relationship data query.\"}, \"end_date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The end date for the relationship data query.\"}}, \"description\": \"The date range for which the relationship information is relevant.\"}, \"include_extended_family\": {\"type\": \"boolean\", \"description\": \"Whether to include extended family relationships in the query results.\"}}, \"required\": [\"individual_name\", \"relationship_type\"]}}\nResult: {\"result\": \"Joyce Grenfell\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the spouse of Frank Launder?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 299,
+    "hop_idx": 1,
+    "qkey": "who is the spouse of frank launder",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Joyce Grenfell"
+  },
+  {
+   "episode_id": "318-0-tool_wrong-v1",
+   "instance_id": 318,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Timothy Shriver?",
+   "gold_answer": "Sargent Shriver",
+   "tool_output": {
+    "result": "Ted Kennedy"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "family_relationship_finder",
+    "description": "An advanced tool designed to retrieve detailed familial relationships of notable individuals, providing comprehensive information such as parents, siblings, children, and extended family members, with contextual details.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "individual_name": {
+       "type": "string",
+       "description": "The full name of the individual whose family relationship is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "sibling",
+        "child",
+        "grandparent",
+        "grandchild",
+        "aunt",
+        "uncle",
+        "cousin"
+       ],
+       "description": "The type of familial relationship to retrieve."
+      },
+      "data_source": {
+       "type": "string",
+       "description": "The specific database or knowledge base to query for information. Defaults to a general biographical database."
+      },
+      "name_variants": {
+       "type": "boolean",
+       "description": "Whether to consider name variants and aliases in the search. Defaults to true."
+      },
+      "time_period": {
+       "type": "string",
+       "description": "The historical time period to consider for the relationship query, formatted as a date range (e.g., '1900-1950')."
+      },
+      "location_context": {
+       "type": "string",
+       "description": "Geographical context to narrow down the search, such as country or city."
+      }
+     },
+     "required": [
+      "individual_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Timothy Shriver?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"family_relationship_finder\", \"description\": \"An advanced tool designed to retrieve detailed familial relationships of notable individuals, providing comprehensive information such as parents, siblings, children, and extended family members, with contextual details.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"individual_name\": {\"type\": \"string\", \"description\": \"The full name of the individual whose family relationship is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"sibling\", \"child\", \"grandparent\", \"grandchild\", \"aunt\", \"uncle\", \"cousin\"], \"description\": \"The type of familial relationship to retrieve.\"}, \"data_source\": {\"type\": \"string\", \"description\": \"The specific database or knowledge base to query for information. Defaults to a general biographical database.\"}, \"name_variants\": {\"type\": \"boolean\", \"description\": \"Whether to consider name variants and aliases in the search. Defaults to true.\"}, \"time_period\": {\"type\": \"string\", \"description\": \"The historical time period to consider for the relationship query, formatted as a date range (e.g., '1900-1950').\"}, \"location_context\": {\"type\": \"string\", \"description\": \"Geographical context to narrow down the search, such as country or city.\"}}, \"required\": [\"individual_name\", \"relationship_type\"]}}\nResult: {\"result\": \"Ted Kennedy\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Timothy Shriver?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 318,
+    "hop_idx": 0,
+    "qkey": "who is the father of timothy shriver",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Ted Kennedy"
+  },
+  {
+   "episode_id": "324-0-tool_wrong-v1",
+   "instance_id": 324,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Fitzroy John Somerset, 5Th Baron Raglan?",
+   "gold_answer": "Fitzroy Richard Somerset",
+   "tool_output": {
+    "result": "Henry Somerset, 10th Duke of Beaufort"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "genealogy_lookup",
+    "description": "An advanced tool for retrieving genealogical information, designed to identify various familial relationships in historical and contemporary contexts, with enhanced options for specificity and data source selection.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "person_name": {
+       "type": "string",
+       "description": "The full name of the individual whose genealogical information is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "both",
+        "siblings",
+        "grandparents",
+        "children"
+       ],
+       "description": "The type of familial relationship to retrieve. Defaults to 'father'."
+      },
+      "historical_context": {
+       "type": "object",
+       "properties": {
+        "is_historical": {
+         "type": "boolean",
+         "description": "Indicates whether the query involves historical figures. Defaults to true."
+        },
+        "time_period": {
+         "type": "string",
+         "description": "Specify the time period for historical queries, e.g., 'Victorian Era', '20th Century'."
+        }
+       },
+       "required": [
+        "is_historical"
+       ]
+      },
+      "data_source": {
+       "type": "object",
+       "properties": {
+        "preferred_source": {
+         "type": "string",
+         "description": "The preferred data source or database for retrieving genealogical information."
+        },
+        "backup_sources": {
+         "type": "array",
+         "items": {
+          "type": "string"
+         },
+         "description": "List of backup data sources to use if the preferred source is unavailable."
+        }
+       },
+       "required": [
+        "preferred_source"
+       ]
+      },
+      "date_range": {
+       "type": "object",
+       "properties": {
+        "start_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The start date for the query range."
+        },
+        "end_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The end date for the query range."
+        }
+       },
+       "description": "Specify a date range for the genealogical query."
+      },
+      "geographical_location": {
+       "type": "string",
+       "description": "The geographical location relevant to the genealogical query, e.g., 'New York, USA'."
+      }
+     },
+     "required": [
+      "person_name"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Fitzroy John Somerset, 5Th Baron Raglan?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"genealogy_lookup\", \"description\": \"An advanced tool for retrieving genealogical information, designed to identify various familial relationships in historical and contemporary contexts, with enhanced options for specificity and data source selection.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"person_name\": {\"type\": \"string\", \"description\": \"The full name of the individual whose genealogical information is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"both\", \"siblings\", \"grandparents\", \"children\"], \"description\": \"The type of familial relationship to retrieve. Defaults to 'father'.\"}, \"historical_context\": {\"type\": \"object\", \"properties\": {\"is_historical\": {\"type\": \"boolean\", \"description\": \"Indicates whether the query involves historical figures. Defaults to true.\"}, \"time_period\": {\"type\": \"string\", \"description\": \"Specify the time period for historical queries, e.g., 'Victorian Era', '20th Century'.\"}}, \"required\": [\"is_historical\"]}, \"data_source\": {\"type\": \"object\", \"properties\": {\"preferred_source\": {\"type\": \"string\", \"description\": \"The preferred data source or database for retrieving genealogical information.\"}, \"backup_sources\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}, \"description\": \"List of backup data sources to use if the preferred source is unavailable.\"}}, \"required\": [\"preferred_source\"]}, \"date_range\": {\"type\": \"object\", \"properties\": {\"start_date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The start date for the query range.\"}, \"end_date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The end date for the query range.\"}}, \"description\": \"Specify a date range for the genealogical query.\"}, \"geographical_location\": {\"type\": \"string\", \"description\": \"The geographical location relevant to the genealogical query, e.g., 'New York, USA'.\"}}, \"required\": [\"person_name\"]}}\nResult: {\"result\": \"Henry Somerset, 10th Duke of Beaufort\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Fitzroy John Somerset, 5Th Baron Raglan?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 324,
+    "hop_idx": 0,
+    "qkey": "who is the father of fitzroy john somerset 5th baron raglan",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Henry Somerset, 10th Duke of Beaufort"
+  },
+  {
+   "episode_id": "349-0-tool_wrong-v1",
+   "instance_id": 349,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the mother of Eva Chamberlain?",
+   "gold_answer": "Cosima Wagner",
+   "tool_output": {
+    "result": "Mathilde Wesendonck"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "family_relationship_query",
+    "description": "An advanced tool designed to query familial relationships from one or more structured datasets. It can retrieve detailed information about various family members based on complex input queries, including relationship depth, age, and location filters.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "person_name": {
+       "type": "string",
+       "description": "The name of the person whose family relationship is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "mother",
+        "father",
+        "sibling",
+        "child",
+        "spouse",
+        "grandparent",
+        "cousin",
+        "aunt",
+        "uncle"
+       ],
+       "description": "The type of familial relationship to query."
+      },
+      "relationship_depth": {
+       "type": "integer",
+       "description": "The depth of the relationship to query, where 1 is immediate family, 2 is extended family, etc.",
+       "default": 1
+      },
+      "age_filter": {
+       "type": "object",
+       "properties": {
+        "min_age": {
+         "type": "integer",
+         "description": "The minimum age of the family members to include in the query."
+        },
+        "max_age": {
+         "type": "integer",
+         "description": "The maximum age of the family members to include in the query."
+        }
+       },
+       "required": []
+      },
+      "location_filter": {
+       "type": "string",
+       "description": "The location to filter family members by, if applicable."
+      },
+      "dataset": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "The datasets or databases to be used for the query. These should contain structured family relationship data."
+      }
+     },
+     "required": [
+      "person_name",
+      "relationship_type",
+      "dataset"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the mother of Eva Chamberlain?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"family_relationship_query\", \"description\": \"An advanced tool designed to query familial relationships from one or more structured datasets. It can retrieve detailed information about various family members based on complex input queries, including relationship depth, age, and location filters.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"person_name\": {\"type\": \"string\", \"description\": \"The name of the person whose family relationship is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"mother\", \"father\", \"sibling\", \"child\", \"spouse\", \"grandparent\", \"cousin\", \"aunt\", \"uncle\"], \"description\": \"The type of familial relationship to query.\"}, \"relationship_depth\": {\"type\": \"integer\", \"description\": \"The depth of the relationship to query, where 1 is immediate family, 2 is extended family, etc.\", \"default\": 1}, \"age_filter\": {\"type\": \"object\", \"properties\": {\"min_age\": {\"type\": \"integer\", \"description\": \"The minimum age of the family members to include in the query.\"}, \"max_age\": {\"type\": \"integer\", \"description\": \"The maximum age of the family members to include in the query.\"}}, \"required\": []}, \"location_filter\": {\"type\": \"string\", \"description\": \"The location to filter family members by, if applicable.\"}, \"dataset\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}, \"description\": \"The datasets or databases to be used for the query. These should contain structured family relationship data.\"}}, \"required\": [\"person_name\", \"relationship_type\", \"dataset\"]}}\nResult: {\"result\": \"Mathilde Wesendonck\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the mother of Eva Chamberlain?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 349,
+    "hop_idx": 0,
+    "qkey": "who is the mother of eva chamberlain",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Mathilde Wesendonck"
+  },
+  {
+   "episode_id": "351-0-tool_wrong-v1",
+   "instance_id": 351,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the director of The Monocle Laughs?",
+   "gold_answer": "Georges Lautner",
+   "tool_output": {
+    "result": "Philippe de Broca"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "film_director_lookup_v2",
+    "description": "An advanced tool for retrieving detailed information about a specified film, including its director. It supports flexible search options, enhanced filtering capabilities, and can provide comprehensive film details.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "film_title": {
+       "type": "string",
+       "description": "The title of the film to search for. Partial titles are accepted."
+      },
+      "case_sensitive": {
+       "type": "boolean",
+       "description": "Whether the search should be case-sensitive. Defaults to false.",
+       "default": false
+      },
+      "additional_info": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "year",
+         "cast",
+         "genre",
+         "runtime",
+         "language",
+         "country"
+        ],
+        "description": "Additional information to retrieve about the film. Options include year of release, cast, genre, runtime, language, and country of origin."
+       }
+      },
+      "release_year": {
+       "type": "integer",
+       "description": "Filter films by their release year. If specified, only films from this year will be considered."
+      },
+      "genre_filter": {
+       "type": "string",
+       "description": "Filter films by genre. Only films matching this genre will be considered."
+      }
+     },
+     "required": [
+      "film_title"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of The Monocle Laughs?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"film_director_lookup_v2\", \"description\": \"An advanced tool for retrieving detailed information about a specified film, including its director. It supports flexible search options, enhanced filtering capabilities, and can provide comprehensive film details.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"film_title\": {\"type\": \"string\", \"description\": \"The title of the film to search for. Partial titles are accepted.\"}, \"case_sensitive\": {\"type\": \"boolean\", \"description\": \"Whether the search should be case-sensitive. Defaults to false.\", \"default\": false}, \"additional_info\": {\"type\": \"array\", \"items\": {\"type\": \"string\", \"enum\": [\"year\", \"cast\", \"genre\", \"runtime\", \"language\", \"country\"], \"description\": \"Additional information to retrieve about the film. Options include year of release, cast, genre, runtime, language, and country of origin.\"}}, \"release_year\": {\"type\": \"integer\", \"description\": \"Filter films by their release year. If specified, only films from this year will be considered.\"}, \"genre_filter\": {\"type\": \"string\", \"description\": \"Filter films by genre. Only films matching this genre will be considered.\"}}, \"required\": [\"film_title\"]}}\nResult: {\"result\": \"Philippe de Broca\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of The Monocle Laughs?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 351,
+    "hop_idx": 0,
+    "qkey": "who is the director of the monocle laughs",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Philippe de Broca"
+  },
+  {
+   "episode_id": "353-0-tool_wrong-v1",
+   "instance_id": 353,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the husband of Marie Anna Of Saxony?",
+   "gold_answer": "Leopold II, Grand Duke of Tuscany",
+   "tool_output": {
+    "result": "Francis IV, Duke of Modena"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "historical_relationship_finder",
+    "description": "An advanced tool designed to find and analyze relationships and connections between historical figures, with a focus on familial, marital, and other significant ties, providing detailed insights and historical context.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "person_name": {
+       "type": "string",
+       "description": "The name of the historical figure whose relationships are to be queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "spouse",
+        "parent",
+        "child",
+        "sibling",
+        "mentor",
+        "colleague",
+        "rival"
+       ],
+       "description": "The type of relationship to query. Defaults to 'spouse'."
+      },
+      "time_period": {
+       "type": "object",
+       "properties": {
+        "start_year": {
+         "type": "integer",
+         "description": "The starting year of the time period to consider for the query."
+        },
+        "end_year": {
+         "type": "integer",
+         "description": "The ending year of the time period to consider for the query."
+        }
+       },
+       "description": "The specific time period to consider for the query, formatted as a range. Optional."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name_only",
+        "detailed",
+        "summary"
+       ],
+       "description": "The format of the output. 'name_only' returns just the name, 'detailed' provides additional information about the relationship, and 'summary' offers a brief overview of the connections."
+      },
+      "include_context": {
+       "type": "boolean",
+       "description": "Whether to include historical context and background information in the output. Defaults to false."
+      }
+     },
+     "required": [
+      "person_name"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the husband of Marie Anna Of Saxony?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"historical_relationship_finder\", \"description\": \"An advanced tool designed to find and analyze relationships and connections between historical figures, with a focus on familial, marital, and other significant ties, providing detailed insights and historical context.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"person_name\": {\"type\": \"string\", \"description\": \"The name of the historical figure whose relationships are to be queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"spouse\", \"parent\", \"child\", \"sibling\", \"mentor\", \"colleague\", \"rival\"], \"description\": \"The type of relationship to query. Defaults to 'spouse'.\"}, \"time_period\": {\"type\": \"object\", \"properties\": {\"start_year\": {\"type\": \"integer\", \"description\": \"The starting year of the time period to consider for the query.\"}, \"end_year\": {\"type\": \"integer\", \"description\": \"The ending year of the time period to consider for the query.\"}}, \"description\": \"The specific time period to consider for the query, formatted as a range. Optional.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name_only\", \"detailed\", \"summary\"], \"description\": \"The format of the output. 'name_only' returns just the name, 'detailed' provides additional information about the relationship, and 'summary' offers a brief overview of the connections.\"}, \"include_context\": {\"type\": \"boolean\", \"description\": \"Whether to include historical context and background information in the output. Defaults to false.\"}}, \"required\": [\"person_name\"]}}\nResult: {\"result\": \"Francis IV, Duke of Modena\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the husband of Marie Anna Of Saxony?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 353,
+    "hop_idx": 0,
+    "qkey": "who is the husband of marie anna of saxony",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Francis IV, Duke of Modena"
+  },
+  {
+   "episode_id": "356-0-tool_wrong-v1",
+   "instance_id": 356,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the mother of Harriet Hemings?",
+   "gold_answer": "Sally Hemings",
+   "tool_output": {
+    "result": "Betty Hemings"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "biographical_info_retriever",
+    "description": "An advanced tool designed to retrieve comprehensive biographical information about historical figures, including familial relationships, achievements, and historical impact. It accesses an extensive database to provide accurate, relevant, and detailed information.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "query": {
+       "type": "string",
+       "description": "The query string containing the name of the historical figure and the specific information requested, such as 'Albert Einstein achievements'."
+      },
+      "context": {
+       "type": "string",
+       "description": "Additional context to narrow down the search, such as time period, location, or specific events. Defaults to None."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "text",
+        "json",
+        "xml"
+       ],
+       "description": "The format of the output. Defaults to text for a simple answer. XML format is added for more structured data representation."
+      },
+      "detail_level": {
+       "type": "string",
+       "enum": [
+        "summary",
+        "detailed",
+        "comprehensive"
+       ],
+       "description": "The level of detail required in the output. 'Summary' provides a brief overview, 'detailed' includes more in-depth information, and 'comprehensive' offers extensive details. Defaults to 'summary'."
+      },
+      "language": {
+       "type": "string",
+       "description": "The language in which the output should be provided. Defaults to English."
+      }
+     },
+     "required": [
+      "query"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the mother of Harriet Hemings?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"biographical_info_retriever\", \"description\": \"An advanced tool designed to retrieve comprehensive biographical information about historical figures, including familial relationships, achievements, and historical impact. It accesses an extensive database to provide accurate, relevant, and detailed information.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"query\": {\"type\": \"string\", \"description\": \"The query string containing the name of the historical figure and the specific information requested, such as 'Albert Einstein achievements'.\"}, \"context\": {\"type\": \"string\", \"description\": \"Additional context to narrow down the search, such as time period, location, or specific events. Defaults to None.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"text\", \"json\", \"xml\"], \"description\": \"The format of the output. Defaults to text for a simple answer. XML format is added for more structured data representation.\"}, \"detail_level\": {\"type\": \"string\", \"enum\": [\"summary\", \"detailed\", \"comprehensive\"], \"description\": \"The level of detail required in the output. 'Summary' provides a brief overview, 'detailed' includes more in-depth information, and 'comprehensive' offers extensive details. Defaults to 'summary'.\"}, \"language\": {\"type\": \"string\", \"description\": \"The language in which the output should be provided. Defaults to English.\"}}, \"required\": [\"query\"]}}\nResult: {\"result\": \"Betty Hemings\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the mother of Harriet Hemings?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 356,
+    "hop_idx": 0,
+    "qkey": "who is the mother of harriet hemings",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Betty Hemings"
+  },
+  {
+   "episode_id": "466-0-tool_wrong-v1",
+   "instance_id": 466,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the director of Skirts Ahoy!?",
+   "gold_answer": "Sidney Lanfield",
+   "tool_output": {
+    "result": "Richard Thorpe"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "movie_director_lookup",
+    "description": "An advanced tool for retrieving detailed information about the director of a specified movie. It searches a comprehensive database of movies and returns the director's name, along with additional details if requested. The tool accommodates various query formats, potential edge cases, and provides enhanced search capabilities.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "movie_title": {
+       "type": "string",
+       "description": "The title of the movie for which the director's name and details are to be retrieved."
+      },
+      "year": {
+       "type": "integer",
+       "description": "The release year of the movie to help disambiguate between different versions or remakes, optional.",
+       "minimum": 1888
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name_only",
+        "detailed",
+        "full_biography"
+       ],
+       "description": "The format of the output. 'name_only' returns just the director's name, 'detailed' provides additional information such as co-directors or production details, and 'full_biography' includes a comprehensive biography of the director."
+      },
+      "genre": {
+       "type": "string",
+       "description": "The genre of the movie to further refine the search, optional."
+      },
+      "language": {
+       "type": "string",
+       "description": "The original language of the movie to help narrow down the search results, optional."
+      }
+     },
+     "required": [
+      "movie_title"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of Skirts Ahoy!?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"movie_director_lookup\", \"description\": \"An advanced tool for retrieving detailed information about the director of a specified movie. It searches a comprehensive database of movies and returns the director's name, along with additional details if requested. The tool accommodates various query formats, potential edge cases, and provides enhanced search capabilities.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"movie_title\": {\"type\": \"string\", \"description\": \"The title of the movie for which the director's name and details are to be retrieved.\"}, \"year\": {\"type\": \"integer\", \"description\": \"The release year of the movie to help disambiguate between different versions or remakes, optional.\", \"minimum\": 1888}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name_only\", \"detailed\", \"full_biography\"], \"description\": \"The format of the output. 'name_only' returns just the director's name, 'detailed' provides additional information such as co-directors or production details, and 'full_biography' includes a comprehensive biography of the director.\"}, \"genre\": {\"type\": \"string\", \"description\": \"The genre of the movie to further refine the search, optional.\"}, \"language\": {\"type\": \"string\", \"description\": \"The original language of the movie to help narrow down the search results, optional.\"}}, \"required\": [\"movie_title\"]}}\nResult: {\"result\": \"Richard Thorpe\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of Skirts Ahoy!?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 466,
+    "hop_idx": 0,
+    "qkey": "who is the director of skirts ahoy",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Richard Thorpe"
+  },
+  {
+   "episode_id": "475-0-tool_wrong-v1",
+   "instance_id": 475,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "free_form",
+   "divergence_bucket": "near",
+   "question": "Who is Selena Quintanilla-Pérez's assistant and head of her fan club?",
+   "gold_answer": "Yolanda Saldívar",
+   "tool_output": {
+    "result": "Suzette Quintanilla"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "public_figure_associate_finder",
+    "description": "An advanced tool designed to find and retrieve comprehensive information about associates of public figures, including assistants, managers, collaborators, and other key personnel. It supports complex queries about various types of relationships and roles, with enhanced output options.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "public_figure_name": {
+       "type": "string",
+       "description": "The name of the public figure whose associate information is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "assistant",
+        "manager",
+        "fan club head",
+        "collaborator",
+        "publicist",
+        "lawyer",
+        "business_partner"
+       ],
+       "description": "The type of relationship or role being queried."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name",
+        "detailed_profile",
+        "contact_info",
+        "social_media_links"
+       ],
+       "description": "The format of the output. 'name' returns just the name, 'detailed_profile' provides comprehensive information, 'contact_info' includes contact details, and 'social_media_links' provides links to social media profiles."
+      },
+      "location_filter": {
+       "type": "string",
+       "description": "Optional filter to narrow down associates based on their primary location."
+      },
+      "active_status": {
+       "type": "boolean",
+       "description": "Filter to include only currently active associates if set to true."
+      }
+     },
+     "required": [
+      "public_figure_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is Selena Quintanilla-Pérez's assistant and head of her fan club?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"public_figure_associate_finder\", \"description\": \"An advanced tool designed to find and retrieve comprehensive information about associates of public figures, including assistants, managers, collaborators, and other key personnel. It supports complex queries about various types of relationships and roles, with enhanced output options.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"public_figure_name\": {\"type\": \"string\", \"description\": \"The name of the public figure whose associate information is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"assistant\", \"manager\", \"fan club head\", \"collaborator\", \"publicist\", \"lawyer\", \"business_partner\"], \"description\": \"The type of relationship or role being queried.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name\", \"detailed_profile\", \"contact_info\", \"social_media_links\"], \"description\": \"The format of the output. 'name' returns just the name, 'detailed_profile' provides comprehensive information, 'contact_info' includes contact details, and 'social_media_links' provides links to social media profiles.\"}, \"location_filter\": {\"type\": \"string\", \"description\": \"Optional filter to narrow down associates based on their primary location.\"}, \"active_status\": {\"type\": \"boolean\", \"description\": \"Filter to include only currently active associates if set to true.\"}}, \"required\": [\"public_figure_name\", \"relationship_type\"]}}\nResult: {\"result\": \"Suzette Quintanilla\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is Selena Quintanilla-Pérez's assistant and head of her fan club?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 475,
+    "hop_idx": 0,
+    "qkey": "who is selena quintanillaprezs assistant and head of her fan club",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Suzette Quintanilla"
+  },
+  {
+   "episode_id": "572-0-tool_wrong-v1",
+   "instance_id": 572,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Alessandro Ruspoli, 9Th Prince Of Cerveteri?",
+   "gold_answer": "Francesco Ruspoli, 8th Prince of Cerveteri",
+   "tool_output": {
+    "result": "Prospero Colonna"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "family_relationship_finder",
+    "description": "An advanced tool designed to find familial relationships for a given individual, covering a wide range of family connections including direct and extended family, with customizable search parameters.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "individual_name": {
+       "type": "string",
+       "description": "The full name of the individual whose family relationship is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "siblings",
+        "children",
+        "grandparents",
+        "cousins",
+        "aunts",
+        "uncles"
+       ],
+       "description": "The type of familial relationship to retrieve."
+      },
+      "include_extended_family": {
+       "type": "boolean",
+       "description": "Whether to include extended family members in the search, default is false."
+      },
+      "data_source": {
+       "type": "string",
+       "description": "The source of the genealogical data, such as a specific database, API, or public records."
+      },
+      "search_depth": {
+       "type": "integer",
+       "description": "The depth of the search in generations, default is 1 for immediate family."
+      },
+      "include_in_laws": {
+       "type": "boolean",
+       "description": "Whether to include in-laws in the search results, default is false."
+      }
+     },
+     "required": [
+      "individual_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Alessandro Ruspoli, 9Th Prince Of Cerveteri?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"family_relationship_finder\", \"description\": \"An advanced tool designed to find familial relationships for a given individual, covering a wide range of family connections including direct and extended family, with customizable search parameters.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"individual_name\": {\"type\": \"string\", \"description\": \"The full name of the individual whose family relationship is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"siblings\", \"children\", \"grandparents\", \"cousins\", \"aunts\", \"uncles\"], \"description\": \"The type of familial relationship to retrieve.\"}, \"include_extended_family\": {\"type\": \"boolean\", \"description\": \"Whether to include extended family members in the search, default is false.\"}, \"data_source\": {\"type\": \"string\", \"description\": \"The source of the genealogical data, such as a specific database, API, or public records.\"}, \"search_depth\": {\"type\": \"integer\", \"description\": \"The depth of the search in generations, default is 1 for immediate family.\"}, \"include_in_laws\": {\"type\": \"boolean\", \"description\": \"Whether to include in-laws in the search results, default is false.\"}}, \"required\": [\"individual_name\", \"relationship_type\"]}}\nResult: {\"result\": \"Prospero Colonna\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Alessandro Ruspoli, 9Th Prince Of Cerveteri?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 572,
+    "hop_idx": 0,
+    "qkey": "who is the father of alessandro ruspoli 9th prince of cerveteri",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Prospero Colonna"
+  },
+  {
+   "episode_id": "584-1-tool_wrong-v1",
+   "instance_id": 584,
+   "hop_idx": 1,
+   "condition": "tool_wrong",
+   "tau": "place",
+   "family": "birth_death_place",
+   "divergence_bucket": "near",
+   "question": "What is the place of death of Abdullah I Of Jordan?",
+   "gold_answer": "Jerusalem",
+   "tool_output": {
+    "result": "Amman"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "biographical_data_retriever",
+    "description": "An advanced tool designed to retrieve detailed biographical information about historical figures, including places and dates of birth and death, major life events, and notable achievements, from a comprehensive and prioritized database.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "figure_name": {
+       "type": "string",
+       "description": "The name of the historical figure whose biographical data is to be retrieved."
+      },
+      "information_type": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "enum": [
+         "place_of_birth",
+         "place_of_death",
+         "date_of_birth",
+         "date_of_death",
+         "major_life_events",
+         "notable_achievements"
+        ],
+        "description": "The types of biographical information requested."
+       }
+      },
+      "source_preference": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "source_name": {
+          "type": "string",
+          "description": "The name of the preferred source."
+         },
+         "reliability_score": {
+          "type": "number",
+          "description": "A score indicating the reliability of the source, on a scale from 0 to 1."
+         },
+         "category": {
+          "type": "string",
+          "description": "The category of the source, e.g., 'academic', 'public domain', 'archive'."
+         }
+        },
+        "required": [
+         "source_name"
+        ]
+       }
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "text",
+        "json",
+        "xml",
+        "csv"
+       ],
+       "description": "The format of the output. Defaults to text."
+      }
+     },
+     "required": [
+      "figure_name",
+      "information_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: What is the place of death of Abdullah I Of Jordan?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"biographical_data_retriever\", \"description\": \"An advanced tool designed to retrieve detailed biographical information about historical figures, including places and dates of birth and death, major life events, and notable achievements, from a comprehensive and prioritized database.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"figure_name\": {\"type\": \"string\", \"description\": \"The name of the historical figure whose biographical data is to be retrieved.\"}, \"information_type\": {\"type\": \"array\", \"items\": {\"type\": \"string\", \"enum\": [\"place_of_birth\", \"place_of_death\", \"date_of_birth\", \"date_of_death\", \"major_life_events\", \"notable_achievements\"], \"description\": \"The types of biographical information requested.\"}}, \"source_preference\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"source_name\": {\"type\": \"string\", \"description\": \"The name of the preferred source.\"}, \"reliability_score\": {\"type\": \"number\", \"description\": \"A score indicating the reliability of the source, on a scale from 0 to 1.\"}, \"category\": {\"type\": \"string\", \"description\": \"The category of the source, e.g., 'academic', 'public domain', 'archive'.\"}}, \"required\": [\"source_name\"]}}, \"output_format\": {\"type\": \"string\", \"enum\": [\"text\", \"json\", \"xml\", \"csv\"], \"description\": \"The format of the output. Defaults to text.\"}}, \"required\": [\"figure_name\", \"information_type\"]}}\nResult: {\"result\": \"Amman\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: What is the place of death of Abdullah I Of Jordan?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 584,
+    "hop_idx": 1,
+    "qkey": "what is the place of death of abdullah i of jordan",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Amman"
+  },
+  {
+   "episode_id": "623-0-tool_wrong-v1",
+   "instance_id": 623,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Charles Mills, 1St Baron Hillingdon?",
+   "gold_answer": "Sir Charles Mills, 1st Baronet",
+   "tool_output": {
+    "result": "Samuel Jones-Loyd, 1st Baron Overstone"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "genealogy_query",
+    "description": "An advanced tool designed to query genealogical databases to find familial relationships, such as parentage, for historical figures. It supports flexible querying to accommodate variations in names and titles, and now includes enhanced capabilities for specifying date ranges and querying multiple data sources simultaneously.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "individual_name": {
+       "type": "string",
+       "description": "The name of the individual whose family relationship is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "sibling",
+        "child",
+        "grandparent",
+        "grandchild",
+        "cousin"
+       ],
+       "description": "The type of familial relationship to query."
+      },
+      "title_included": {
+       "type": "boolean",
+       "description": "Indicates whether titles are included in the individual's name. Defaults to false.",
+       "default": false
+      },
+      "data_sources": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "A list of sources of the genealogical data, such as specific databases or datasets."
+      },
+      "date_range": {
+       "type": "object",
+       "properties": {
+        "start_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The start date for the query range."
+        },
+        "end_date": {
+         "type": "string",
+         "format": "date",
+         "description": "The end date for the query range."
+        }
+       },
+       "description": "The date range within which to search for familial relationships."
+      }
+     },
+     "required": [
+      "individual_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Charles Mills, 1St Baron Hillingdon?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"genealogy_query\", \"description\": \"An advanced tool designed to query genealogical databases to find familial relationships, such as parentage, for historical figures. It supports flexible querying to accommodate variations in names and titles, and now includes enhanced capabilities for specifying date ranges and querying multiple data sources simultaneously.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"individual_name\": {\"type\": \"string\", \"description\": \"The name of the individual whose family relationship is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"sibling\", \"child\", \"grandparent\", \"grandchild\", \"cousin\"], \"description\": \"The type of familial relationship to query.\"}, \"title_included\": {\"type\": \"boolean\", \"description\": \"Indicates whether titles are included in the individual's name. Defaults to false.\", \"default\": false}, \"data_sources\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}, \"description\": \"A list of sources of the genealogical data, such as specific databases or datasets.\"}, \"date_range\": {\"type\": \"object\", \"properties\": {\"start_date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The start date for the query range.\"}, \"end_date\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The end date for the query range.\"}}, \"description\": \"The date range within which to search for familial relationships.\"}}, \"required\": [\"individual_name\", \"relationship_type\"]}}\nResult: {\"result\": \"Samuel Jones-Loyd, 1st Baron Overstone\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Charles Mills, 1St Baron Hillingdon?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 623,
+    "hop_idx": 0,
+    "qkey": "who is the father of charles mills 1st baron hillingdon",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Samuel Jones-Loyd, 1st Baron Overstone"
+  },
+  {
+   "episode_id": "713-0-tool_wrong-v1",
+   "instance_id": 713,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the director of film Liberated Hands?",
+   "gold_answer": "Hans Schweikart",
+   "tool_output": {
+    "result": "Helmut Käutner"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "film_director_lookup",
+    "description": "An advanced tool for retrieving the director of specified films. It supports complex search capabilities to handle variations, typos, and international film titles, ensuring accurate matching and detailed output.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "film_titles": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "A list of film titles for which the directors' names are to be retrieved."
+      },
+      "case_sensitive": {
+       "type": "boolean",
+       "description": "Indicates whether the search should be case-sensitive. Defaults to false."
+      },
+      "partial_match": {
+       "type": "boolean",
+       "description": "Allows for partial matching of film titles. Defaults to false."
+      },
+      "fuzzy_match": {
+       "type": "boolean",
+       "description": "Enables fuzzy matching to handle typos in film titles. Defaults to false."
+      },
+      "language": {
+       "type": "string",
+       "description": "The language of the film title. Defaults to 'en' for English."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name",
+        "detailed",
+        "filmography",
+        "biography"
+       ],
+       "description": "The format of the output. 'name' returns just the director's name, 'detailed' provides additional information about the director, 'filmography' includes a list of films directed, and 'biography' provides a brief biography."
+      }
+     },
+     "required": [
+      "film_titles"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of film Liberated Hands?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"film_director_lookup\", \"description\": \"An advanced tool for retrieving the director of specified films. It supports complex search capabilities to handle variations, typos, and international film titles, ensuring accurate matching and detailed output.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"film_titles\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}, \"description\": \"A list of film titles for which the directors' names are to be retrieved.\"}, \"case_sensitive\": {\"type\": \"boolean\", \"description\": \"Indicates whether the search should be case-sensitive. Defaults to false.\"}, \"partial_match\": {\"type\": \"boolean\", \"description\": \"Allows for partial matching of film titles. Defaults to false.\"}, \"fuzzy_match\": {\"type\": \"boolean\", \"description\": \"Enables fuzzy matching to handle typos in film titles. Defaults to false.\"}, \"language\": {\"type\": \"string\", \"description\": \"The language of the film title. Defaults to 'en' for English.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name\", \"detailed\", \"filmography\", \"biography\"], \"description\": \"The format of the output. 'name' returns just the director's name, 'detailed' provides additional information about the director, 'filmography' includes a list of films directed, and 'biography' provides a brief biography.\"}}, \"required\": [\"film_titles\"]}}\nResult: {\"result\": \"Helmut Käutner\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of film Liberated Hands?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 713,
+    "hop_idx": 0,
+    "qkey": "who is the director of film liberated hands",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Helmut Käutner"
+  },
+  {
+   "episode_id": "725-1-tool_wrong-v1",
+   "instance_id": 725,
+   "hop_idx": 1,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the mother of Damian Harris?",
+   "gold_answer": "Elizabeth Rees-Williams",
+   "tool_output": {
+    "result": "Vanessa Redgrave"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "family_relationship_query",
+    "description": "An advanced tool designed to retrieve detailed familial relationship information for a given individual. It supports a wide range of family relationships and offers enhanced data retrieval options.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "individual_name": {
+       "type": "string",
+       "description": "The name of the individual whose familial relationship is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "mother",
+        "father",
+        "sibling",
+        "spouse",
+        "child",
+        "grandparent",
+        "grandchild",
+        "aunt",
+        "uncle",
+        "cousin"
+       ],
+       "description": "The type of familial relationship to query."
+      },
+      "data_source": {
+       "type": "string",
+       "description": "The source of the data, such as a database or API endpoint, where the familial information is stored."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "text",
+        "json",
+        "xml",
+        "csv"
+       ],
+       "description": "The format of the output. Defaults to text for human-readable output."
+      },
+      "age_filter": {
+       "type": "object",
+       "properties": {
+        "min_age": {
+         "type": "integer",
+         "description": "The minimum age of the individuals to include in the query results."
+        },
+        "max_age": {
+         "type": "integer",
+         "description": "The maximum age of the individuals to include in the query results."
+        }
+       },
+       "description": "Optional age filter to narrow down the query results."
+      },
+      "location_filter": {
+       "type": "string",
+       "description": "Optional location filter to narrow down the query results based on geographical location."
+      }
+     },
+     "required": [
+      "individual_name",
+      "relationship_type",
+      "data_source"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the mother of Damian Harris?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"family_relationship_query\", \"description\": \"An advanced tool designed to retrieve detailed familial relationship information for a given individual. It supports a wide range of family relationships and offers enhanced data retrieval options.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"individual_name\": {\"type\": \"string\", \"description\": \"The name of the individual whose familial relationship is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"mother\", \"father\", \"sibling\", \"spouse\", \"child\", \"grandparent\", \"grandchild\", \"aunt\", \"uncle\", \"cousin\"], \"description\": \"The type of familial relationship to query.\"}, \"data_source\": {\"type\": \"string\", \"description\": \"The source of the data, such as a database or API endpoint, where the familial information is stored.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"text\", \"json\", \"xml\", \"csv\"], \"description\": \"The format of the output. Defaults to text for human-readable output.\"}, \"age_filter\": {\"type\": \"object\", \"properties\": {\"min_age\": {\"type\": \"integer\", \"description\": \"The minimum age of the individuals to include in the query results.\"}, \"max_age\": {\"type\": \"integer\", \"description\": \"The maximum age of the individuals to include in the query results.\"}}, \"description\": \"Optional age filter to narrow down the query results.\"}, \"location_filter\": {\"type\": \"string\", \"description\": \"Optional location filter to narrow down the query results based on geographical location.\"}}, \"required\": [\"individual_name\", \"relationship_type\", \"data_source\"]}}\nResult: {\"result\": \"Vanessa Redgrave\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the mother of Damian Harris?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 725,
+    "hop_idx": 1,
+    "qkey": "who is the mother of damian harris",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Vanessa Redgrave"
+  },
+  {
+   "episode_id": "771-0-tool_wrong-v1",
+   "instance_id": 771,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Octavius Vernon Harcourt?",
+   "gold_answer": "Edward Venables-Vernon-Harcourt",
+   "tool_output": {
+    "result": "George Harcourt, 2nd Earl Harcourt"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "genealogy_query",
+    "description": "An advanced tool for querying genealogical information, designed to identify a wide range of familial relationships and accommodate historical and geographical variations in records. It supports queries for various historical figures and provides detailed genealogical data.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "individual_name": {
+       "type": "string",
+       "description": "The name of the individual whose genealogical information is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "parent",
+        "sibling",
+        "spouse",
+        "child",
+        "ancestor",
+        "descendant"
+       ],
+       "description": "The type of familial relationship to query. Defaults to 'parent'."
+      },
+      "historical_context": {
+       "type": "boolean",
+       "description": "Indicates whether to consider historical variations in naming and records. Defaults to true."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name",
+        "detailed_record",
+        "full_genealogy"
+       ],
+       "description": "The format of the output. 'name' returns just the name, 'detailed_record' provides additional information about the individual, and 'full_genealogy' returns a comprehensive genealogical report."
+      },
+      "time_period": {
+       "type": "string",
+       "description": "The specific time period to consider for the query, formatted as a range (e.g., '1800-1900')."
+      },
+      "geographical_location": {
+       "type": "string",
+       "description": "The geographical location to consider for the query, which can help refine results based on regional records."
+      }
+     },
+     "required": [
+      "individual_name",
+      "relationship_type"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Octavius Vernon Harcourt?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"genealogy_query\", \"description\": \"An advanced tool for querying genealogical information, designed to identify a wide range of familial relationships and accommodate historical and geographical variations in records. It supports queries for various historical figures and provides detailed genealogical data.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"individual_name\": {\"type\": \"string\", \"description\": \"The name of the individual whose genealogical information is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"parent\", \"sibling\", \"spouse\", \"child\", \"ancestor\", \"descendant\"], \"description\": \"The type of familial relationship to query. Defaults to 'parent'.\"}, \"historical_context\": {\"type\": \"boolean\", \"description\": \"Indicates whether to consider historical variations in naming and records. Defaults to true.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name\", \"detailed_record\", \"full_genealogy\"], \"description\": \"The format of the output. 'name' returns just the name, 'detailed_record' provides additional information about the individual, and 'full_genealogy' returns a comprehensive genealogical report.\"}, \"time_period\": {\"type\": \"string\", \"description\": \"The specific time period to consider for the query, formatted as a range (e.g., '1800-1900').\"}, \"geographical_location\": {\"type\": \"string\", \"description\": \"The geographical location to consider for the query, which can help refine results based on regional records.\"}}, \"required\": [\"individual_name\", \"relationship_type\"]}}\nResult: {\"result\": \"George Harcourt, 2nd Earl Harcourt\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Octavius Vernon Harcourt?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 771,
+    "hop_idx": 0,
+    "qkey": "who is the father of octavius vernon harcourt",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "George Harcourt, 2nd Earl Harcourt"
+  },
+  {
+   "episode_id": "792-0-tool_wrong-v1",
+   "instance_id": 792,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the father of Cosima Von Bülow Pavoncelli?",
+   "gold_answer": "Claus von Bülow",
+   "tool_output": {
+    "result": "Gunter Sachs"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "family_relationship_finder",
+    "description": "An advanced tool designed to find and analyze familial relationships for given individuals. It accesses structured genealogical or biographical data to provide comprehensive and accurate information, including extended family connections.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "individual_name": {
+       "type": "string",
+       "description": "The full name of the individual whose familial relationship is being queried."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "father",
+        "mother",
+        "parent",
+        "sibling",
+        "grandparent",
+        "child",
+        "spouse"
+       ],
+       "description": "The type of familial relationship to find. Defaults to 'parent'."
+      },
+      "data_source": {
+       "type": "string",
+       "description": "The source of the genealogical or biographical data. This could be a database, API, or dataset. Supports multiple sources for cross-referencing."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "name",
+        "detailed_info",
+        "relationship_tree"
+       ],
+       "description": "The format of the output. 'name' returns just the name, 'detailed_info' provides additional information about the individual, and 'relationship_tree' offers a visual representation of the family tree."
+      },
+      "date_of_birth": {
+       "type": "string",
+       "format": "date",
+       "description": "The date of birth of the individual, used to improve search accuracy."
+      },
+      "location": {
+       "type": "string",
+       "description": "The known location or region associated with the individual, used to refine search results."
+      }
+     },
+     "required": [
+      "individual_name",
+      "relationship_type",
+      "data_source"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Cosima Von Bülow Pavoncelli?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"family_relationship_finder\", \"description\": \"An advanced tool designed to find and analyze familial relationships for given individuals. It accesses structured genealogical or biographical data to provide comprehensive and accurate information, including extended family connections.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"individual_name\": {\"type\": \"string\", \"description\": \"The full name of the individual whose familial relationship is being queried.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"father\", \"mother\", \"parent\", \"sibling\", \"grandparent\", \"child\", \"spouse\"], \"description\": \"The type of familial relationship to find. Defaults to 'parent'.\"}, \"data_source\": {\"type\": \"string\", \"description\": \"The source of the genealogical or biographical data. This could be a database, API, or dataset. Supports multiple sources for cross-referencing.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"name\", \"detailed_info\", \"relationship_tree\"], \"description\": \"The format of the output. 'name' returns just the name, 'detailed_info' provides additional information about the individual, and 'relationship_tree' offers a visual representation of the family tree.\"}, \"date_of_birth\": {\"type\": \"string\", \"format\": \"date\", \"description\": \"The date of birth of the individual, used to improve search accuracy.\"}, \"location\": {\"type\": \"string\", \"description\": \"The known location or region associated with the individual, used to refine search results.\"}}, \"required\": [\"individual_name\", \"relationship_type\", \"data_source\"]}}\nResult: {\"result\": \"Gunter Sachs\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the father of Cosima Von Bülow Pavoncelli?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 792,
+    "hop_idx": 0,
+    "qkey": "who is the father of cosima von blow pavoncelli",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Gunter Sachs"
+  },
+  {
+   "episode_id": "820-0-tool_wrong-v1",
+   "instance_id": 820,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the director of Boden'S Boy?",
+   "gold_answer": "Henry Edwards",
+   "tool_output": {
+    "result": "Maurice Elvey"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "film_director_lookup",
+    "description": "An advanced tool for retrieving the director(s) of a specified film. It supports flexible title matching and can be used for various film-related queries, including filtering by language, release year, and director nationality.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "film_title": {
+       "type": "string",
+       "description": "The title of the film for which the director is to be found."
+      },
+      "case_sensitive": {
+       "type": "boolean",
+       "description": "Whether the title search should be case sensitive. Defaults to false.",
+       "default": false
+      },
+      "include_punctuation": {
+       "type": "boolean",
+       "description": "Whether to include punctuation in the title search. Defaults to true.",
+       "default": true
+      },
+      "language": {
+       "type": "string",
+       "description": "The language of the film. Useful for filtering films with similar titles in different languages."
+      },
+      "release_year": {
+       "type": "integer",
+       "description": "The release year of the film. Useful for filtering films with the same title released in different years."
+      },
+      "director_nationality": {
+       "type": "string",
+       "description": "The nationality of the director. Useful for narrowing down search results based on director's nationality."
+      },
+      "include_multiple_directors": {
+       "type": "boolean",
+       "description": "Whether to include films with multiple directors. Defaults to true.",
+       "default": true
+      }
+     },
+     "required": [
+      "film_title"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of Boden'S Boy?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"film_director_lookup\", \"description\": \"An advanced tool for retrieving the director(s) of a specified film. It supports flexible title matching and can be used for various film-related queries, including filtering by language, release year, and director nationality.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"film_title\": {\"type\": \"string\", \"description\": \"The title of the film for which the director is to be found.\"}, \"case_sensitive\": {\"type\": \"boolean\", \"description\": \"Whether the title search should be case sensitive. Defaults to false.\", \"default\": false}, \"include_punctuation\": {\"type\": \"boolean\", \"description\": \"Whether to include punctuation in the title search. Defaults to true.\", \"default\": true}, \"language\": {\"type\": \"string\", \"description\": \"The language of the film. Useful for filtering films with similar titles in different languages.\"}, \"release_year\": {\"type\": \"integer\", \"description\": \"The release year of the film. Useful for filtering films with the same title released in different years.\"}, \"director_nationality\": {\"type\": \"string\", \"description\": \"The nationality of the director. Useful for narrowing down search results based on director's nationality.\"}, \"include_multiple_directors\": {\"type\": \"boolean\", \"description\": \"Whether to include films with multiple directors. Defaults to true.\", \"default\": true}}, \"required\": [\"film_title\"]}}\nResult: {\"result\": \"Maurice Elvey\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the director of Boden'S Boy?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 820,
+    "hop_idx": 0,
+    "qkey": "who is the director of bodens boy",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Maurice Elvey"
+  },
+  {
+   "episode_id": "887-0-tool_wrong-v1",
+   "instance_id": 887,
+   "hop_idx": 0,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "creator_role",
+   "divergence_bucket": "near",
+   "question": "Who is the cast member of Ice Bound: A Woman'S Survival At The South Pole?",
+   "gold_answer": "Susan Sarandon",
+   "tool_output": {
+    "result": "Christine Lahti"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "film_cast_lookup",
+    "description": "An advanced tool for retrieving detailed cast information of specified films. It supports various input formats, provides options for handling title variations, and allows filtering by additional film attributes.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "film_title": {
+       "type": "string",
+       "description": "The title of the film for which the cast members are to be retrieved."
+      },
+      "title_variations": {
+       "type": "boolean",
+       "description": "Whether to consider variations and potential misspellings of the film title. Defaults to false."
+      },
+      "output_format": {
+       "type": "string",
+       "enum": [
+        "list",
+        "text",
+        "detailed"
+       ],
+       "description": "The format of the output. Defaults to list (a list of cast members). 'Detailed' includes additional information such as character names and roles."
+      },
+      "year_of_release": {
+       "type": "integer",
+       "description": "The year the film was released. Useful for distinguishing between films with similar titles."
+      },
+      "director_name": {
+       "type": "string",
+       "description": "The name of the director of the film. Helps to refine the search when multiple films share the same title."
+      },
+      "genre": {
+       "type": "string",
+       "description": "The genre of the film. Can be used to narrow down search results."
+      }
+     },
+     "required": [
+      "film_title"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the cast member of Ice Bound: A Woman'S Survival At The South Pole?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"film_cast_lookup\", \"description\": \"An advanced tool for retrieving detailed cast information of specified films. It supports various input formats, provides options for handling title variations, and allows filtering by additional film attributes.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"film_title\": {\"type\": \"string\", \"description\": \"The title of the film for which the cast members are to be retrieved.\"}, \"title_variations\": {\"type\": \"boolean\", \"description\": \"Whether to consider variations and potential misspellings of the film title. Defaults to false.\"}, \"output_format\": {\"type\": \"string\", \"enum\": [\"list\", \"text\", \"detailed\"], \"description\": \"The format of the output. Defaults to list (a list of cast members). 'Detailed' includes additional information such as character names and roles.\"}, \"year_of_release\": {\"type\": \"integer\", \"description\": \"The year the film was released. Useful for distinguishing between films with similar titles.\"}, \"director_name\": {\"type\": \"string\", \"description\": \"The name of the director of the film. Helps to refine the search when multiple films share the same title.\"}, \"genre\": {\"type\": \"string\", \"description\": \"The genre of the film. Can be used to narrow down search results.\"}}, \"required\": [\"film_title\"]}}\nResult: {\"result\": \"Christine Lahti\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the cast member of Ice Bound: A Woman'S Survival At The South Pole?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 887,
+    "hop_idx": 0,
+    "qkey": "who is the cast member of ice bound a womans survival at the south pole",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Christine Lahti"
+  },
+  {
+   "episode_id": "907-1-tool_wrong-v1",
+   "instance_id": 907,
+   "hop_idx": 1,
+   "condition": "tool_wrong",
+   "tau": "person",
+   "family": "genealogy",
+   "divergence_bucket": "near",
+   "question": "Who is the sibling of Natalie Wood?",
+   "gold_answer": "Lana Wood",
+   "tool_output": {
+    "result": "Jill St. John"
+   },
+   "tool_correct": false,
+   "memory_correct": null,
+   "tool_schema": {
+    "name": "sibling_finder",
+    "description": "An advanced tool designed to find and return the siblings of a given individual based on comprehensive biographical data. It supports complex queries for various individuals and considers a wide range of sibling relationships, including step-siblings and adopted siblings.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "individual_name": {
+       "type": "string",
+       "description": "The name of the individual whose siblings are to be found."
+      },
+      "relationship_type": {
+       "type": "string",
+       "enum": [
+        "full",
+        "half",
+        "step",
+        "adopted",
+        "all"
+       ],
+       "description": "The type of sibling relationship to consider. 'Full' for full siblings, 'half' for half-siblings, 'step' for step-siblings, 'adopted' for adopted siblings, and 'all' for all types."
+      },
+      "data_source": {
+       "type": "string",
+       "description": "The source of the biographical data, such as a database, API endpoint, or a local file."
+      },
+      "age_range": {
+       "type": "object",
+       "properties": {
+        "min_age": {
+         "type": "integer",
+         "description": "The minimum age of siblings to consider."
+        },
+        "max_age": {
+         "type": "integer",
+         "description": "The maximum age of siblings to consider."
+        }
+       },
+       "description": "The age range of siblings to include in the search."
+      },
+      "location": {
+       "type": "string",
+       "description": "The geographical location to consider when searching for siblings."
+      }
+     },
+     "required": [
+      "individual_name",
+      "data_source"
+     ]
+    }
+   },
+   "prompt_variant": 1,
+   "prompt_version": 2,
+   "prompts": {
+    "closed_book": "Relying solely on what you already know (no tools, no lookup), answer the question. If unsure, say UNKNOWN.\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the sibling of Natalie Wood?\n",
+    "with_tool": "A tool was invoked and returned the result below. Do not attempt another tool call; answer the question directly.\nTool: {\"name\": \"sibling_finder\", \"description\": \"An advanced tool designed to find and return the siblings of a given individual based on comprehensive biographical data. It supports complex queries for various individuals and considers a wide range of sibling relationships, including step-siblings and adopted siblings.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"individual_name\": {\"type\": \"string\", \"description\": \"The name of the individual whose siblings are to be found.\"}, \"relationship_type\": {\"type\": \"string\", \"enum\": [\"full\", \"half\", \"step\", \"adopted\", \"all\"], \"description\": \"The type of sibling relationship to consider. 'Full' for full siblings, 'half' for half-siblings, 'step' for step-siblings, 'adopted' for adopted siblings, and 'all' for all types.\"}, \"data_source\": {\"type\": \"string\", \"description\": \"The source of the biographical data, such as a database, API endpoint, or a local file.\"}, \"age_range\": {\"type\": \"object\", \"properties\": {\"min_age\": {\"type\": \"integer\", \"description\": \"The minimum age of siblings to consider.\"}, \"max_age\": {\"type\": \"integer\", \"description\": \"The maximum age of siblings to consider.\"}}, \"description\": \"The age range of siblings to include in the search.\"}, \"location\": {\"type\": \"string\", \"description\": \"The geographical location to consider when searching for siblings.\"}}, \"required\": [\"individual_name\", \"data_source\"]}}\nResult: {\"result\": \"Jill St. John\"}\nFinish with a single line that starts with 'FINAL: ' and then your answer.\nQ: Who is the sibling of Natalie Wood?\n"
+   },
+   "distractor_flags": [],
+   "qc_flags": [],
+   "seed": 20260721,
+   "provenance": {
+    "source": "ToolHop/question-v2",
+    "instance_id": 907,
+    "hop_idx": 1,
+    "qkey": "who is the sibling of natalie wood",
+    "distractor_source": "qc_adjudication_repair",
+    "distractor_method": "assistant_draft_human_approved"
+   },
+   "distractor": "Jill St. John"
+  }
+ ]
+}
