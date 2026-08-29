@@ -3,8 +3,9 @@
 Everything needed to inspect the benchmark and to re-derive the paper's numbers
 without a GPU.
 
-> Paper: *MemToC: Benchmarking Memory–Tool Conflict Resolution in Large Language
-> Models.* Preprint link to be added here.
+> Paper: Arseniy Varlamov, Rishat Zinnatullin, Elisei Rykov, Alexander Panchenko,
+> Ilseyar Alimova. *MemToC: Benchmarking Memory–Tool Conflict Resolution in Large
+> Language Models.* arXiv:2608.26295, 2026. <https://arxiv.org/abs/2608.26295>
 
 ```
 benchmark/    the benchmark itself: 575 questions x 5 tool conditions,
@@ -238,3 +239,17 @@ The released benchmark was produced by
 in `results/construction/`, under prompt template version 2 and random seed
 20260721, and then had the repair overlay applied. All evaluation runs
 used greedy decoding (temperature 0), one process per arm.
+
+## Citation
+
+```bibtex
+@misc{varlamov2026memtoc,
+  title         = {MemToC: Benchmarking Memory-Tool Conflict Resolution in Large Language Models},
+  author        = {Varlamov, Arseniy and Zinnatullin, Rishat and Rykov, Elisei and Panchenko, Alexander and Alimova, Ilseyar},
+  year          = {2026},
+  eprint        = {2608.26295},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2608.26295}
+}
+```
